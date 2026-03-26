@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Central_Server/Dockerfile
+    ports:
+      - "8080:8080"
+      # Expose API/Dashboard port as well if server runs api.py? 
+      # Wait, original server.py runs on 8080 (Flower).
+      # api.py runs on 5500. We need to expose 5500 if we want the orchestrator dashboard.
+      - "5500:5500"
+    volumes:
+      - ./Central_Server/model_registry:/app/model_registry
+      - ./Central_Server/fl_metrics.json:/app/fl_metrics.json
+      # Mount api.py to run orchestrator? 
+      # The user's dockerfile CMD is `python server.py`. 
+      # server.py is the Flower Server. 
+      # api.py is the Orchestrator. 
+      # Currently they are separate in the codebase.
+      # The user asks to "bundle admin with server".
+      # Implies api.py (Orchestrator + Admin Dashboard) should probably govern this container.
+      # BUT the flower server must run.
+      # Ideally api.py starts server.py subprocess.
+      # So we should run api.py.
+    command: ["uv", "run", "api.py"] 
+    # Current Dockerfile simply copies files. Need to copy api.py too.
+
+  hospital_a:
+    build:
+      context: .
+      dockerfile: Client/Dockerfile
+    ports:
+      - "8001:8000"
+    depends_on:
+      - server
+    volumes:
+      - ./demo/Hospital_A/local_storage/data:/app/data
+    environment:
+      - FL_SERVER_ADDRESS=server:8080
+      - VITE_API_URL=http://localhost:5500 # For frontend to know where API is (accessed from user browser)
+    command: ["--client_id", "Hospital_A", "--data_dir", "/app/data"]
+
+  hospital_b:
+    build:
+      context: .
+      dockerfile: Client/Dockerfile
+    ports:
+      - "8002:8000"
+    depends_on:
+      - server
+    volumes:
+      - ./demo/Hospital_B/local_storage/data:/app/data
+    environment:
+      - FL_SERVER_ADDRESS=server:8080
+      - VITE_API_URL=http://localhost:5500
+    command: ["--client_id", "Hospital_B", "--data_dir", "/app/data"]

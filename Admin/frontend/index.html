@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fed-X | Secure Medical AI</title>
+
+    <!-- React & ReactDOM (Pinned Versions) -->
+    <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+    <!-- Prop-Types (Required dependency for Recharts UMD) -->
+    <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+
+    <!-- Recharts (Pinned Version known to work in UMD) -->
+    <script src="https://unpkg.com/recharts@2.10.3/umd/Recharts.js"></script>
+
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Network Animation Keyframes */
+        @keyframes flow-server-a {
+            0% {
+                left: 50%;
+                top: 20%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 20%;
+                top: 60%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes flow-server-b {
+            0% {
+                left: 50%;
+                top: 20%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 80%;
+                top: 60%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes flow-a-server {
+            0% {
+                left: 20%;
+                top: 60%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 50%;
+                top: 20%;
+                opacity: 0;
+            }
+        }
+
+        @keyframes flow-b-server {
+            0% {
+                left: 80%;
+                top: 60%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 50%;
+                top: 20%;
+                opacity: 0;
+            }
+        }
+
+        .packet {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        .packet-down-a {
+            animation: flow-server-a 1.5s infinite linear;
+        }
+
+        .packet-down-b {
+            animation: flow-server-b 1.5s infinite linear;
+        }
+
+        .packet-up-a {
+            animation: flow-a-server 1.5s infinite linear;
+            animation-delay: 0.75s;
+            background: #3b82f6;
+            box-shadow: 0 0 10px #3b82f6;
+        }
+
+        .packet-up-b {
+            animation: flow-b-server 1.5s infinite linear;
+            animation-delay: 0.75s;
+            background: #3b82f6;
+            box-shadow: 0 0 10px #3b82f6;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pulse-ring {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            }
+
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animation-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+        const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } = Recharts;
+
+        const API_URL = "http://localhost:8081";
+
+        function App() {
+            const [activeTab, setActiveTab] = useState('network');
+            const [isTraining, setIsTraining] = useState(false);
+            const [isLoggedIn, setIsLoggedIn] = useState(false);
+            const [username, setUsername] = useState('');
+            const [password, setPassword] = useState('');
+            const [metrics, setMetrics] = useState([]);
+            const [versions, setVersions] = useState([]);
+            const [loadingVersions, setLoadingVersions] = useState(false);
+
+            const handleLogin = (e) => {
+                e.preventDefault();
+                if (username === 'admin' && password === 'admin123') {
+                    setIsLoggedIn(true);
+                } else {
+                    alert('Invalid Admin Credentials');
+                }
+            };
+
+
+            // Prediction State
+            const [selectedFile, setSelectedFile] = useState(null);
+            const [preview, setPreview] = useState(null);
+            const [prediction, setPrediction] = useState(null);
+            const [loadingPred, setLoadingPred] = useState(false);
+            const [showExplanation, setShowExplanation] = useState(false);
+            const [heatmapUrl, setHeatmapUrl] = useState(null);
+            const fetchVersions = async () => {
+                setLoadingVersions(true);
+                try {
+                    const res = await fetch(`${API_URL}/models/versions`);
+                    const data = await res.json();
+                    if (data.versions) setVersions(data.versions);
+                } catch (e) {
+                    console.error(e);
+                }
+                setLoadingVersions(false);
+            };
+
+            const rollbackToVersion = async (version) => {
+                if (!confirm(`Are you sure you want to rollback to version ${version}?`)) return;
+
+                try {
+                    const res = await fetch(`${API_URL}/models/rollback/${version}`, { method: 'POST' });
+                    const data = await res.json();
+                    if (data.success) {
+                        alert(`Successfully rolled back to version ${version}`);
+                        fetchVersions();
+                    } else {
+                        alert('Rollback failed: ' + (data.error || 'Unknown error'));
+                    }
+                } catch (e) {
+                    alert('Error: ' + e.message);
+                }
+            };
+
+            const downloadVersion = (version) => {
+                window.location.href = `${API_URL}/models/download/${version}`;
+            };
+
+            // WebSocket Connection for Real-time Updates
+            useEffect(() => {
+                let ws;
+                const connectWs = () => {
+                    const wsHost = window.location.hostname === 'localhost' ? 'localhost' : window.location.hostname;
+                    ws = new WebSocket(`ws://${wsHost}:8081/ws`);
+
+                    ws.onopen = () => {
+                        console.log("✅ Connected to Real-time WebSocket");
+                    };
+
+                    ws.onmessage = (event) => {
+                        try {
+                            const data = JSON.parse(event.data);
+                            if (data.is_training !== undefined) setIsTraining(data.is_training);
+                            if (data.metrics) setMetrics(data.metrics);
+                        } catch (e) {
+                            console.error("Error parsing WS message:", e);
+                        }
+                    };
+
+                    ws.onclose = () => {
+                        console.log("⚠️ WebSocket disconnected, retrying in 3s...");
+                        setTimeout(connectWs, 3000);
+                    };
+                };
+
+                connectWs();
+                fetchMetrics();
+
+                return () => {
+                    if (ws) ws.close();
+                };
+            }, []);
+
+            const fetchMetrics = async () => {
+                try {
+                    const res = await fetch(`${API_URL}/metrics`);
+                    const data = await res.json();
+                    if (data && data.length > 0) setMetrics(data);
+                } catch (e) {
+                    console.error(e);
+                }
+            };
+
+            const startProtocol = async () => {
+                setMetrics([]);
+                setIsTraining(true);
+                await fetch(`${API_URL}/train/start`, { method: 'POST' });
+            };
+
+            const stopProtocol = async () => {
+                setIsTraining(false);
+                await fetch(`${API_URL}/train/stop`, { method: 'POST' });
+            };
+
+            useEffect(() => {
+                if (activeTab === 'versions') {
+                    fetchVersions();
+                }
+            }, [activeTab]);
+
+
+            const handleFileSelect = (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    setSelectedFile(file);
+                    setPreview(URL.createObjectURL(file));
+                    setPrediction(null);
+                    setHeatmapUrl(null);
+                    setShowExplanation(false);
+                }
+            };
+
+            const resetUpload = () => {
+                setSelectedFile(null);
+                setPreview(null);
+                setPrediction(null);
+                setLoadingPred(false);
+                setHeatmapUrl(null);
+                setShowExplanation(false);
+                document.getElementById('fileInput').value = '';
+            };
+
+            const runDiagnosis = async () => {
+                if (!selectedFile) return;
+                setLoadingPred(true);
+
+                const formData = new FormData();
+                formData.append('file', selectedFile);
+
+                try {
+                    const res = await fetch(`${API_URL}/predict/explain`, {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await res.json();
+
+                    setPrediction(data);
+
+                    if (data.heatmap_url) {
+                        setHeatmapUrl(`${API_URL}${data.heatmap_url}?t=${Date.now()}`);
+                    }
+                } catch (e) {
+                    console.error('Error:', e);
+                    alert("Error running diagnosis. Is the server running?");
+                }
+                setLoadingPred(false);
+            };
+
+            if (!isLoggedIn) {
+                return (
+                    <div className="min-h-screen flex items-center justify-center bg-slate-900 relative overflow-hidden">
+                        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl"></div>
+                        </div>
+
+                        <div className="glass-panel p-8 rounded-2xl w-full max-w-md relative z-10 border border-purple-500/30">
+                            <div className="text-center mb-8">
+                                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center text-3xl shadow-lg shadow-purple-500/50 mx-auto mb-4">
+                                    <i className="fa-solid fa-users-gear"></i>
+                                </div>
+                                <h1 className="text-2xl font-bold">Admin Console</h1>
+                                <p className="text-slate-400 text-sm">Federated Network Control</p>
+                            </div>
+                            <form onSubmit={handleLogin} className="space-y-4">
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-400 mb-1">ADMIN ID</label>
+                                    <input
+                                        type="text"
+                                        value={username}
+                                        onChange={(e) => setUsername(e.target.value)}
+                                        className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:border-purple-500 focus:outline-none"
+                                        placeholder="admin"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-xs font-bold text-slate-400 mb-1">PASSWORD</label>
+                                    <input
+                                        type="password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                        className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white focus:border-purple-500 focus:outline-none"
+                                        placeholder="••••••••"
+                                    />
+                                </div>
+                                <button type="submit" className="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-lg shadow-lg transition-all">
+                                    AUTHENTICATE
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                );
+            }
+
+            return (
+                <div className="min-h-screen flex flex-col">
+                    {/* Navbar */}
+                    <nav className="border-b border-slate-700 bg-slate-900 p-4 flex justify-between items-center shadow-lg z-10">
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-3xl shadow-lg shadow-purple-500/50">
+                                <i className="fa-solid fa-shield-cat"></i>
+                            </div>
+                            <div>
+                                <h1 className="text-xl font-bold tracking-wider">FED-X <span className="text-purple-400">ADMIN</span></h1>
+                                <p className="text-xs text-slate-400">Network Orchestrator</p>
+                            </div>
+
+                            {/* Status Badge */}
+                            <div className={`ml-4 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-2 border transition-all ${isTraining
+                                ? 'bg-green-900/30 text-green-400 border-green-500/50 shadow-[0_0_10px_rgba(34,197,94,0.3)]'
+                                : 'bg-slate-800 text-slate-500 border-slate-700'
+                                }`}>
+                                <div className={`w-2 h-2 rounded-full ${isTraining ? 'bg-green-500 animate-pulse' : 'bg-slate-500'}`}></div>
+                                {isTraining ? 'TRAINING IN PROGRESS' : 'SYSTEM IDLE'}
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="flex bg-slate-800 rounded-lg p-1">
+                                <button
+                                    onClick={() => setActiveTab('network')}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'network' ? 'bg-blue-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    <i className="fa-solid fa-network-wired mr-2"></i>Ops
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab('doctor')}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'doctor' ? 'bg-blue-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    <i className="fa-solid fa-microscope mr-2"></i>Lab
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab('versions')}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${activeTab === 'versions' ? 'bg-blue-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
+                                >
+                                    <i className="fa-solid fa-code-branch mr-2"></i>Versions
+                                </button>
+                            </div>
+                            <button
+                                onClick={() => setIsLoggedIn(false)}
+                                className="px-3 py-2 rounded-md text-sm font-medium bg-red-900/20 text-red-400 hover:bg-red-900/40 border border-red-900/50 transition-all"
+                            >
+                                <i className="fa-solid fa-sign-out-alt"></i>
+                            </button>
+                        </div>
+                    </nav>
+
+                    {/* Main Content */}
+                    <main className="flex-1 p-6 relative overflow-hidden">
+                        {/* Background Decor */}
+                        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+                            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-500 rounded-full blur-3xl"></div>
+                        </div>
+
+                        {activeTab === 'network' ? (
+                            <div className="max-w-7xl mx-auto space-y-6 relative z-10">
+
+                                {/* Training Statistics Banner */}
+                                {metrics.length > 0 && (
+                                    <div className="glass-panel rounded-2xl p-4 animation-fade-in">
+                                        <div className="grid grid-cols-5 gap-4">
+                                            {/* Progress */}
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-12 h-12 rounded-full bg-blue-900/50 flex items-center justify-center">
+                                                    <i className="fa-solid fa-chart-line text-blue-400 text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-xs text-slate-400">Progress</div>
+                                                    <div className="text-lg font-bold text-white">
+                                                        {metrics[metrics.length - 1].progress_percentage?.toFixed(0) || 0}%
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Elapsed Time */}
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-12 h-12 rounded-full bg-purple-900/50 flex items-center justify-center">
+                                                    <i className="fa-solid fa-clock text-purple-400 text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-xs text-slate-400">Elapsed</div>
+                                                    <div className="text-lg font-bold text-white">
+                                                        {metrics[metrics.length - 1].elapsed_minutes?.toFixed(1) || 0}m
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* ETA */}
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-12 h-12 rounded-full bg-green-900/50 flex items-center justify-center">
+                                                    <i className="fa-solid fa-hourglass-half text-green-400 text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-xs text-slate-400">ETA</div>
+                                                    <div className="text-lg font-bold text-white">
+                                                        {metrics[metrics.length - 1].eta_minutes?.toFixed(1) || 0}m
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Training Speed */}
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-12 h-12 rounded-full bg-orange-900/50 flex items-center justify-center">
+                                                    <i className="fa-solid fa-gauge-high text-orange-400 text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-xs text-slate-400">Speed</div>
+                                                    <div className="text-lg font-bold text-white">
+                                                        {metrics[metrics.length - 1].training_speed?.toFixed(2) || 0}
+                                                    </div>
+                                                    <div className="text-xs text-slate-500">rounds/min</div>
+                                                </div>
+                                            </div>
+
+                                            {/* Current Round */}
+                                            <div className="flex items-center gap-3">
+                                                <div className="w-12 h-12 rounded-full bg-cyan-900/50 flex items-center justify-center">
+                                                    <i className="fa-solid fa-rotate text-cyan-400 text-xl"></i>
+                                                </div>
+                                                <div>
+                                                    <div className="text-xs text-slate-400">Round</div>
+                                                    <div className="text-lg font-bold text-white">
+                                                        {metrics.length} / 25
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Progress Bar */}
+                                        <div className="mt-4">
+                                            <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
+                                                <div
+                                                    className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500"
+                                                    style={{ width: `${metrics[metrics.length - 1].progress_percentage || 0}%` }}
+                                                ></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Top Row: Visualizer + Controls */}
+                                <div className="grid grid-cols-12 gap-6">
+                                    {/* Visualizer Panel */}
+                                    <div className="col-span-12 lg:col-span-7 glass-panel rounded-2xl p-6 h-[500px] relative flex flex-col">
+                                        <div className="flex justify-between items-center mb-6">
+                                            <h2 className="text-lg font-semibold flex items-center">
+                                                <span className={`w-3 h-3 rounded-full mr-2 ${isTraining ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}></span>
+                                                Real-Time Network Topology
+                                            </h2>
+                                            <div className="text-xs text-slate-400 font-mono">
+                                                ENCRYPTION: AES-256 <span className="mx-2">|</span> PRIVACY: ε={metrics.length > 0 && metrics[metrics.length - 1].privacy_epsilon ? metrics[metrics.length - 1].privacy_epsilon.toFixed(1) : '4.2'}
+                                            </div>
+                                        </div>
+
+                                        <div className="flex-1 relative border border-slate-700/50 rounded-xl bg-slate-900/50 overflow-hidden">
+                                            {/* Server Node */}
+                                            <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20">
+                                                <div className={`w-16 h-16 rounded-full bg-slate-800 border-2 border-blue-500 flex items-center justify-center text-2xl shadow-[0_0_20px_rgba(59,130,246,0.3)] ${isTraining ? 'pulse-ring' : ''}`}>
+                                                    <i className="fa-solid fa-server text-blue-400"></i>
+                                                </div>
+                                                <span className="mt-2 text-sm font-bold text-blue-200 bg-slate-900/80 px-2 rounded">AGGREGATOR</span>
+                                            </div>
+
+                                            {/* Hospital A */}
+                                            <div className="absolute bottom-[20%] left-[20%] transform -translate-x-1/2 flex flex-col items-center z-20">
+                                                <div className="w-14 h-14 rounded-full bg-slate-800 border-2 border-green-500 flex items-center justify-center text-xl shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                                                    <i className="fa-solid fa-hospital text-green-400"></i>
+                                                </div>
+                                                <span className="mt-2 text-xs text-slate-300">Client A (Boston)</span>
+                                            </div>
+
+                                            {/* Hospital B */}
+                                            <div className="absolute bottom-[20%] left-[80%] transform -translate-x-1/2 flex flex-col items-center z-20">
+                                                <div className="w-14 h-14 rounded-full bg-slate-800 border-2 border-green-500 flex items-center justify-center text-xl shadow-[0_0_20px_rgba(34,197,94,0.3)]">
+                                                    <i className="fa-solid fa-hospital text-green-400"></i>
+                                                </div>
+                                                <span className="mt-2 text-xs text-slate-300">Client B (London)</span>
+                                            </div>
+
+                                            <svg className="absolute top-0 left-0 w-full h-full pointer-events-none stroke-slate-700" strokeWidth="2">
+                                                <line x1="50%" y1="20%" x2="20%" y2="60%" strokeDasharray="5,5" />
+                                                <line x1="50%" y1="20%" x2="80%" y2="60%" strokeDasharray="5,5" />
+                                            </svg>
+
+                                            {isTraining && (
+                                                <>
+                                                    <div className="packet packet-down-a"></div>
+                                                    <div className="packet packet-down-b"></div>
+                                                    <div className="packet packet-up-a"></div>
+                                                    <div className="packet packet-up-b"></div>
+                                                </>
+                                            )}
+                                        </div>
+                                    </div>
+
+                                    {/* Controls & Live Graph */}
+                                    <div className="col-span-12 lg:col-span-5 flex flex-col gap-6">
+                                        {/* Action Card */}
+                                        <div className="glass-panel p-6 rounded-2xl">
+                                            <h3 className="text-sm uppercase text-slate-400 font-bold mb-4">Protocol Controls</h3>
+                                            <div className="flex gap-4">
+                                                {!isTraining ? (
+                                                    <button onClick={startProtocol} className="flex-1 bg-green-600 hover:bg-green-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-900/20 transition-all active:scale-95 flex items-center justify-center gap-2">
+                                                        <i className="fa-solid fa-rocket"></i> INITIALIZE NETWORK
+                                                    </button>
+                                                ) : (
+                                                    <button onClick={stopProtocol} className="flex-1 bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-red-900/20 transition-all active:scale-95 flex items-center justify-center gap-2">
+                                                        <i className="fa-solid fa-power-off"></i> TERMINATE
+                                                    </button>
+                                                )}
+                                            </div>
+                                        </div>
+
+                                        {/* Live Graph */}
+                                        <div className="glass-panel p-6 rounded-2xl flex-1 flex flex-col">
+                                            <div className="flex justify-between items-end mb-4">
+                                                <div>
+                                                    <h3 className="text-sm uppercase text-slate-400 font-bold">Global Accuracy</h3>
+                                                    <div className="text-3xl font-mono font-bold text-white mt-1">
+                                                        {metrics.length > 0 ? (metrics[metrics.length - 1].accuracy * 100).toFixed(2) : "0.00"}%
+                                                    </div>
+                                                </div>
+                                                <div className="text-right">
+                                                    <div className="text-sm text-slate-400">Current Round</div>
+                                                    <div className="text-xl font-bold text-blue-400">{metrics.length} / 25</div>
+                                                </div>
+                                            </div>
+
+                                            <div className="flex-1 w-full h-40">
+                                                <ResponsiveContainer width="100%" height="100%">
+                                                    <AreaChart data={metrics}>
+                                                        <defs>
+                                                            <linearGradient id="colorAcc" x1="0" y1="0" x2="0" y2="1">
+                                                                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.5} />
+                                                                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
+                                                            </linearGradient>
+                                                        </defs>
+                                                        <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
+                                                        <XAxis dataKey="round" stroke="#94a3b8" />
+                                                        <YAxis domain={[0, 1]} stroke="#94a3b8" />
+                                                        <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px' }} />
+                                                        <Area type="monotone" dataKey="accuracy" stroke="#3b82f6" fillOpacity={1} fill="url(#colorAcc)" />
+                                                    </AreaChart>
+                                                </ResponsiveContainer>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Bottom Row: Privacy + Fairness */}
+                                <div className="grid grid-cols-12 gap-6">
+                                    {/* Privacy Budget Panel */}
+                                    <div className="col-span-12 lg:col-span-6 glass-panel p-6 rounded-2xl">
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <i className="fa-solid fa-shield-halved text-purple-400 text-xl"></i>
+                                            <h3 className="text-sm uppercase text-slate-400 font-bold">Differential Privacy Tracker</h3>
+                                        </div>
+
+                                        {metrics.length > 0 && metrics[metrics.length - 1].privacy_epsilon ? (
+                                            <div className="space-y-4">
+                                                <div className="bg-slate-800/50 rounded-lg p-4">
+                                                    <div className="flex justify-between items-center mb-2">
+                                                        <span className="text-slate-400 text-sm">Differential Privacy Metric (ε)</span>
+                                                        <span className={`px-2 py-1 rounded text-xs font-bold ${metrics[metrics.length - 1].privacy_risk === 'LOW' ? 'bg-green-900/50 text-green-400' :
+                                                            metrics[metrics.length - 1].privacy_risk === 'MEDIUM' ? 'bg-yellow-900/50 text-yellow-400' :
+                                                                'bg-red-900/50 text-red-400'
+                                                            }`}>
+                                                            {metrics[metrics.length - 1].privacy_risk} RISK
+                                                        </span>
+                                                    </div>
+                                                    <div className="text-3xl font-mono font-bold text-purple-400">
+                                                        ε = {metrics[metrics.length - 1].privacy_epsilon.toFixed(2)}
+                                                    </div>
+                                                    <div className="text-xs text-slate-500 mt-1">
+                                                        δ = {metrics[metrics.length - 1].privacy_delta.toExponential(1)}
+                                                    </div>
+                                                </div>
+
+                                                <div className="space-y-3">
+                                                    <div className="flex justify-between text-xs text-slate-400">
+                                                        <span>Differential Privacy Applied</span>
+                                                        <span>
+                                                            {Math.min(100, (metrics[metrics.length - 1].privacy_epsilon / 10) * 100).toFixed(0)}%
+                                                        </span>
+                                                    </div>
+
+                                                    <div className="h-3 bg-slate-700 rounded-full overflow-hidden">
+                                                        <div
+                                                            className={`h-full transition-all duration-500 ${metrics[metrics.length - 1].privacy_risk === 'LOW'
+                                                                ? 'bg-green-500'
+                                                                : metrics[metrics.length - 1].privacy_risk === 'MEDIUM'
+                                                                    ? 'bg-yellow-500'
+                                                                    : 'bg-red-500'
+                                                                }`}
+                                                            style={{
+                                                                width: `${Math.min(
+                                                                    100,
+                                                                    (metrics[metrics.length - 1].privacy_epsilon / 10) * 100
+                                                                )}%`
+                                                            }}
+                                                        ></div>
+                                                    </div>
+
+                                                    <p className="text-xs text-slate-400 leading-relaxed">
+                                                        🔒 <strong>Patient Privacy Status:</strong>
+                                                        The model uses <span className="text-purple-400 font-medium">differential privacy</span> to ensure that
+                                                        individual patient records <strong>cannot be identified or reconstructed</strong>.
+                                                        Lower ε values indicate stronger privacy protection.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        ) : (
+                                            <div className="text-center text-slate-500 py-8">
+                                                <i className="fa-solid fa-shield text-3xl mb-2"></i>
+                                                <p className="text-sm">Start training to track privacy budget</p>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Fairness Analysis Panel */}
+                                    <div className="col-span-12 lg:col-span-6 glass-panel p-6 rounded-2xl">
+                                        <div className="flex items-center gap-2 mb-4">
+                                            <i className="fa-solid fa-scale-balanced text-green-400 text-xl"></i>
+                                            <h3 className="text-sm uppercase text-slate-400 font-bold">Fairness & Bias Analysis</h3>
+                                        </div>
+
+                                        {metrics.length > 0 && metrics[metrics.length - 1].fairness_score !== undefined ? (
+                                            <div className="space-y-4">
+                                                <div className="grid grid-cols-3 gap-3">
+                                                    {/* Hospital A Performance */}
+                                                    <div className="bg-slate-800/50 rounded-lg p-3">
+                                                        <div className="flex items-center gap-1 mb-1">
+                                                            <i className="fa-solid fa-hospital text-blue-400 text-xs"></i>
+                                                            <span className="text-xs text-slate-400">Hospital A</span>
+                                                        </div>
+                                                        <div className="text-xl font-bold text-blue-400">
+                                                            {(metrics[metrics.length - 1].hospital_a_accuracy * 100).toFixed(1)}%
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Hospital B Performance */}
+                                                    <div className="bg-slate-800/50 rounded-lg p-3">
+                                                        <div className="flex items-center gap-1 mb-1">
+                                                            <i className="fa-solid fa-hospital text-purple-400 text-xs"></i>
+                                                            <span className="text-xs text-slate-400">Hospital B</span>
+                                                        </div>
+                                                        <div className="text-xl font-bold text-purple-400">
+                                                            {(metrics[metrics.length - 1].hospital_b_accuracy * 100).toFixed(1)}%
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Fairness Score */}
+                                                    <div className="bg-slate-800/50 rounded-lg p-3">
+                                                        <div className="flex items-center gap-1 mb-1">
+                                                            <i className="fa-solid fa-balance-scale text-green-400 text-xs"></i>
+                                                            <span className="text-xs text-slate-400">Fairness</span>
+                                                        </div>
+                                                        <div className={`text-xl font-bold ${metrics[metrics.length - 1].fairness_score > 0.95 ? 'text-green-400' :
+                                                            metrics[metrics.length - 1].fairness_score > 0.90 ? 'text-yellow-400' :
+                                                                'text-red-400'
+                                                            }`}>
+                                                            {(metrics[metrics.length - 1].fairness_score * 100).toFixed(1)}%
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div className="bg-slate-800/30 rounded-lg p-3 border-l-4 border-green-500">
+                                                    <p className="text-xs text-slate-400">
+                                                        <i className="fa-solid fa-info-circle mr-1"></i>
+                                                        <strong>Fairness Score:</strong> Measures equal performance across hospitals.
+                                                        Gap: {(metrics[metrics.length - 1].fairness_gap * 100).toFixed(2)}%
+                                                        {metrics[metrics.length - 1].fairness_score > 0.95 ?
+                                                            " ✅ No significant bias detected." :
+                                                            " ⚠️ Performance gap detected."}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <div className="text-center text-slate-500 py-8">
+                                                <i className="fa-solid fa-chart-bar text-3xl mb-2"></i>
+                                                <p className="text-sm">Fairness metrics will appear after training starts</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>
+                        ) : activeTab === 'doctor' ? (
+                            <div className="max-w-6xl mx-auto glass-panel rounded-2xl p-8 relative z-10">
+                                <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                                    <i className="fa-solid fa-microscope text-blue-400"></i> AI Diagnostics Lab
+                                </h2>
+
+                                <div className="grid grid-cols-2 gap-8">
+                                    {/* Upload Section */}
+                                    <div className="border-2 border-dashed border-slate-600 rounded-xl p-8 text-center hover:border-blue-500 transition-colors bg-slate-800/50">
+                                        <input
+                                            type="file"
+                                            id="fileInput"
+                                            className="hidden"
+                                            accept="image/*"
+                                            onChange={handleFileSelect}
+                                        />
+                                        <label htmlFor="fileInput" className="cursor-pointer flex flex-col items-center gap-4">
+                                            {preview ? (
+                                                <img src={preview} alt="Preview" className="max-h-64 rounded-lg shadow-lg" />
+                                            ) : (
+                                                <>
+                                                    <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center text-2xl">
+                                                        <i className="fa-solid fa-cloud-arrow-up text-slate-400"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p className="font-medium text-slate-300">Click to upload X-Ray</p>
+                                                        <p className="text-sm text-slate-500 mt-1">Supports PNG, JPG (DICOM sim)</p>
+                                                    </div>
+                                                </>
+                                            )}
+                                        </label>
+                                    </div>
+
+                                    {/* Results Section */}
+                                    <div className="flex flex-col justify-center">
+                                        {!preview ? (
+                                            <div className="text-center text-slate-500">
+                                                <i className="fa-solid fa-arrow-left mr-2"></i> Upload scan to begin analysis
+                                            </div>
+                                        ) : (
+                                            <div className="space-y-6">
+                                                {!prediction ? (
+                                                    <>
+                                                        <button
+                                                            onClick={runDiagnosis}
+                                                            disabled={loadingPred}
+                                                            className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 text-white font-bold py-3 rounded-lg transition-all"
+                                                        >
+                                                            {loadingPred ? <i className="fa-solid fa-circle-notch fa-spin"></i> : "RUN ANALYSIS"}
+                                                        </button>
+                                                        <button
+                                                            onClick={resetUpload}
+                                                            className="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 rounded-lg transition-all"
+                                                        >
+                                                            CANCEL
+                                                        </button>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <div className="bg-slate-800 rounded-xl p-6 border border-slate-700 animation-fade-in">
+                                                            <div className="flex justify-between items-start mb-4">
+                                                                <div>
+                                                                    <p className="text-sm text-slate-400 uppercase font-bold">Prediction</p>
+                                                                    <h3 className={`text-3xl font-bold ${prediction.prediction === 'PNEUMONIA' ? 'text-red-400' : 'text-green-400'}`}>
+                                                                        {prediction.prediction}
+                                                                    </h3>
+                                                                </div>
+                                                                <div className="text-right">
+                                                                    <p className="text-sm text-slate-400 uppercase font-bold">Confidence</p>
+                                                                    <p className="text-2xl font-mono">{prediction.confidence.toFixed(1)}%</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div className="space-y-3">
+                                                                <div className="flex justify-between text-xs text-slate-400">
+                                                                    <span>Normal</span>
+                                                                    <span>Pneumonia</span>
+                                                                </div>
+                                                                <div className="h-4 bg-slate-700 rounded-full overflow-hidden flex relative">
+                                                                    <div
+                                                                        className="h-full bg-green-500 transition-all duration-1000"
+                                                                        style={{ width: `${prediction.probabilities.normal}%` }}
+                                                                    ></div>
+                                                                    <div
+                                                                        className="h-full bg-red-500 transition-all duration-1000"
+                                                                        style={{ width: `${prediction.probabilities.pneumonia}%` }}
+                                                                    ></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        {heatmapUrl && (
+                                                            <button
+                                                                onClick={() => setShowExplanation(!showExplanation)}
+                                                                className="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2"
+                                                            >
+                                                                <i className="fa-solid fa-brain"></i>
+                                                                {showExplanation ? 'HIDE' : 'SHOW'} AI EXPLANATION
+                                                            </button>
+                                                        )}
+
+                                                        <button
+                                                            onClick={resetUpload}
+                                                            className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2"
+                                                        >
+                                                            <i className="fa-solid fa-cloud-arrow-up"></i> UPLOAD ANOTHER IMAGE
+                                                        </button>
+                                                    </>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                {showExplanation && heatmapUrl && (
+                                    <div className="mt-8 glass-panel rounded-xl p-6 animation-fade-in">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <i className="fa-solid fa-fire text-orange-400 text-xl"></i>
+                                            <h3 className="text-lg font-bold">Explainable AI (Grad-CAM Heatmap)</h3>
+                                        </div>
+                                        <p className="text-sm text-slate-400 mb-4">
+                                            Red/yellow areas show where the AI model focused to make its decision.
+                                            Hotter colors indicate higher importance.
+                                        </p>
+                                        <div className="flex justify-center">
+                                            <img
+                                                src={heatmapUrl}
+                                                alt="Grad-CAM Heatmap"
+                                                className="max-w-md rounded-lg shadow-2xl border-2 border-orange-500/30"
+                                            />
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        ) : (
+                            <div className="max-w-6xl mx-auto relative z-10">
+                                <div className="glass-panel rounded-2xl p-8">
+                                    <div className="flex justify-between items-center mb-6">
+                                        <div>
+                                            <h2 className="text-2xl font-bold flex items-center gap-3">
+                                                <i className="fa-solid fa-code-branch text-purple-400"></i> Model Version Control
+                                            </h2>
+                                            <p className="text-sm text-slate-400 mt-1">Manage, compare, and rollback model versions</p>
+                                        </div>
+                                        <button
+                                            onClick={fetchVersions}
+                                            disabled={loadingVersions}
+                                            className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-all flex items-center gap-2"
+                                        >
+                                            <i className={`fa-solid fa-sync ${loadingVersions ? 'fa-spin' : ''}`}></i>
+                                            Refresh
+                                        </button>
+                                    </div>
+
+                                    {versions.length === 0 ? (
+                                        <div className="text-center py-16 text-slate-500">
+                                            <i className="fa-solid fa-box-open text-5xl mb-4"></i>
+                                            <p className="text-lg">No model versions available yet</p>
+                                            <p className="text-sm mt-2">Start training to create version checkpoints</p>
+                                        </div>
+                                    ) : (
+                                        <div className="space-y-3">
+                                            {versions.map((v) => (
+                                                <div key={v.version} className="bg-slate-800/50 rounded-xl p-4 border border-slate-700 hover:border-blue-500 transition-all">
+                                                    <div className="flex items-center justify-between">
+                                                        <div className="flex items-center gap-4">
+                                                            <div className="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center">
+                                                                <span className="text-xl font-bold text-blue-400">v{v.version}</span>
+                                                            </div>
+                                                            <div>
+                                                                <h3 className="font-semibold text-white">Model Version {v.version}</h3>
+                                                                <p className="text-xs text-slate-400">Round {v.version} • {new Date(v.timestamp).toLocaleString()}</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="flex items-center gap-6">
+                                                            {/* Metrics */}
+                                                            <div className="flex gap-4 text-sm">
+                                                                <div className="text-center">
+                                                                    <div className="text-xs text-slate-400">Accuracy</div>
+                                                                    <div className="font-bold text-green-400">{(v.accuracy * 100).toFixed(1)}%</div>
+                                                                </div>
+                                                                <div className="text-center">
+                                                                    <div className="text-xs text-slate-400">Privacy ε</div>
+                                                                    <div className="font-bold text-purple-400">{v.privacy_epsilon.toFixed(2)}</div>
+                                                                </div>
+                                                                <div className="text-center">
+                                                                    <div className="text-xs text-slate-400">Fairness</div>
+                                                                    <div className="font-bold text-blue-400">{(v.fairness_score * 100).toFixed(1)}%</div>
+                                                                </div>
+                                                                <div className="text-center">
+                                                                    <div className="text-xs text-slate-400">Size</div>
+                                                                    <div className="font-bold text-slate-300">{v.size_mb} MB</div>
+                                                                </div>
+                                                            </div>
+
+                                                            {/* Actions */}
+                                                            <div className="flex gap-2">
+                                                                <button
+                                                                    onClick={() => rollbackToVersion(v.version)}
+                                                                    className="bg-yellow-600 hover:bg-yellow-500 text-white px-3 py-2 rounded-lg text-sm transition-all flex items-center gap-2"
+                                                                    title="Rollback to this version"
+                                                                >
+                                                                    <i className="fa-solid fa-rotate-left"></i>
+                                                                    Rollback
+                                                                </button>
+                                                                <button
+                                                                    onClick={() => downloadVersion(v.version)}
+                                                                    className="bg-green-600 hover:bg-green-500 text-white px-3 py-2 rounded-lg text-sm transition-all flex items-center gap-2"
+                                                                    title="Download this version"
+                                                                >
+                                                                    <i className="fa-solid fa-download"></i>
+                                                                    Download
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+
+                        )}
+                    </main>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

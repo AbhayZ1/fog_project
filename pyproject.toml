@@ -1,0 +1,32 @@
+[project]
+name = "federated-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.123.5",
+    "flwr>=1.23.0",
+    "grad-cam>=1.5.5",
+    "markupsafe==3.0.2",
+    "matplotlib>=3.10.7",
+    "medmnist>=3.0.2",
+    "numpy==2.3.5",
+    "opacus>=1.5.4",
+    "opencv-python>=4.11.0.86",
+    "pillow>=12.0.0",
+    "python-multipart>=0.0.20",
+    "shutils>=0.1.0",
+    "torch>=2.9.1",
+    "torchaudio>=2.9.1",
+    "torchvision>=0.24.1",
+    "tqdm>=4.67.1",
+    "uvicorn>=0.38.0",
+    "websockets>=15.0.1",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu124"

@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Network Animation Keyframes */
+@keyframes flow-server-a {
+    0% {
+        left: 50%;
+        top: 20%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 20%;
+        top: 60%;
+        opacity: 0;
+    }
+}
+
+@keyframes flow-server-b {
+    0% {
+        left: 50%;
+        top: 20%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 80%;
+        top: 60%;
+        opacity: 0;
+    }
+}
+
+@keyframes flow-a-server {
+    0% {
+        left: 20%;
+        top: 60%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 50%;
+        top: 20%;
+        opacity: 0;
+    }
+}
+
+@keyframes flow-b-server {
+    0% {
+        left: 80%;
+        top: 60%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 50%;
+        top: 20%;
+        opacity: 0;
+    }
+}
+
+.packet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+.packet-down-a {
+    animation: flow-server-a 1.5s infinite linear;
+}
+
+.packet-down-b {
+    animation: flow-server-b 1.5s infinite linear;
+}
+
+.packet-up-a {
+    animation: flow-a-server 1.5s infinite linear;
+    animation-delay: 0.75s;
+    background: #3b82f6;
+    box-shadow: 0 0 10px #3b82f6;
+}
+
+.packet-up-b {
+    animation: flow-b-server 1.5s infinite linear;
+    animation-delay: 0.75s;
+    background: #3b82f6;
+    box-shadow: 0 0 10px #3b82f6;
+}
+
+.glass-panel {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pulse-ring {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animation-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
