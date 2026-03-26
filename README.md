@@ -1,123 +1,110 @@
-# 🚀 Fed-X: Privacy-Preserving Federated Learning System for Medical Imaging
+# 🚀 Fed-X: Federated Learning System for Medical Imaging
 
-## 📌 Overview
+## 📌 What this project does
 
-Fed-X is a **production-style federated learning system** designed for medical image classification (Pneumonia detection) with:
+Fed-X is a **distributed AI system** that trains a pneumonia detection model across multiple hospitals **without sharing raw data**.
 
-* 🔐 Privacy-preserving training (Opacus)
-* 🧠 Deep Learning (CNN - PyTorch)
-* 🌐 Distributed clients (Hospitals A & B)
-* 📊 Real-time monitoring dashboard
-* 🔍 Explainable AI (Grad-CAM heatmaps)
-* 🔄 Model versioning & rollback
+It includes:
 
----
-
-## 🏗️ Architecture
-
-```
-                ┌────────────────────────┐
-                │     Admin Dashboard    │
-                │   (FastAPI + Frontend) │
-                └──────────┬─────────────┘
-                           │
-                    REST + WebSocket
-                           │
-                ┌──────────▼──────────┐
-                │   Central Server    │
-                │  (Flower + FastAPI) │
-                └──────────┬──────────┘
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                                     │
-┌───────▼────────┐                  ┌─────────▼───────┐
-│  Hospital A     │                  │  Hospital B     │
-│  (Client Node)  │                  │  (Client Node)  │
-└─────────────────┘                  └─────────────────┘
-```
+* Federated learning (Flower)
+* Differential privacy (Opacus)
+* Real-time monitoring dashboard
+* Explainable AI (Grad-CAM heatmaps)
+* Model versioning + rollback
 
 ---
 
-## 📂 Project Structure
+## 🧠 How the system works
+
+1. Central server coordinates training
+2. Multiple clients (Hospitals A & B) train locally
+3. Model updates are aggregated (not raw data)
+4. Dashboard shows live metrics
+
+---
+
+## 🏗️ Project Structure
 
 ```
 .
-├── api.py                     # Main FastAPI backend (orchestrator)
-├── architecture.py           # CNN model definition
-├── heatmap_generator.py      # Grad-CAM explainability
-├── docker-compose.yml        # Multi-container setup
-├── run_demo.py               # Local system launcher
+├── api.py                     # Main backend (FastAPI orchestrator)
+├── run_demo.py                # One-command local launcher
+├── architecture.py            # CNN model
+├── heatmap_generator.py       # Explainability (Grad-CAM)
 │
-├── Central_Server/           # Federated server
-│   ├── server.py             # Flower server logic
-│   ├── model_registry/       # Versioned models
-│   └── frontend/             # Admin dashboard
-│
-├── Client/                   # Client node
-│   ├── client.py             # Training logic
-│   ├── ui.py                 # Local UI
-│   └── frontend/             # Client dashboard
-│
-├── demo/                     # Simulated hospitals
-│   ├── Hospital_A/
-│   └── Hospital_B/
-│
-├── frontend/                 # Vite frontend (main UI)
-│   ├── src/
-│   └── dist/                 # Production build
-│
-└── dataset/                  # Generated dataset (after setup)
+├── Central_Server/            # Federated server (Flower)
+├── Client/                    # Client training nodes
+├── demo/                      # Simulated hospital datasets
+├── frontend/                  # Web dashboard (Vite)
+└── dataset/                   # Generated dataset (after setup)
 ```
 
 ---
 
-## ⚙️ Features
+## ⚙️ Prerequisites
 
-### 🧠 Federated Learning
-
-* Flower-based distributed training
-* Multiple client nodes (Hospitals)
-* Non-IID data distribution
-
-### 🔐 Privacy
-
-* Differential Privacy using Opacus
-* Epsilon tracking per round
-
-### 📊 Monitoring Dashboard
-
-* Real-time training metrics
-* Accuracy, F1, fairness, privacy
-* WebSocket-based live updates
-
-### 🔍 Explainable AI
-
-* Grad-CAM heatmaps
-* Visual explanation of predictions
-
-### 🔄 Model Management
-
-* Versioning after each round
-* Rollback to previous models
-* Download checkpoints
+* Python 3.11+
+* Git
+* (Optional) Docker
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start (Local Setup)
 
-### 1. Install dependencies
+### 1. Clone repo
 
 ```bash
+git clone https://github.com/AbhayZ1/fog_project.git
+cd fog_project
+```
+
+---
+
+### 2. Install dependencies (IMPORTANT: uses `uv`)
+
+```bash
+pip install uv
 uv sync
 ```
 
-### 2. Run system (local)
+---
+
+### 3. Download & prepare dataset
+
+Run:
+
+```bash
+python setup_project.py
+```
+
+This will:
+
+* Download PneumoniaMNIST
+* Split into Hospital A & B
+* Store in `dataset/`
+
+---
+
+### 4. Build frontend (only once)
+
+```bash
+cd frontend
+npm install
+npm run build
+cd ..
+```
+
+---
+
+### 5. Start the system
 
 ```bash
 python run_demo.py
 ```
 
-### 3. Open dashboard
+---
+
+### 6. Open dashboard
 
 ```
 http://localhost:8000
@@ -125,7 +112,31 @@ http://localhost:8000
 
 ---
 
-## 🐳 Run with Docker
+## 🎯 What you can do in the UI
+
+* Start/stop federated training
+* Monitor accuracy, fairness, privacy
+* Upload X-ray image → get prediction
+* View Grad-CAM heatmap
+* Rollback model versions
+
+---
+
+## 🔌 Key API Endpoints
+
+| Endpoint                     | Purpose              |
+| ---------------------------- | -------------------- |
+| `/train/start`               | Start training       |
+| `/train/stop`                | Stop training        |
+| `/metrics`                   | Get training metrics |
+| `/predict`                   | Image prediction     |
+| `/predict/explain`           | Prediction + heatmap |
+| `/models/versions`           | List versions        |
+| `/models/rollback/{version}` | Rollback             |
+
+---
+
+## 🐳 Docker Setup (Optional)
 
 ```bash
 docker-compose up --build
@@ -133,44 +144,93 @@ docker-compose up --build
 
 ---
 
-## 🔌 API Endpoints
+## ⚠️ Common Issues
 
-| Endpoint                     | Description                 |
-| ---------------------------- | --------------------------- |
-| `/train/start`               | Start federated training    |
-| `/train/stop`                | Stop training               |
-| `/metrics`                   | Get training metrics        |
-| `/predict`                   | Upload image for prediction |
-| `/predict/explain`           | Prediction + heatmap        |
-| `/models/versions`           | List model versions         |
-| `/models/rollback/{version}` | Rollback model              |
+### 1. Port mismatch
+
+Make sure backend runs on:
+
+```
+http://localhost:8000
+```
 
 ---
 
-## 📊 Dataset
+### 2. Frontend not loading
 
-* Based on **PneumoniaMNIST (MedMNIST)**
-* Split into:
+Run:
 
-  * Hospital A (80% Normal)
-  * Hospital B (80% Pneumonia)
-
----
-
-## ⚠️ Known Issues
-
-* Port inconsistencies (fix to single port recommended)
-* Frontend serving duplication (needs cleanup)
-* Hardcoded localhost in some configs
+```bash
+npm run build
+```
 
 ---
 
-## 🧠 Future Improvements
+### 3. Model not found error
 
-* Kubernetes deployment
-* Secure aggregation
-* Real hospital integration
-* Authentication system (JWT)
+You must:
+
+```
+1. Run training first
+OR
+2. Ensure model file exists
+```
+
+---
+
+### 4. Empty dashboard
+
+Training not started yet:
+
+```
+Click "Start Training"
+```
+
+---
+
+## 📊 Dataset Details
+
+* Source: MedMNIST (PneumoniaMNIST)
+* Non-IID split:
+
+  * Hospital A → mostly NORMAL
+  * Hospital B → mostly PNEUMONIA
+
+---
+
+## 🔐 Privacy
+
+* Uses Differential Privacy (Opacus)
+* Tracks epsilon per round
+
+---
+
+## 🔍 Explainability
+
+* Grad-CAM heatmaps
+* Highlights regions influencing prediction
+
+---
+
+## 🔄 Model Versioning
+
+* Model saved after each round
+* Can rollback to previous versions
+* Stored in:
+
+```
+Central_Server/model_registry/
+```
+
+---
+
+## 🧠 Tech Stack
+
+* Backend: FastAPI, Python
+* ML: PyTorch, Opacus
+* Federated Learning: Flower
+* Frontend: Vite, Vue
+* Explainability: Grad-CAM
 
 ---
 
@@ -182,4 +242,4 @@ Abhay Mahantesh Zalaki
 
 ## 📜 License
 
-MIT License
+MIT
