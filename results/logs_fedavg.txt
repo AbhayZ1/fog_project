@@ -1,0 +1,2919 @@
+=== RUN 2: FedAvg Baseline (FedAvg + DP) ===
+Started: 2026-04-14 20:27:16
+
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:27:21:WARNING:DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=25, no round_timeout
+04/14/2026 20:27:21:INFO:Starting Flower server, config: num_rounds=25, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (25 rounds), SSL is disabled
+04/14/2026 20:27:21:INFO:Flower ECE: gRPC server running (25 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+04/14/2026 20:27:21:INFO:[INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+04/14/2026 20:27:21:INFO:Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+04/14/2026 20:27:21:INFO:Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+04/14/2026 20:27:21:INFO:Evaluation returned no results (`None`)
+[92mINFO [0m:      
+04/14/2026 20:27:21:INFO:
+[92mINFO [0m:      [ROUND 1]
+04/14/2026 20:27:21:INFO:[ROUND 1]
+/home/abhay/Documents/fog_project/.venv/lib/python3.11/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:27:33:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:27:33:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+04/14/2026 20:27:33:DEBUG:ChannelConnectivity.IDLE
+04/14/2026 20:27:33:DEBUG:ChannelConnectivity.CONNECTING
+04/14/2026 20:27:33:DEBUG:ChannelConnectivity.READY
+/home/abhay/Documents/fog_project/.venv/lib/python3.11/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:27:38:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:27:38:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+04/14/2026 20:27:38:DEBUG:ChannelConnectivity.IDLE
+04/14/2026 20:27:38:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:27:38:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:27:38:INFO:
+[92mINFO [0m:      Received: train message 9c70bcfd-76e4-4419-b5cf-d387ef4aab4a
+04/14/2026 20:27:38:INFO:Received: train message 9c70bcfd-76e4-4419-b5cf-d387ef4aab4a
+[92mINFO [0m:      
+04/14/2026 20:27:38:INFO:
+[92mINFO [0m:      Received: train message 479a5d18-3294-457c-a51a-44e83d862620
+04/14/2026 20:27:38:INFO:Received: train message 479a5d18-3294-457c-a51a-44e83d862620
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:27:51:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:27:59:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:27:59:INFO:aggregate_fit: received 2 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+04/14/2026 20:27:59:WARNING:No fit_metrics_aggregation_fn provided
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:27:59:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:27:59:INFO:
+[92mINFO [0m:      Received: evaluate message 6dfd3c3f-fa9e-43f7-9625-2e50e37205c4
+04/14/2026 20:27:59:INFO:Received: evaluate message 6dfd3c3f-fa9e-43f7-9625-2e50e37205c4
+[92mINFO [0m:      
+04/14/2026 20:27:59:INFO:
+[92mINFO [0m:      Received: evaluate message c3d19f84-8d14-4665-992f-e8beb252449c
+04/14/2026 20:27:59:INFO:Received: evaluate message c3d19f84-8d14-4665-992f-e8beb252449c
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:00:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:01:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:28:01:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:28:01:INFO:
+[92mINFO [0m:      [ROUND 2]
+04/14/2026 20:28:01:INFO:[ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:28:01:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:28:01:INFO:
+[92mINFO [0m:      Received: train message 67b39360-99eb-4703-9241-7b430ffa3629
+04/14/2026 20:28:01:INFO:Received: train message 67b39360-99eb-4703-9241-7b430ffa3629
+[92mINFO [0m:      
+04/14/2026 20:28:01:INFO:
+[92mINFO [0m:      Received: train message d0eadff7-1ee1-44cf-a069-6b017d107713
+04/14/2026 20:28:01:INFO:Received: train message d0eadff7-1ee1-44cf-a069-6b017d107713
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:16:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:23:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:28:23:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:28:23:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:28:23:INFO:
+[92mINFO [0m:      Received: evaluate message 5543306c-3f3e-45ea-9aaf-ceb3031d64e4
+04/14/2026 20:28:23:INFO:Received: evaluate message 5543306c-3f3e-45ea-9aaf-ceb3031d64e4
+[92mINFO [0m:      
+04/14/2026 20:28:23:INFO:
+[92mINFO [0m:      Received: evaluate message ec6fb908-fb83-44fd-a1ca-7355f3c713ca
+04/14/2026 20:28:23:INFO:Received: evaluate message ec6fb908-fb83-44fd-a1ca-7355f3c713ca
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:24:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:24:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:28:24:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:28:24:INFO:
+[92mINFO [0m:      [ROUND 3]
+04/14/2026 20:28:24:INFO:[ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:28:24:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:28:24:INFO:
+[92mINFO [0m:      Received: train message 95786fd2-fc53-44c0-af6a-40898bf874f0
+04/14/2026 20:28:24:INFO:Received: train message 95786fd2-fc53-44c0-af6a-40898bf874f0
+[92mINFO [0m:      
+04/14/2026 20:28:24:INFO:
+[92mINFO [0m:      Received: train message dfb697fa-6b9c-4cb7-ad7a-74c4a5f8b3e8
+04/14/2026 20:28:24:INFO:Received: train message dfb697fa-6b9c-4cb7-ad7a-74c4a5f8b3e8
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:37:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:45:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:28:45:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:28:45:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:28:45:INFO:
+[92mINFO [0m:      Received: evaluate message 53eacc42-f569-4ffb-ae1e-35e82c7d8271
+04/14/2026 20:28:45:INFO:Received: evaluate message 53eacc42-f569-4ffb-ae1e-35e82c7d8271
+[92mINFO [0m:      
+04/14/2026 20:28:45:INFO:
+[92mINFO [0m:      Received: evaluate message 7241f21f-ebae-4836-b309-60c392547eb8
+04/14/2026 20:28:45:INFO:Received: evaluate message 7241f21f-ebae-4836-b309-60c392547eb8
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:46:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:28:46:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:28:46:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:28:46:INFO:
+[92mINFO [0m:      [ROUND 4]
+04/14/2026 20:28:46:INFO:[ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:28:46:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:28:46:INFO:
+[92mINFO [0m:      Received: train message a099d7ee-ea62-46e9-bdc0-7ff38def8768
+04/14/2026 20:28:46:INFO:Received: train message a099d7ee-ea62-46e9-bdc0-7ff38def8768
+[92mINFO [0m:      
+04/14/2026 20:28:46:INFO:
+[92mINFO [0m:      Received: train message 84f621f2-fc9f-4cd6-997f-be9a63caf8a2
+04/14/2026 20:28:46:INFO:Received: train message 84f621f2-fc9f-4cd6-997f-be9a63caf8a2
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:02:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:07:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:29:07:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:29:07:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:29:07:INFO:
+[92mINFO [0m:      Received: evaluate message 858423e0-83a5-4836-8d8d-855920615906
+04/14/2026 20:29:07:INFO:Received: evaluate message 858423e0-83a5-4836-8d8d-855920615906
+[92mINFO [0m:      
+04/14/2026 20:29:07:INFO:
+[92mINFO [0m:      Received: evaluate message fa953907-b233-4b89-b130-571a4783bfb9
+04/14/2026 20:29:07:INFO:Received: evaluate message fa953907-b233-4b89-b130-571a4783bfb9
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:09:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:09:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:29:09:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:29:09:INFO:
+[92mINFO [0m:      [ROUND 5]
+04/14/2026 20:29:09:INFO:[ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:29:09:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:29:09:INFO:
+[92mINFO [0m:      Received: train message f9435be0-2aa4-4747-87c1-40da94fee91b
+04/14/2026 20:29:09:INFO:Received: train message f9435be0-2aa4-4747-87c1-40da94fee91b
+[92mINFO [0m:      
+04/14/2026 20:29:09:INFO:
+[92mINFO [0m:      Received: train message f2b99c61-e5c4-4b28-9499-068be7690e71
+04/14/2026 20:29:09:INFO:Received: train message f2b99c61-e5c4-4b28-9499-068be7690e71
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:25:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:30:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:29:30:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:29:30:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:29:30:INFO:
+[92mINFO [0m:      Received: evaluate message 2b032809-d9e8-4661-bf21-d896193aa00e
+04/14/2026 20:29:30:INFO:Received: evaluate message 2b032809-d9e8-4661-bf21-d896193aa00e
+[92mINFO [0m:      
+04/14/2026 20:29:30:INFO:
+[92mINFO [0m:      Received: evaluate message 6e27ed2b-dd8f-4750-ad27-0e6351e01cc8
+04/14/2026 20:29:30:INFO:Received: evaluate message 6e27ed2b-dd8f-4750-ad27-0e6351e01cc8
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:31:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:31:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:29:31:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:29:31:INFO:
+[92mINFO [0m:      [ROUND 6]
+04/14/2026 20:29:31:INFO:[ROUND 6]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:29:31:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:29:31:INFO:
+[92mINFO [0m:      Received: train message 18a564e7-b2ab-4cab-b6e7-3e595337a279
+04/14/2026 20:29:31:INFO:Received: train message 18a564e7-b2ab-4cab-b6e7-3e595337a279
+[92mINFO [0m:      
+04/14/2026 20:29:31:INFO:
+[92mINFO [0m:      Received: train message c81a60e2-c53f-4319-8b37-8ed8e2df4bdf
+04/14/2026 20:29:31:INFO:Received: train message c81a60e2-c53f-4319-8b37-8ed8e2df4bdf
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:45:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:53:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:29:53:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:29:53:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:29:53:INFO:
+[92mINFO [0m:      Received: evaluate message 1d253c51-33c0-44cb-8721-9bd1cb23d86b
+04/14/2026 20:29:53:INFO:Received: evaluate message 1d253c51-33c0-44cb-8721-9bd1cb23d86b
+[92mINFO [0m:      
+04/14/2026 20:29:53:INFO:
+[92mINFO [0m:      Received: evaluate message 3e387759-4cd1-4d44-9317-44c67d060187
+04/14/2026 20:29:53:INFO:Received: evaluate message 3e387759-4cd1-4d44-9317-44c67d060187
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:53:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:29:54:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:29:54:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:29:54:INFO:
+[92mINFO [0m:      [ROUND 7]
+04/14/2026 20:29:54:INFO:[ROUND 7]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:29:54:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:29:54:INFO:
+[92mINFO [0m:      Received: train message 05ca6efc-c6d5-4da8-9a61-f7adf38aedc8
+04/14/2026 20:29:54:INFO:Received: train message 05ca6efc-c6d5-4da8-9a61-f7adf38aedc8
+[92mINFO [0m:      
+04/14/2026 20:29:54:INFO:
+[92mINFO [0m:      Received: train message 76a5f30c-8ce7-41f2-a04d-4aefcfe912da
+04/14/2026 20:29:54:INFO:Received: train message 76a5f30c-8ce7-41f2-a04d-4aefcfe912da
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:16:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:30:16:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:30:16:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:30:16:INFO:
+[92mINFO [0m:      Received: evaluate message 3d4826f1-8686-49b4-9fd3-f3d4b718728b
+04/14/2026 20:30:16:INFO:Received: evaluate message 3d4826f1-8686-49b4-9fd3-f3d4b718728b
+[92mINFO [0m:      
+04/14/2026 20:30:16:INFO:
+[92mINFO [0m:      Received: evaluate message f434d63a-76bf-46f4-98bc-fbbaa5b7fcce
+04/14/2026 20:30:16:INFO:Received: evaluate message f434d63a-76bf-46f4-98bc-fbbaa5b7fcce
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:17:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:18:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:30:18:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:30:18:INFO:
+[92mINFO [0m:      [ROUND 8]
+04/14/2026 20:30:18:INFO:[ROUND 8]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:30:18:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:30:18:INFO:
+[92mINFO [0m:      Received: train message 5dba747d-037d-48c3-90e5-24859273ea20
+04/14/2026 20:30:18:INFO:Received: train message 5dba747d-037d-48c3-90e5-24859273ea20
+[92mINFO [0m:      
+04/14/2026 20:30:18:INFO:
+[92mINFO [0m:      Received: train message 1c641495-cb4d-4872-a52c-6a786ae0fd86
+04/14/2026 20:30:18:INFO:Received: train message 1c641495-cb4d-4872-a52c-6a786ae0fd86
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:35:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:40:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:30:40:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:30:40:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:30:40:INFO:
+[92mINFO [0m:      Received: evaluate message 9e87d63c-77e7-4480-bc78-a0ddaea59bc2
+04/14/2026 20:30:40:INFO:Received: evaluate message 9e87d63c-77e7-4480-bc78-a0ddaea59bc2
+[92mINFO [0m:      
+04/14/2026 20:30:41:INFO:
+[92mINFO [0m:      Received: evaluate message d9e5066c-c121-4109-a7e9-8c1ceaa41120
+04/14/2026 20:30:41:INFO:Received: evaluate message d9e5066c-c121-4109-a7e9-8c1ceaa41120
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:42:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:42:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:30:42:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:30:42:INFO:
+[92mINFO [0m:      [ROUND 9]
+04/14/2026 20:30:42:INFO:[ROUND 9]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:30:42:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:30:42:INFO:
+[92mINFO [0m:      Received: train message 5b3d9a60-821b-4c2c-8153-106e9862852a
+04/14/2026 20:30:42:INFO:Received: train message 5b3d9a60-821b-4c2c-8153-106e9862852a
+[92mINFO [0m:      
+04/14/2026 20:30:42:INFO:
+[92mINFO [0m:      Received: train message d9594d36-b70f-47e9-bd60-fc81f9c948d2
+04/14/2026 20:30:42:INFO:Received: train message d9594d36-b70f-47e9-bd60-fc81f9c948d2
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:30:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:04:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:31:04:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:31:04:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:31:04:INFO:
+[92mINFO [0m:      Received: evaluate message 0775b8db-522a-472e-bc84-a4bc4885926b
+04/14/2026 20:31:04:INFO:Received: evaluate message 0775b8db-522a-472e-bc84-a4bc4885926b
+[92mINFO [0m:      
+04/14/2026 20:31:04:INFO:
+[92mINFO [0m:      Received: evaluate message 34f1137c-29dc-44a6-87c3-5d6596c90c2c
+04/14/2026 20:31:04:INFO:Received: evaluate message 34f1137c-29dc-44a6-87c3-5d6596c90c2c
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:06:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:06:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:31:06:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:31:06:INFO:
+[92mINFO [0m:      [ROUND 10]
+04/14/2026 20:31:06:INFO:[ROUND 10]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:31:06:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:31:06:INFO:
+[92mINFO [0m:      Received: train message e960921c-904c-4f64-91bc-0163eabb158e
+04/14/2026 20:31:06:INFO:Received: train message e960921c-904c-4f64-91bc-0163eabb158e
+[92mINFO [0m:      
+04/14/2026 20:31:06:INFO:
+[92mINFO [0m:      Received: train message 67fa0a4b-f32f-4f7f-8f11-f4466574af70
+04/14/2026 20:31:06:INFO:Received: train message 67fa0a4b-f32f-4f7f-8f11-f4466574af70
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:19:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:27:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:31:27:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:31:27:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:31:27:INFO:
+[92mINFO [0m:      Received: evaluate message 3e4da873-a3e8-4dcd-bba3-7f497848ee7b
+04/14/2026 20:31:27:INFO:Received: evaluate message 3e4da873-a3e8-4dcd-bba3-7f497848ee7b
+[92mINFO [0m:      
+04/14/2026 20:31:27:INFO:
+[92mINFO [0m:      Received: evaluate message 04279b11-31d9-4c67-b5c3-b408af064b7f
+04/14/2026 20:31:27:INFO:Received: evaluate message 04279b11-31d9-4c67-b5c3-b408af064b7f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:29:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:29:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:31:29:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:31:29:INFO:
+[92mINFO [0m:      [ROUND 11]
+04/14/2026 20:31:29:INFO:[ROUND 11]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:31:29:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:31:29:INFO:
+[92mINFO [0m:      Received: train message 97147f2a-e23c-4232-839c-9ebd29cf1a9c
+04/14/2026 20:31:29:INFO:Received: train message 97147f2a-e23c-4232-839c-9ebd29cf1a9c
+[92mINFO [0m:      
+04/14/2026 20:31:29:INFO:
+[92mINFO [0m:      Received: train message 04ba1e8d-342e-4e50-bba0-c7c83c36bc8f
+04/14/2026 20:31:29:INFO:Received: train message 04ba1e8d-342e-4e50-bba0-c7c83c36bc8f
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+
+======================================================================
+🏥 [FedAvg] CLIENT B (Hospital B) - DP Enabled
+======================================================================
+Privacy Budget: ε=2.0, δ=1e-05
+Noise Multiplier: 1.1
+======================================================================
+
+✅ Model fixed for Opacus (BatchNorm → GroupNorm)
+✅ DP enabled: ε=2.0, δ=1e-05
+
+🔌 Connecting to FL server at 127.0.0.1:8080...
+
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.4634
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.3470
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.3677
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.2661
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.4635
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.5751
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.8372
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.5092
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.6283
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.5865
+   [FedAvg Client B] Privacy spent: ε=0.58
+
+[FedAvg CLIENT B EVAL] ε=0.58 | Val: 0.9204 | Test: 0.8694 | F1: 0.8087
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.1954
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.3109
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.3152
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.4028
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.1292
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.4164
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.5636
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0013
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.2018
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.3785
+   [FedAvg Client B] Privacy spent: ε=0.76
+
+[FedAvg CLIENT B EVAL] ε=0.76 | Val: 0.9204 | Test: 0.8694 | F1: 0.8087
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.4694
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.2475
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.4343
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.7609
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.1429
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.1478
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.8817
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.5478
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.7999
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.3943
+   [FedAvg Client B] Privacy spent: ε=0.90
+
+[FedAvg CLIENT B EVAL] ε=0.90 | Val: 0.9204 | Test: 0.8694 | F1: 0.8087
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.1761
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.6975
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1392
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.7486
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.4506
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.0021
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.6906
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.3682
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.4970
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.4420
+   [FedAvg Client B] Privacy spent: ε=1.02
+
+[FedAvg CLIENT B EVAL] ε=1.02 | Val: 0.9204 | Test: 0.8694 | F1: 0.8087
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.4104
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.3732
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.3668
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 1.2137
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.2050
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.2223
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1538
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.4593
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0939
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.6100
+   [FedAvg Client B] Privacy spent: ε=1.13
+
+[FedAvg CLIENT B EVAL] ε=1.13 | Val: 0.9204 | Test: 0.8694 | F1: 0.8087
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2862
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.3523
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1172
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.5490
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0013
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.4187
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.3682
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.1708
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.1752
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2893
+   [FedAvg Client B] Privacy spent: ε=1.23
+
+[FedAvg CLIENT B EVAL] ε=1.23 | Val: 0.9204 | Test: 0.8722 | F1: 0.8154
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2026
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.2823
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.4079
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.3275
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.2341
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.4303
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1653
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 1.1776
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.4557
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.7329
+   [FedAvg Client B] Privacy spent: ε=1.32
+
+[FedAvg CLIENT B EVAL] ε=1.32 | Val: 0.9263 | Test: 0.8750 | F1: 0.8218
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2024
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.4668
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.4170
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.6209
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.1065
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.6013
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.0918
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0006
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.5514
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.4652
+   [FedAvg Client B] Privacy spent: ε=1.41
+
+[FedAvg CLIENT B EVAL] ε=1.41 | Val: 0.9263 | Test: 0.8778 | F1: 0.8280
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.0490
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1899
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.0014
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.4301
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0014
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.0659
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.4431
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.5936
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0019
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.3832
+   [FedAvg Client B] Privacy spent: ε=1.49
+
+[FedAvg CLIENT B EVAL] ε=1.49 | Val: 0.9292 | Test: 0.8806 | F1: 0.8340
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.3143
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1635
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.0031
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.1118
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.2850
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.2363
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.3641
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0007
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.8651
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.7003
+   [FedAvg Client B] Privacy spent: ε=1.57
+
+[FedAvg CLIENT B EVAL] ε=1.57 | Val: 0.9558 | Test: 0.8944 | F1: 0.8646
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2070
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.0048
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.5071
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.2327
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.1692[92mINFO [0m:      Sent reply
+04/14/2026 20:31:43:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:49:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:31:49:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:31:49:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:31:49:INFO:
+[92mINFO [0m:      Received: evaluate message 593960dd-cfd1-49a6-af80-5afa513ef409
+04/14/2026 20:31:49:INFO:Received: evaluate message 593960dd-cfd1-49a6-af80-5afa513ef409
+[92mINFO [0m:      
+04/14/2026 20:31:49:INFO:
+[92mINFO [0m:      Received: evaluate message 2e3d54fc-4b43-4021-85e5-6f9628ed5229
+04/14/2026 20:31:49:INFO:Received: evaluate message 2e3d54fc-4b43-4021-85e5-6f9628ed5229
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:51:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:31:51:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:31:51:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:31:51:INFO:
+[92mINFO [0m:      [ROUND 12]
+04/14/2026 20:31:51:INFO:[ROUND 12]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:31:51:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:31:51:INFO:
+[92mINFO [0m:      Received: train message c877ace7-0492-44a8-b348-28cc9096447e
+04/14/2026 20:31:51:INFO:Received: train message c877ace7-0492-44a8-b348-28cc9096447e
+[92mINFO [0m:      
+04/14/2026 20:31:51:INFO:
+[92mINFO [0m:      Received: train message a6b19ff0-d46e-4e99-95ae-037c2f04f7b8
+04/14/2026 20:31:51:INFO:Received: train message a6b19ff0-d46e-4e99-95ae-037c2f04f7b8
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:04:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:13:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:32:13:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:32:13:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:32:13:INFO:
+[92mINFO [0m:      Received: evaluate message e5d43769-37ec-4bef-9a74-a13f9e6d4099
+04/14/2026 20:32:13:INFO:Received: evaluate message e5d43769-37ec-4bef-9a74-a13f9e6d4099
+[92mINFO [0m:      
+04/14/2026 20:32:13:INFO:
+[92mINFO [0m:      Received: evaluate message bec71441-4b1c-496b-a581-c8ddeaaa3238
+04/14/2026 20:32:13:INFO:Received: evaluate message bec71441-4b1c-496b-a581-c8ddeaaa3238
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:14:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:14:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:32:14:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:32:14:INFO:
+[92mINFO [0m:      [ROUND 13]
+04/14/2026 20:32:14:INFO:[ROUND 13]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:32:14:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:32:14:INFO:
+[92mINFO [0m:      Received: train message 8b85ef9a-0997-4076-a3b1-5ca11a4ffac8
+04/14/2026 20:32:14:INFO:Received: train message 8b85ef9a-0997-4076-a3b1-5ca11a4ffac8
+[92mINFO [0m:      
+04/14/2026 20:32:14:INFO:
+[92mINFO [0m:      Received: train message aacf8bca-7c1c-45f5-a2f9-9b9281f5296a
+04/14/2026 20:32:14:INFO:Received: train message aacf8bca-7c1c-45f5-a2f9-9b9281f5296a
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:28:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:35:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:32:35:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:32:35:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:32:35:INFO:
+[92mINFO [0m:      Received: evaluate message f4e7b88b-74a1-4288-baa7-ac858c35b896
+04/14/2026 20:32:35:INFO:Received: evaluate message f4e7b88b-74a1-4288-baa7-ac858c35b896
+[92mINFO [0m:      
+04/14/2026 20:32:35:INFO:
+[92mINFO [0m:      Received: evaluate message a902766a-38d3-4ba2-9a51-5cf3ec5bd73c
+04/14/2026 20:32:35:INFO:Received: evaluate message a902766a-38d3-4ba2-9a51-5cf3ec5bd73c
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:36:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:36:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:32:36:INFO:aggregate_evaluate: received 2 results and 0 failures
+
+======================================================================
+🚀 [RUN 2] FedAvg BASELINE — Standard FedAvg WITH DP
+======================================================================
+Strategy:     FedAvg (NO proximal term)
+DP:           ENABLED (ε=2.0, δ=1e-5, noise=1.1, clip=1.0)
+Rounds:       25
+Local Epochs: 1 per client
+Device:       cpu
+Clients:      2
+======================================================================
+
+✅ Server model fixed (BatchNorm → GroupNorm)
+✅ Starting FedAvg server on 0.0.0.0:8080...
+Waiting for clients...
+
+✅ [FedAvg] Model v1 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7071
+   ► Test Accuracy: 0.6250
+   ► Val F1:        0.6125
+   ► Test F1:       0.5223
+   ► Hospital A:    0.2917
+   ► Hospital B:    0.8694
+   ► Fairness Gap:  0.5778
+   ► ε (epsilon):   0.6989
+======================================================================
+
+💾 [FedAvg] Metrics for Round 1 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 0.0m | ETA: 0.0m
+✅ [FedAvg] Model v2 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7071
+   ► Test Accuracy: 0.6250
+   ► Val F1:        0.6125
+   ► Test F1:       0.5223
+   ► Hospital A:    0.8694
+   ► Hospital B:    0.2917
+   ► Fairness Gap:  0.5778
+   ► ε (epsilon):   0.9012
+======================================================================
+
+💾 [FedAvg] Metrics for Round 2 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 0.4m | ETA: 4.5m
+✅ [FedAvg] Model v3 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7071
+   ► Test Accuracy: 0.6250
+   ► Val F1:        0.6125
+   ► Test F1:       0.5223
+   ► Hospital A:    0.2917
+   ► Hospital B:    0.8694
+   ► Fairness Gap:  0.5778
+   ► ε (epsilon):   1.0634
+======================================================================
+
+💾 [FedAvg] Metrics for Round 3 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 0.8m | ETA: 5.6m
+✅ [FedAvg] Model v4 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7071
+   ► Test Accuracy: 0.6250
+   ► Val F1:        0.6125
+   ► Test F1:       0.5223
+   ► Hospital A:    0.2917
+   ► Hospital B:    0.8694
+   ► Fairness Gap:  0.5778
+   ► ε (epsilon):   1.2043
+======================================================================
+
+💾 [FedAvg] Metrics for Round 4 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 1.1m | ETA: 5.9m
+✅ [FedAvg] Model v5 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7071
+   ► Test Accuracy: 0.6250
+   ► Val F1:        0.6125
+   ► Test F1:       0.5223
+   ► Hospital A:    0.8694
+   ► Hospital B:    0.2917
+   ► Fairness Gap:  0.5778
+   ► ε (epsilon):   1.3311
+======================================================================
+
+💾 [FedAvg] Metrics for Round 5 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 1.5m | ETA: 6.0m
+✅ [FedAvg] Model v6 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7094
+   ► Test Accuracy: 0.6282
+   ► Val F1:        0.6174
+   ► Test F1:       0.5295
+   ► Hospital A:    0.8722
+   ► Hospital B:    0.2955
+   ► Fairness Gap:  0.5768
+   ► ε (epsilon):   1.4476
+======================================================================
+
+💾 [FedAvg] Metrics for Round 6 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 1.9m | ETA: 6.0m
+✅ [FedAvg] Model v7 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7379
+   ► Test Accuracy: 0.6394
+   ► Val F1:        0.6747
+   ► Test F1:       0.5526
+   ► Hospital A:    0.8750
+   ► Hospital B:    0.3182
+   ► Fairness Gap:  0.5568
+   ► ε (epsilon):   1.5563
+======================================================================
+
+💾 [FedAvg] Metrics for Round 7 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 2.3m | ETA: 5.9m
+✅ [FedAvg] Model v8 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7379
+   ► Test Accuracy: 0.6410
+   ► Val F1:        0.6747
+   ► Test F1:       0.5562
+   ► Hospital A:    0.3182
+   ► Hospital B:    0.8778
+   ► Fairness Gap:  0.5596
+   ► ε (epsilon):   1.6586
+======================================================================
+
+💾 [FedAvg] Metrics for Round 8 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 2.7m | ETA: 5.7m
+✅ [FedAvg] Model v9 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.7648
+   ► Test Accuracy: 0.6538
+   ► Val F1:        0.7229
+   ► Test F1:       0.5810
+   ► Hospital A:    0.3447
+   ► Hospital B:    0.8806
+   ► Fairness Gap:  0.5359
+   ► ε (epsilon):   1.7557
+======================================================================
+
+💾 [FedAvg] Metrics for Round 9 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 3.1m | ETA: 5.5m
+✅ [FedAvg] Model v10 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8395
+   ► Test Accuracy: 0.6955
+   ► Val F1:        0.8298
+   ► Test F1:       0.6568
+   ► Hospital A:    0.4242
+   ► Hospital B:    0.8944
+   ► Fairness Gap:  0.4702
+   ► ε (epsilon):   1.8483
+======================================================================
+
+💾 [FedAvg] Metrics for Round 10 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 3.5m | ETA: 5.2m
+✅ [FedAvg] Model v11 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8441
+   ► Test Accuracy: 0.6971
+   ► Val F1:        0.8353
+   ► Test F1:       0.6608
+   ► Hospital A:    0.4280
+   ► Hospital B:    0.8944
+   ► Fairness Gap:  0.4664
+   ► ε (epsilon):   1.9372
+======================================================================
+
+💾 [FedAvg] Metrics for Round 11 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 3.8m | ETA: 4.9m
+✅ [FedAvg] Model v12 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8418
+   ► Test Accuracy: 0.7003
+   ► Val F1:        0.8326
+   ► Test F1:       0.6643
+   ► Hospital A:    0.8944
+   ► Hospital B:    0.4356
+   ► Fairness Gap:  0.4588
+   ► ε (epsilon):   2.0227
+======================================================================
+
+💾 [FedAvg] Metrics for Round 12 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 4.2m | ETA: 4.6m
+✅ [FedAvg] Model v13 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================[92mINFO [0m:      
+04/14/2026 20:32:36:INFO:
+[92mINFO [0m:      [ROUND 14]
+04/14/2026 20:32:36:INFO:[ROUND 14]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:32:36:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:32:36:INFO:
+[92mINFO [0m:      Received: train message 156e4712-56f3-467d-a99f-829354c53f60
+04/14/2026 20:32:36:INFO:Received: train message 156e4712-56f3-467d-a99f-829354c53f60
+[92mINFO [0m:      
+04/14/2026 20:32:36:INFO:
+[92mINFO [0m:      Received: train message f155de4c-fdc2-4574-bf77-65f899a572a0
+04/14/2026 20:32:36:INFO:Received: train message f155de4c-fdc2-4574-bf77-65f899a572a0
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:49:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:58:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:32:58:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:32:58:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:32:58:INFO:
+[92mINFO [0m:      Received: evaluate message 65160f4c-6dd5-4433-8f58-54b33ef7e989
+04/14/2026 20:32:58:INFO:Received: evaluate message 65160f4c-6dd5-4433-8f58-54b33ef7e989
+[92mINFO [0m:      
+04/14/2026 20:32:58:INFO:
+[92mINFO [0m:      Received: evaluate message e2be6b7e-1b7d-4ae4-907c-ba8ca5f41fcb
+04/14/2026 20:32:58:INFO:Received: evaluate message e2be6b7e-1b7d-4ae4-907c-ba8ca5f41fcb
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:59:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:32:59:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:32:59:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:32:59:INFO:
+[92mINFO [0m:      [ROUND 15]
+04/14/2026 20:32:59:INFO:[ROUND 15]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:32:59:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:32:59:INFO:
+[92mINFO [0m:      Received: train message bcc1e78e-0af9-4250-9301-821f72d46d27
+04/14/2026 20:32:59:INFO:Received: train message bcc1e78e-0af9-4250-9301-821f72d46d27
+[92mINFO [0m:      
+04/14/2026 20:32:59:INFO:
+[92mINFO [0m:      Received: train message db703bc3-a3e2-497a-b879-1111d2582988
+04/14/2026 20:32:59:INFO:Received: train message db703bc3-a3e2-497a-b879-1111d2582988
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:13:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:21:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:33:21:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:33:21:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:33:21:INFO:
+[92mINFO [0m:      Received: evaluate message a64c7fde-e603-451e-aa6b-49ad78d6cddf
+04/14/2026 20:33:21:INFO:Received: evaluate message a64c7fde-e603-451e-aa6b-49ad78d6cddf
+[92mINFO [0m:      
+04/14/2026 20:33:21:INFO:
+[92mINFO [0m:      Received: evaluate message e76699ad-0267-4cfd-a9f5-71ab6b14c650
+04/14/2026 20:33:21:INFO:Received: evaluate message e76699ad-0267-4cfd-a9f5-71ab6b14c650
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:22:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:22:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:33:22:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:33:22:INFO:
+[92mINFO [0m:      [ROUND 16]
+04/14/2026 20:33:22:INFO:[ROUND 16]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:33:22:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:33:22:INFO:
+[92mINFO [0m:      Received: train message e54a7808-5088-4f7d-a7c3-750a13b87b71
+04/14/2026 20:33:22:INFO:Received: train message e54a7808-5088-4f7d-a7c3-750a13b87b71
+[92mINFO [0m:      
+04/14/2026 20:33:22:INFO:
+[92mINFO [0m:      Received: train message b1e2c83d-0213-46a6-93ee-9f5aae681c55
+04/14/2026 20:33:22:INFO:Received: train message b1e2c83d-0213-46a6-93ee-9f5aae681c55
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+
+======================================================================
+🏥 [FedAvg] CLIENT A (Hospital A) - DP Enabled
+======================================================================
+Privacy Budget: ε=2.0, δ=1e-05
+Noise Multiplier: 1.1
+======================================================================
+
+✅ Model fixed for Opacus (BatchNorm → GroupNorm)
+✅ DP enabled: ε=2.0, δ=1e-05
+
+🔌 Connecting to FL server at 127.0.0.1:8080...
+
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.7780
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.7203
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.6247
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.8058
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.6824
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 1.3519
+   [FedAvg Client A] Privacy spent: ε=0.86
+
+[FedAvg CLIENT A EVAL] ε=0.86 | Val: 0.4162 | Test: 0.2917 | F1: 0.1317
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.5229
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 1.7973
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.9881
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.6374
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.4772
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.5389
+   [FedAvg Client A] Privacy spent: ε=1.10
+
+[FedAvg CLIENT A EVAL] ε=1.10 | Val: 0.4162 | Test: 0.2917 | F1: 0.1317
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.7894
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.9371
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 1.1558
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.7275
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.4871
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.3072
+   [FedAvg Client A] Privacy spent: ε=1.29
+
+[FedAvg CLIENT A EVAL] ε=1.29 | Val: 0.4162 | Test: 0.2917 | F1: 0.1317
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.4513
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 1.0135
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.5093
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.2680
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.5946
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.8560
+   [FedAvg Client A] Privacy spent: ε=1.46
+
+[FedAvg CLIENT A EVAL] ε=1.46 | Val: 0.4162 | Test: 0.2917 | F1: 0.1317
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.8057
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 1.3826
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.5215
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.2333
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.2794
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.3611
+   [FedAvg Client A] Privacy spent: ε=1.61
+
+[FedAvg CLIENT A EVAL] ε=1.61 | Val: 0.4162 | Test: 0.2917 | F1: 0.1317
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.6531
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.7111
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.3165
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.3660
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.1456
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.3611
+   [FedAvg Client A] Privacy spent: ε=1.75
+
+[FedAvg CLIENT A EVAL] ε=1.75 | Val: 0.4216 | Test: 0.2955 | F1: 0.1396
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.3409
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 1.0081
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.2138
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.1946
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.5285
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.4282
+   [FedAvg Client A] Privacy spent: ε=1.88
+
+[FedAvg CLIENT A EVAL] ε=1.88 | Val: 0.4811 | Test: 0.3182 | F1: 0.1856
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.4116
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.4664
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.2014
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.4188
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.5035
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.5346
+   [FedAvg Client A] Privacy spent: ε=2.00
+
+[FedAvg CLIENT A EVAL] ε=2.00 | Val: 0.4811 | Test: 0.3182 | F1: 0.1856
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.0497
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.5856
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.3137
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.2015
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.3959
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.2513
+   [FedAvg Client A] Privacy spent: ε=2.11
+
+[FedAvg CLIENT A EVAL] ε=2.11 | Val: 0.5405 | Test: 0.3447 | F1: 0.2360
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.1108
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.3545
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.3060
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.3980
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.1372
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.2888
+   [FedAvg Client A] Privacy spent: ε=2.22
+
+[FedAvg CLIENT A EVAL] ε=2.22 | Val: 0.6811 | Test: 0.4242 | F1: 0.3735
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.6183
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.4230
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.2959
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.2106
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.2174
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.1271
+   [FedAvg Client A] Privacy spent: ε=2.33
+
+[FedAvg CLIENT A EVAL] ε=2.33 | Val: 0.6919 | Test: 0.4280 | F1: 0.3793
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.7755
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.2078
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.4424
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 1.0812
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.8205
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.3727
+   [FedAvg Client A] Privacy spent: ε=2.43
+
+[FedAvg CLIENT A EVAL] ε=2.43 | Val: 0.6865 | Test: 0.4356 | F1: 0.3875
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.6859
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.2844
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.2880
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.3228
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.0377
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.0556
+   [FedAvg Client A] Privacy spent: ε=2.53
+
+[FedAvg CLIENT A EVAL] ε=2.53 | Val: 0.7297 | Test: 0.4773 | F1: 0.4505
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 1.3014
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.2142
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.2895
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.0736
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.8144
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.4504
+   [FedAvg Client A] Privacy spent: ε=2.63
+
+[FedAvg CLIENT A EVAL] ε=2.63 | Val: 0.7676 | Test: 0.5568 | F1: 0.5532
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.2998
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.4907
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.1290
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.0961
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.2858
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.1491
+   [FedAvg Client A] Privacy spent: ε=2.72
+
+[FedAvg CLIENT A EVAL] ε=2.72 | Val: 0.7622 | Test: 0.5303 | F1: 0.5204
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.7203[92mINFO [0m:      Sent reply
+04/14/2026 20:33:35:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:41:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:33:41:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:33:41:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:33:41:INFO:
+[92mINFO [0m:      Received: evaluate message c8b40e8f-610d-4be0-a3b7-5679016e8138
+04/14/2026 20:33:41:INFO:Received: evaluate message c8b40e8f-610d-4be0-a3b7-5679016e8138
+[92mINFO [0m:      
+04/14/2026 20:33:41:INFO:
+[92mINFO [0m:      Received: evaluate message 56e33f79-3519-45e7-a95a-830923acb735
+04/14/2026 20:33:41:INFO:Received: evaluate message 56e33f79-3519-45e7-a95a-830923acb735
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:42:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:42:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:33:42:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:33:42:INFO:
+[92mINFO [0m:      [ROUND 17]
+04/14/2026 20:33:42:INFO:[ROUND 17]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:33:42:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:33:42:INFO:
+[92mINFO [0m:      Received: train message f20c7dd3-0f15-4d42-a576-e9cf90648139
+04/14/2026 20:33:42:INFO:Received: train message f20c7dd3-0f15-4d42-a576-e9cf90648139
+[92mINFO [0m:      
+04/14/2026 20:33:42:INFO:
+[92mINFO [0m:      Received: train message add50bd3-c3dd-41e6-94ae-de20329518a8
+04/14/2026 20:33:42:INFO:Received: train message add50bd3-c3dd-41e6-94ae-de20329518a8
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:33:55:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:01:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:34:01:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:34:01:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:34:01:INFO:
+[92mINFO [0m:      Received: evaluate message 3d2f0d80-8242-4f0e-9ddb-e02af1896e56
+04/14/2026 20:34:01:INFO:Received: evaluate message 3d2f0d80-8242-4f0e-9ddb-e02af1896e56
+[92mINFO [0m:      
+04/14/2026 20:34:01:INFO:
+[92mINFO [0m:      Received: evaluate message 52e234a0-28d7-4532-85af-db3fe4aa07b1
+04/14/2026 20:34:01:INFO:Received: evaluate message 52e234a0-28d7-4532-85af-db3fe4aa07b1
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:02:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:02:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:34:02:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:34:02:INFO:
+[92mINFO [0m:      [ROUND 18]
+04/14/2026 20:34:02:INFO:[ROUND 18]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:34:02:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:34:02:INFO:
+[92mINFO [0m:      Received: train message 2db7948b-fafa-43ae-8362-477377199fe1
+04/14/2026 20:34:02:INFO:Received: train message 2db7948b-fafa-43ae-8362-477377199fe1
+[92mINFO [0m:      
+04/14/2026 20:34:02:INFO:
+[92mINFO [0m:      Received: train message 8a6865bd-f074-4b99-b8ed-37fd40e963c3
+04/14/2026 20:34:02:INFO:Received: train message 8a6865bd-f074-4b99-b8ed-37fd40e963c3
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:13:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:19:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:34:19:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:34:19:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:34:19:INFO:
+[92mINFO [0m:      Received: evaluate message fccac95a-f7fb-4ee0-a618-79e867a2e582
+04/14/2026 20:34:19:INFO:Received: evaluate message fccac95a-f7fb-4ee0-a618-79e867a2e582
+[92mINFO [0m:      
+04/14/2026 20:34:19:INFO:
+[92mINFO [0m:      Received: evaluate message 2f45d426-b3f4-43b7-b412-c9134c86a7ea
+04/14/2026 20:34:19:INFO:Received: evaluate message 2f45d426-b3f4-43b7-b412-c9134c86a7ea
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:20:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:20:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:34:20:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:34:20:INFO:
+[92mINFO [0m:      [ROUND 19]
+04/14/2026 20:34:20:INFO:[ROUND 19]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:34:20:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:34:20:INFO:
+[92mINFO [0m:      Received: train message 4780bd0e-da6f-43e1-b00f-d276faf8e677
+04/14/2026 20:34:20:INFO:Received: train message 4780bd0e-da6f-43e1-b00f-d276faf8e677
+[92mINFO [0m:      
+04/14/2026 20:34:20:INFO:
+[92mINFO [0m:      Received: train message c998084f-31a3-459f-809b-57bfceb5a857
+04/14/2026 20:34:20:INFO:Received: train message c998084f-31a3-459f-809b-57bfceb5a857
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:38:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:50:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:34:50:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:34:50:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:34:50:INFO:
+[92mINFO [0m:      Received: evaluate message 00695b96-363b-43f6-8186-a5a578c9fb3b
+04/14/2026 20:34:50:INFO:Received: evaluate message 00695b96-363b-43f6-8186-a5a578c9fb3b
+[92mINFO [0m:      
+04/14/2026 20:34:50:INFO:
+[92mINFO [0m:      Received: evaluate message 20d88764-507e-40d5-8715-9a7436c6dfd3
+04/14/2026 20:34:50:INFO:Received: evaluate message 20d88764-507e-40d5-8715-9a7436c6dfd3
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:52:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:34:52:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:34:52:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:34:52:INFO:
+[92mINFO [0m:      [ROUND 20]
+04/14/2026 20:34:52:INFO:[ROUND 20]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:34:52:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:34:52:INFO:
+[92mINFO [0m:      Received: train message 0d9e7388-37e4-4370-815b-ccd21144051a
+04/14/2026 20:34:52:INFO:Received: train message 0d9e7388-37e4-4370-815b-ccd21144051a
+[92mINFO [0m:      
+04/14/2026 20:34:52:INFO:
+[92mINFO [0m:      Received: train message 00b6f199-217a-4443-aadb-341ce9fb565a
+04/14/2026 20:34:52:INFO:Received: train message 00b6f199-217a-4443-aadb-341ce9fb565a
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:06:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:12:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:35:12:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:35:12:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:35:12:INFO:
+[92mINFO [0m:      Received: evaluate message 56eaad2c-9113-4e70-bdf1-5ddd47c972af
+04/14/2026 20:35:12:INFO:Received: evaluate message 56eaad2c-9113-4e70-bdf1-5ddd47c972af
+[92mINFO [0m:      
+04/14/2026 20:35:12:INFO:
+[92mINFO [0m:      Received: evaluate message 46f04c7b-962e-446d-8dd1-169d8d480744
+04/14/2026 20:35:12:INFO:Received: evaluate message 46f04c7b-962e-446d-8dd1-169d8d480744
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:13:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:13:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:35:13:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:35:13:INFO:
+[92mINFO [0m:      [ROUND 21]
+04/14/2026 20:35:13:INFO:[ROUND 21]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:35:13:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:35:13:INFO:
+[92mINFO [0m:      Received: train message f051ed26-e754-4aca-8b5a-270c3e2edc50
+04/14/2026 20:35:13:INFO:Received: train message f051ed26-e754-4aca-8b5a-270c3e2edc50
+[92mINFO [0m:      
+04/14/2026 20:35:13:INFO:
+[92mINFO [0m:      Received: train message 107d7c08-34b4-4532-b03d-17d39b830983
+04/14/2026 20:35:13:INFO:Received: train message 107d7c08-34b4-4532-b03d-17d39b830983
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:32:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:35:32:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:35:33:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:35:33:INFO:
+[92mINFO [0m:      Received: evaluate message c533ebcb-9fd6-47d3-8e8b-4281ea788786
+04/14/2026 20:35:33:INFO:Received: evaluate message c533ebcb-9fd6-47d3-8e8b-4281ea788786
+[92mINFO [0m:      
+04/14/2026 20:35:33:INFO:
+[92mINFO [0m:      Received: evaluate message 1f9c4cc5-697b-49e2-9266-5003179cc730
+04/14/2026 20:35:33:INFO:Received: evaluate message 1f9c4cc5-697b-49e2-9266-5003179cc730
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:34:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:34:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:35:34:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:35:34:INFO:
+[92mINFO [0m:      [ROUND 22]
+04/14/2026 20:35:34:INFO:[ROUND 22]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:35:34:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:35:34:INFO:
+[92mINFO [0m:      Received: train message cfdfb239-96b1-4d22-b033-93d717cdf83d
+04/14/2026 20:35:34:INFO:Received: train message cfdfb239-96b1-4d22-b033-93d717cdf83d
+[92mINFO [0m:      
+04/14/2026 20:35:34:INFO:
+[92mINFO [0m:      Received: train message 657b526c-9698-402a-a909-59eb450813ba
+04/14/2026 20:35:34:INFO:Received: train message 657b526c-9698-402a-a909-59eb450813ba
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.3377
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.3092
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.1805
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.2419
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2183
+   [FedAvg Client B] Privacy spent: ε=1.65
+
+[FedAvg CLIENT B EVAL] ε=1.65 | Val: 0.9558 | Test: 0.8944 | F1: 0.8673
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.0609
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1227
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1505
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.0789
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.2875
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.5673
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1331
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.3128
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0045
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2261
+   [FedAvg Client B] Privacy spent: ε=1.72
+
+[FedAvg CLIENT B EVAL] ε=1.72 | Val: 0.9558 | Test: 0.8944 | F1: 0.8673
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.0950
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1016
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1220
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.3517
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0133
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.4869
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1160
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.1930
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0810
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.0455
+   [FedAvg Client B] Privacy spent: ε=1.79
+
+[FedAvg CLIENT B EVAL] ε=1.79 | Val: 0.9587 | Test: 0.9028 | F1: 0.8812
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.1182
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.2776
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.5340
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.8136
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.2944
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.1084
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.0013
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.4480
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.5127
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2018
+   [FedAvg Client B] Privacy spent: ε=1.86
+
+[FedAvg CLIENT B EVAL] ε=1.86 | Val: 0.9617 | Test: 0.9111 | F1: 0.8942
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2982
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.0594
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.7212
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.1769
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0003
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.1521
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.4423
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.1971
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.4159
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.1818
+   [FedAvg Client B] Privacy spent: ε=1.93
+
+[FedAvg CLIENT B EVAL] ε=1.93 | Val: 0.9646 | Test: 0.9111 | F1: 0.8942
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2056
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1276
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.3046
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.1099
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0386
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.0528
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.2403
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0914
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0534
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.1977
+   [FedAvg Client B] Privacy spent: ε=1.99
+
+[FedAvg CLIENT B EVAL] ε=1.99 | Val: 0.9646 | Test: 0.9111 | F1: 0.8942
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2677
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1652
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.0745
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.1002
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.3214
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.1883
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.2310
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0011
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.3077
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.1122
+   [FedAvg Client B] Privacy spent: ε=2.06
+
+[FedAvg CLIENT B EVAL] ε=2.06 | Val: 0.9646 | Test: 0.9111 | F1: 0.8959
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.1018
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.0126
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1775
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.0114
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0590
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.4963
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.0810
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0007
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0931
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.1042
+   [FedAvg Client B] Privacy spent: ε=2.12
+
+[FedAvg CLIENT B EVAL] ε=2.12 | Val: 0.9646 | Test: 0.9083 | F1: 0.8918
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.1625
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.4126
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.0136
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.0226
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0618
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.0560
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1289
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0192
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.3180
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2170
+   [FedAvg Client B] Privacy spent: ε=2.18
+
+[FedAvg CLIENT B EVAL] ε=2.18 | Val: 0.9705 | Test: 0.9083 | F1: 0.8918
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.1893
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.0578
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1479
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.3444
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.1254
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.0341
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1530
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0031
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.1199
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2210
+   [FedAvg Client B] Privacy spent: ε=2.24
+
+[FedAvg CLIENT B EVAL] ε=2.24 | Val: 0.9676 | Test: 0.9139 | F1: 0.8966
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2706
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.2084
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.0926
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.3227
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0259
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.0503
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.4624
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0397
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0005
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2030
+   [FedAvg Client B] Privacy spent: ε=2.29
+
+[FedAvg CLIENT B EVAL] ε=2.29 | Val: 0.9794 | Test: 0.9083 | F1: 0.8935
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2309
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1029
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.0616
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.0462
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.1645
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.5481[92mINFO [0m:      Sent reply
+04/14/2026 20:35:47:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:53:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:35:53:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:35:53:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:35:53:INFO:
+[92mINFO [0m:      Received: evaluate message a385bd15-96e4-4331-91cb-6da78814eebb
+04/14/2026 20:35:53:INFO:Received: evaluate message a385bd15-96e4-4331-91cb-6da78814eebb
+[92mINFO [0m:      
+04/14/2026 20:35:53:INFO:
+[92mINFO [0m:      Received: evaluate message 11f3e871-e718-458e-aa80-6779f97f435a
+04/14/2026 20:35:53:INFO:Received: evaluate message 11f3e871-e718-458e-aa80-6779f97f435a
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:55:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:35:55:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:35:55:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:35:55:INFO:
+[92mINFO [0m:      [ROUND 23]
+04/14/2026 20:35:55:INFO:[ROUND 23]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:35:55:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:35:55:INFO:
+[92mINFO [0m:      Received: train message 64b73f62-b5fb-4e92-aec2-59f3513f86f6
+04/14/2026 20:35:55:INFO:Received: train message 64b73f62-b5fb-4e92-aec2-59f3513f86f6
+[92mINFO [0m:      
+04/14/2026 20:35:55:INFO:
+[92mINFO [0m:      Received: train message bfec4471-7bc3-49cb-a340-e117c356646b
+04/14/2026 20:35:55:INFO:Received: train message bfec4471-7bc3-49cb-a340-e117c356646b
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:15:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:36:15:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:36:15:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:36:15:INFO:
+[92mINFO [0m:      Received: evaluate message fa07afdc-f12e-4a46-98de-fcb9ca5010b5
+04/14/2026 20:36:15:INFO:Received: evaluate message fa07afdc-f12e-4a46-98de-fcb9ca5010b5
+[92mINFO [0m:      
+04/14/2026 20:36:15:INFO:
+[92mINFO [0m:      Received: evaluate message e760f153-fdd8-46a6-94b0-1b29e0af0af0
+04/14/2026 20:36:15:INFO:Received: evaluate message e760f153-fdd8-46a6-94b0-1b29e0af0af0
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:16:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:16:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:36:16:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:36:16:INFO:
+[92mINFO [0m:      [ROUND 24]
+04/14/2026 20:36:16:INFO:[ROUND 24]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:36:16:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:36:16:INFO:
+[92mINFO [0m:      Received: train message c72a5f7c-c78c-4891-b39d-edbdc7a8b96a
+04/14/2026 20:36:16:INFO:Received: train message c72a5f7c-c78c-4891-b39d-edbdc7a8b96a
+[92mINFO [0m:      
+04/14/2026 20:36:16:INFO:
+[92mINFO [0m:      Received: train message 2954589a-4d29-42fb-bb36-938ddd2fc378
+04/14/2026 20:36:16:INFO:Received: train message 2954589a-4d29-42fb-bb36-938ddd2fc378
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:30:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:35:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:36:35:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:36:35:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:36:35:INFO:
+[92mINFO [0m:      Received: evaluate message e1a3ea2f-d378-4cd1-a8c7-5a031bba2f10
+04/14/2026 20:36:35:INFO:Received: evaluate message e1a3ea2f-d378-4cd1-a8c7-5a031bba2f10
+[92mINFO [0m:      
+04/14/2026 20:36:35:INFO:
+[92mINFO [0m:      Received: evaluate message 4525d23d-f436-4627-a8a8-2888e7137e7e
+04/14/2026 20:36:35:INFO:Received: evaluate message 4525d23d-f436-4627-a8a8-2888e7137e7e
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:36:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:37:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:36:37:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:36:37:INFO:
+[92mINFO [0m:      [ROUND 25]
+04/14/2026 20:36:37:INFO:[ROUND 25]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:36:37:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:36:37:INFO:
+[92mINFO [0m:      Received: train message 6aa643ac-3f30-4031-ae50-7bfed689c601
+04/14/2026 20:36:37:INFO:Received: train message 6aa643ac-3f30-4031-ae50-7bfed689c601
+[92mINFO [0m:      
+04/14/2026 20:36:37:INFO:
+[92mINFO [0m:      Received: train message 79e6f6ea-38da-44fc-a770-14a179b5391e
+04/14/2026 20:36:37:INFO:Received: train message 79e6f6ea-38da-44fc-a770-14a179b5391e
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:49:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:56:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:36:56:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:36:56:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:36:56:INFO:
+[92mINFO [0m:      Received: evaluate message ce9be303-2152-4a80-b733-4727c4b2564d
+04/14/2026 20:36:56:INFO:Received: evaluate message ce9be303-2152-4a80-b733-4727c4b2564d
+[92mINFO [0m:      
+04/14/2026 20:36:56:INFO:
+[92mINFO [0m:      Received: evaluate message 804bb789-0784-4132-9ff6-c7c9cd3ada1f
+04/14/2026 20:36:56:INFO:Received: evaluate message 804bb789-0784-4132-9ff6-c7c9cd3ada1f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:36:57:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:36:57:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:36:57:INFO:
+[92mINFO [0m:      [SUMMARY]
+04/14/2026 20:36:57:INFO:[SUMMARY]
+[92mINFO [0m:      Run finished 25 round(s) in 576.46s
+04/14/2026 20:36:57:INFO:Run finished 25 round(s) in 576.46s
+[92mINFO [0m:      	History (loss, distributed):
+04/14/2026 20:36:57:INFO:	History (loss, distributed):
+[92mINFO [0m:      		round 1: 1.179881256360274
+04/14/2026 20:36:57:INFO:		round 1: 1.179881256360274
+[92mINFO [0m:      		round 2: 1.2259962054399343
+04/14/2026 20:36:57:INFO:		round 2: 1.2259962054399343
+[92mINFO [0m:      		round 3: 1.194497863833721
+04/14/2026 20:36:57:INFO:		round 3: 1.194497863833721
+[92mINFO [0m:      		round 4: 1.0357053887385588
+04/14/2026 20:36:57:INFO:		round 4: 1.0357053887385588
+[92mINFO [0m:      		round 5: 1.0358040206707442
+04/14/2026 20:36:57:INFO:		round 5: 1.0358040206707442
+[92mINFO [0m:      		round 6: 1.0241679801390722
+04/14/2026 20:36:57:INFO:		round 6: 1.0241679801390722
+[92mINFO [0m:      		round 7: 0.8683495601782432
+04/14/2026 20:36:57:INFO:		round 7: 0.8683495601782432
+[92mINFO [0m:      		round 8: 1.0260564684867859
+04/14/2026 20:36:57:INFO:		round 8: 1.0260564684867859
+[92mINFO [0m:      		round 9: 1.0094328981179457
+04/14/2026 20:36:57:INFO:		round 9: 1.0094328981179457
+[92mINFO [0m:      		round 10: 0.7648006872488902
+04/14/2026 20:36:57:INFO:		round 10: 0.7648006872488902
+[92mINFO [0m:      		round 11: 0.7886381756800872
+04/14/2026 20:36:57:INFO:		round 11: 0.7886381756800872
+[92mINFO [0m:      		round 12: 0.8230038755215131
+04/14/2026 20:36:57:INFO:		round 12: 0.8230038755215131
+[92mINFO [0m:      		round 13: 0.7512611230978599
+04/14/2026 20:36:57:INFO:		round 13: 0.7512611230978599
+[92mINFO [0m:      		round 14: 0.6643036924875699
+04/14/2026 20:36:57:INFO:		round 14: 0.6643036924875699
+[92mINFO [0m:      		round 15: 0.7531690270854876
+04/14/2026 20:36:57:INFO:		round 15: 0.7531690270854876
+[92mINFO [0m:      		round 16: 0.785457075215303
+04/14/2026 20:36:57:INFO:		round 16: 0.785457075215303
+[92mINFO [0m:      		round 17: 0.7897477522492409
+04/14/2026 20:36:57:INFO:		round 17: 0.7897477522492409
+[92mINFO [0m:      		round 18: 0.7829560270676246
+04/14/2026 20:36:57:INFO:		round 18: 0.7829560270676246
+[92mINFO [0m:      		round 19: 0.822258207660455
+04/14/2026 20:36:57:INFO:		round 19: 0.822258207660455
+[92mINFO [0m:      		round 20: 0.888410196854518
+04/14/2026 20:36:57:INFO:		round 20: 0.888410196854518
+[92mINFO [0m:      		round 21: 0.742992409146749
+04/14/2026 20:36:57:INFO:		round 21: 0.742992409146749
+[92mINFO [0m:      		round 22: 0.7344685964859449
+04/14/2026 20:36:57:INFO:		round 22: 0.7344685964859449
+[92mINFO [0m:      		round 23: 0.6861088058123221
+04/14/2026 20:36:57:INFO:		round 23: 0.6861088058123221
+[92mINFO [0m:      		round 24: 0.7833703997043463
+04/14/2026 20:36:57:INFO:		round 24: 0.7833703997043463
+[92mINFO [0m:      		round 25: 0.8571392928178494
+04/14/2026 20:36:57:INFO:		round 25: 0.8571392928178494
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+04/14/2026 20:36:57:INFO:	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	{'accuracy': [(1, 0.7070649274189098),
+[92mINFO [0m:      	              (2, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	              (2, 0.7070649274189098),
+[92mINFO [0m:      	              (3, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	              (3, 0.7070649274189098),
+[92mINFO [0m:      	              (4, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	              (4, 0.7070649274189098),
+[92mINFO [0m:      	              (5, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	              (5, 0.7070649274189098),
+[92mINFO [0m:      	              (6, 0.709351829705812),
+04/14/2026 20:36:57:INFO:	              (6, 0.709351829705812),
+[92mINFO [0m:      	              (7, 0.7379114308317849),
+04/14/2026 20:36:57:INFO:	              (7, 0.7379114308317849),
+[92mINFO [0m:      	              (8, 0.7379114308317849),
+04/14/2026 20:36:57:INFO:	              (8, 0.7379114308317849),
+[92mINFO [0m:      	              (9, 0.7647691939727338),
+04/14/2026 20:36:57:INFO:	              (9, 0.7647691939727338),
+[92mINFO [0m:      	              (10, 0.8395451952974077),
+04/14/2026 20:36:57:INFO:	              (10, 0.8395451952974077),
+[92mINFO [0m:      	              (11, 0.8441189998712122),
+04/14/2026 20:36:57:INFO:	              (11, 0.8441189998712122),
+[92mINFO [0m:      	              (12, 0.84183209758431),
+04/14/2026 20:36:57:INFO:	              (12, 0.84183209758431),
+[92mINFO [0m:      	              (13, 0.861829153864552),
+04/14/2026 20:36:57:INFO:	              (13, 0.861829153864552),
+[92mINFO [0m:      	              (14, 0.8795393078578919),
+04/14/2026 20:36:57:INFO:	              (14, 0.8795393078578919),
+[92mINFO [0m:      	              (15, 0.8789542435560134),
+04/14/2026 20:36:57:INFO:	              (15, 0.8789542435560134),
+[92mINFO [0m:      	              (16, 0.8812411458429157),
+04/14/2026 20:36:57:INFO:	              (16, 0.8812411458429157),
+[92mINFO [0m:      	              (17, 0.8926756572774271),
+04/14/2026 20:36:57:INFO:	              (17, 0.8926756572774271),
+[92mINFO [0m:      	              (18, 0.8972494618512318),
+04/14/2026 20:36:57:INFO:	              (18, 0.8972494618512318),
+[92mINFO [0m:      	              (19, 0.8983662355343771),
+04/14/2026 20:36:57:INFO:	              (19, 0.8983662355343771),
+[92mINFO [0m:      	              (20, 0.8875167884017441),
+04/14/2026 20:36:57:INFO:	              (20, 0.8875167884017441),
+[92mINFO [0m:      	              (21, 0.9171931632108624),
+04/14/2026 20:36:57:INFO:	              (21, 0.9171931632108624),
+[92mINFO [0m:      	              (22, 0.9200651297996431),
+04/14/2026 20:36:57:INFO:	              (22, 0.9200651297996431),
+[92mINFO [0m:      	              (23, 0.9275109009622283),
+04/14/2026 20:36:57:INFO:	              (23, 0.9275109009622283),
+[92mINFO [0m:      	              (24, 0.9246389343734476),
+04/14/2026 20:36:57:INFO:	              (24, 0.9246389343734476),
+[92mINFO [0m:      	              (25, 0.9149062609239601)],
+04/14/2026 20:36:57:INFO:	              (25, 0.9149062609239601)],
+[92mINFO [0m:      	 'fairness_gap': [(1, 0.5777777777777777),
+04/14/2026 20:36:57:INFO:	 'fairness_gap': [(1, 0.5777777777777777),
+[92mINFO [0m:      	                  (2, 0.5777777777777777),
+04/14/2026 20:36:57:INFO:	                  (2, 0.5777777777777777),
+[92mINFO [0m:      	                  (3, 0.5777777777777777),
+04/14/2026 20:36:57:INFO:	                  (3, 0.5777777777777777),
+[92mINFO [0m:      	                  (4, 0.5777777777777777),
+04/14/2026 20:36:57:INFO:	                  (4, 0.5777777777777777),
+[92mINFO [0m:      	                  (5, 0.5777777777777777),
+04/14/2026 20:36:57:INFO:	                  (5, 0.5777777777777777),
+[92mINFO [0m:      	                  (6, 0.5767676767676768),
+04/14/2026 20:36:57:INFO:	                  (6, 0.5767676767676768),
+[92mINFO [0m:      	                  (7, 0.5568181818181819),
+04/14/2026 20:36:57:INFO:	                  (7, 0.5568181818181819),
+[92mINFO [0m:      	                  (8, 0.5595959595959596),
+04/14/2026 20:36:57:INFO:	                  (8, 0.5595959595959596),
+[92mINFO [0m:      	                  (9, 0.5358585858585858),
+04/14/2026 20:36:57:INFO:	                  (9, 0.5358585858585858),
+[92mINFO [0m:      	                  (10, 0.47020202020202023),
+04/14/2026 20:36:57:INFO:	                  (10, 0.47020202020202023),
+[92mINFO [0m:      	                  (11, 0.46641414141414145),
+04/14/2026 20:36:57:INFO:	                  (11, 0.46641414141414145),
+[92mINFO [0m:      	                  (12, 0.4588383838383839),
+04/14/2026 20:36:57:INFO:	                  (12, 0.4588383838383839),
+[92mINFO [0m:      	                  (13, 0.4255050505050505),
+04/14/2026 20:36:57:INFO:	                  (13, 0.4255050505050505),
+[92mINFO [0m:      	                  (14, 0.3542929292929293),
+04/14/2026 20:36:57:INFO:	                  (14, 0.3542929292929293),
+[92mINFO [0m:      	                  (15, 0.3808080808080808),
+04/14/2026 20:36:57:INFO:	                  (15, 0.3808080808080808),
+[92mINFO [0m:      	                  (16, 0.36944444444444446),
+04/14/2026 20:36:57:INFO:	                  (16, 0.36944444444444446),
+[92mINFO [0m:      	                  (17, 0.3391414141414141),
+04/14/2026 20:36:57:INFO:	                  (17, 0.3391414141414141),
+[92mINFO [0m:      	                  (18, 0.3363636363636363),
+04/14/2026 20:36:57:INFO:	                  (18, 0.3363636363636363),
+[92mINFO [0m:      	                  (19, 0.3401515151515151),
+04/14/2026 20:36:57:INFO:	                  (19, 0.3401515151515151),
+[92mINFO [0m:      	                  (20, 0.3608585858585859),
+04/14/2026 20:36:57:INFO:	                  (20, 0.3608585858585859),
+[92mINFO [0m:      	                  (21, 0.3098484848484848),
+04/14/2026 20:36:57:INFO:	                  (21, 0.3098484848484848),
+[92mINFO [0m:      	                  (22, 0.2898989898989899),
+04/14/2026 20:36:57:INFO:	                  (22, 0.2898989898989899),
+[92mINFO [0m:      	                  (23, 0.2886363636363637),
+04/14/2026 20:36:57:INFO:	                  (23, 0.2886363636363637),
+[92mINFO [0m:      	                  (24, 0.3002525252525252),
+04/14/2026 20:36:57:INFO:	                  (24, 0.3002525252525252),
+[92mINFO [0m:      	                  (25, 0.3343434343434343)],
+04/14/2026 20:36:57:INFO:	                  (25, 0.3343434343434343)],
+[92mINFO [0m:      	 'fairness_score': [(1, 0.4222222222222223),
+04/14/2026 20:36:57:INFO:	 'fairness_score': [(1, 0.4222222222222223),
+[92mINFO [0m:      	                    (2, 0.4222222222222223),
+04/14/2026 20:36:57:INFO:	                    (2, 0.4222222222222223),
+[92mINFO [0m:      	                    (3, 0.4222222222222223),
+04/14/2026 20:36:57:INFO:	                    (3, 0.4222222222222223),
+[92mINFO [0m:      	                    (4, 0.4222222222222223),
+04/14/2026 20:36:57:INFO:	                    (4, 0.4222222222222223),
+[92mINFO [0m:      	                    (5, 0.4222222222222223),
+04/14/2026 20:36:57:INFO:	                    (5, 0.4222222222222223),
+[92mINFO [0m:      	                    (6, 0.4232323232323232),
+04/14/2026 20:36:57:INFO:	                    (6, 0.4232323232323232),
+[92mINFO [0m:      	                    (7, 0.4431818181818181),
+04/14/2026 20:36:57:INFO:	                    (7, 0.4431818181818181),
+[92mINFO [0m:      	                    (8, 0.44040404040404035),
+04/14/2026 20:36:57:INFO:	                    (8, 0.44040404040404035),
+[92mINFO [0m:      	                    (9, 0.4641414141414142),
+04/14/2026 20:36:57:INFO:	                    (9, 0.4641414141414142),
+[92mINFO [0m:      	                    (10, 0.5297979797979797),
+04/14/2026 20:36:57:INFO:	                    (10, 0.5297979797979797),
+[92mINFO [0m:      	                    (11, 0.5335858585858586),
+04/14/2026 20:36:57:INFO:	                    (11, 0.5335858585858586),
+[92mINFO [0m:      	                    (12, 0.5411616161616162),
+04/14/2026 20:36:57:INFO:	                    (12, 0.5411616161616162),
+[92mINFO [0m:      	                    (13, 0.5744949494949495),
+04/14/2026 20:36:57:INFO:	                    (13, 0.5744949494949495),
+[92mINFO [0m:      	                    (14, 0.6457070707070707),
+04/14/2026 20:36:57:INFO:	                    (14, 0.6457070707070707),
+[92mINFO [0m:      	                    (15, 0.6191919191919192),
+04/14/2026 20:36:57:INFO:	                    (15, 0.6191919191919192),
+[92mINFO [0m:      	                    (16, 0.6305555555555555),
+04/14/2026 20:36:57:INFO:	                    (16, 0.6305555555555555),
+[92mINFO [0m:      	                    (17, 0.6608585858585859),
+04/14/2026 20:36:57:INFO:	                    (17, 0.6608585858585859),
+[92mINFO [0m:      	                    (18, 0.6636363636363637),
+04/14/2026 20:36:57:INFO:	                    (18, 0.6636363636363637),
+[92mINFO [0m:      	                    (19, 0.6598484848484849),
+04/14/2026 20:36:57:INFO:	                    (19, 0.6598484848484849),
+[92mINFO [0m:      	                    (20, 0.6391414141414141),
+04/14/2026 20:36:57:INFO:	                    (20, 0.6391414141414141),
+[92mINFO [0m:      	                    (21, 0.6901515151515152),
+04/14/2026 20:36:57:INFO:	                    (21, 0.6901515151515152),
+[92mINFO [0m:      	                    (22, 0.7101010101010101),
+04/14/2026 20:36:57:INFO:	                    (22, 0.7101010101010101),
+[92mINFO [0m:      	                    (23, 0.7113636363636363),
+04/14/2026 20:36:57:INFO:	                    (23, 0.7113636363636363),
+[92mINFO [0m:      	                    (24, 0.6997474747474748),
+04/14/2026 20:36:57:INFO:	                    (24, 0.6997474747474748),
+[92mINFO [0m:      	                    (25, 0.6656565656565657)],
+04/14/2026 20:36:57:INFO:	                    (25, 0.6656565656565657)],
+[92mINFO [0m:      	 'hospital_a_accuracy': [(1, 0.2916666666666667),
+04/14/2026 20:36:57:INFO:	 'hospital_a_accuracy': [(1, 0.2916666666666667),
+[92mINFO [0m:      	                         (2, 0.8694444444444445),
+04/14/2026 20:36:57:INFO:	                         (2, 0.8694444444444445),
+[92mINFO [0m:      	                         (3, 0.2916666666666667),
+04/14/2026 20:36:57:INFO:	                         (3, 0.2916666666666667),
+[92mINFO [0m:      	                         (4, 0.2916666666666667),
+04/14/2026 20:36:57:INFO:	                         (4, 0.2916666666666667),
+[92mINFO [0m:      	                         (5, 0.8694444444444445),
+04/14/2026 20:36:57:INFO:	                         (5, 0.8694444444444445),
+[92mINFO [0m:      	                         (6, 0.8722222222222222),
+04/14/2026 20:36:57:INFO:	                         (6, 0.8722222222222222),
+[92mINFO [0m:      	                         (7, 0.875),
+04/14/2026 20:36:57:INFO:	                         (7, 0.875),
+[92mINFO [0m:      	                         (8, 0.3181818181818182),
+04/14/2026 20:36:57:INFO:	                         (8, 0.3181818181818182),
+[92mINFO [0m:      	                         (9, 0.3446969696969697),
+04/14/2026 20:36:57:INFO:	                         (9, 0.3446969696969697),
+[92mINFO [0m:      	                         (10, 0.42424242424242425),
+04/14/2026 20:36:57:INFO:	                         (10, 0.42424242424242425),
+[92mINFO [0m:      	                         (11, 0.42803030303030304),
+04/14/2026 20:36:57:INFO:	                         (11, 0.42803030303030304),
+[92mINFO [0m:      	                         (12, 0.8944444444444445),
+04/14/2026 20:36:57:INFO:	                         (12, 0.8944444444444445),
+[92mINFO [0m:      	                         (13, 0.4772727272727273),
+04/14/2026 20:36:57:INFO:	                         (13, 0.4772727272727273),
+[92mINFO [0m:      	                         (14, 0.9111111111111111),
+04/14/2026 20:36:57:INFO:	                         (14, 0.9111111111111111),
+[92mINFO [0m:      	                         (15, 0.9111111111111111),
+04/14/2026 20:36:57:INFO:	                         (15, 0.9111111111111111),
+[92mINFO [0m:      	                         (16, 0.9111111111111111),
+04/14/2026 20:36:57:INFO:	                         (16, 0.9111111111111111),
+[92mINFO [0m:      	                         (17, 0.571969696969697),
+04/14/2026 20:36:57:INFO:	                         (17, 0.571969696969697),
+[92mINFO [0m:      	                         (18, 0.571969696969697),
+04/14/2026 20:36:57:INFO:	                         (18, 0.571969696969697),
+[92mINFO [0m:      	                         (19, 0.9083333333333333),
+04/14/2026 20:36:57:INFO:	                         (19, 0.9083333333333333),
+[92mINFO [0m:      	                         (20, 0.9138888888888889),
+04/14/2026 20:36:57:INFO:	                         (20, 0.9138888888888889),
+[92mINFO [0m:      	                         (21, 0.9083333333333333),
+04/14/2026 20:36:57:INFO:	                         (21, 0.9083333333333333),
+[92mINFO [0m:      	                         (22, 0.9111111111111111),
+04/14/2026 20:36:57:INFO:	                         (22, 0.9111111111111111),
+[92mINFO [0m:      	                         (23, 0.925),
+04/14/2026 20:36:57:INFO:	                         (23, 0.925),
+[92mINFO [0m:      	                         (24, 0.6136363636363636),
+04/14/2026 20:36:57:INFO:	                         (24, 0.6136363636363636),
+[92mINFO [0m:      	                         (25, 0.5795454545454546)],
+04/14/2026 20:36:57:INFO:	                         (25, 0.5795454545454546)],
+[92mINFO [0m:      	 'hospital_b_accuracy': [(1, 0.8694444444444445),
+04/14/2026 20:36:57:INFO:	 'hospital_b_accuracy': [(1, 0.8694444444444445),
+[92mINFO [0m:      	                         (2, 0.2916666666666667),
+04/14/2026 20:36:57:INFO:	                         (2, 0.2916666666666667),
+[92mINFO [0m:      	                         (3, 0.8694444444444445),
+04/14/2026 20:36:57:INFO:	                         (3, 0.8694444444444445),
+[92mINFO [0m:      	                         (4, 0.8694444444444445),
+04/14/2026 20:36:57:INFO:	                         (4, 0.8694444444444445),
+[92mINFO [0m:      	                         (5, 0.2916666666666667),
+04/14/2026 20:36:57:INFO:	                         (5, 0.2916666666666667),
+[92mINFO [0m:      	                         (6, 0.29545454545454547),
+04/14/2026 20:36:57:INFO:	                         (6, 0.29545454545454547),
+[92mINFO [0m:      	                         (7, 0.3181818181818182),
+04/14/2026 20:36:57:INFO:	                         (7, 0.3181818181818182),
+[92mINFO [0m:      	                         (8, 0.8777777777777778),
+04/14/2026 20:36:57:INFO:	                         (8, 0.8777777777777778),
+[92mINFO [0m:      	                         (9, 0.8805555555555555),
+04/14/2026 20:36:57:INFO:	                         (9, 0.8805555555555555),
+[92mINFO [0m:      	                         (10, 0.8944444444444445),
+04/14/2026 20:36:57:INFO:	                         (10, 0.8944444444444445),
+[92mINFO [0m:      	                         (11, 0.8944444444444445),
+04/14/2026 20:36:57:INFO:	                         (11, 0.8944444444444445),
+[92mINFO [0m:      	                         (12, 0.4356060606060606),
+04/14/2026 20:36:57:INFO:	                         (12, 0.4356060606060606),
+[92mINFO [0m:      	                         (13, 0.9027777777777778),
+04/14/2026 20:36:57:INFO:	                         (13, 0.9027777777777778),
+[92mINFO [0m:      	                         (14, 0.5568181818181818),
+04/14/2026 20:36:57:INFO:	                         (14, 0.5568181818181818),
+[92mINFO [0m:      	                         (15, 0.5303030303030303),
+04/14/2026 20:36:57:INFO:	                         (15, 0.5303030303030303),
+[92mINFO [0m:      	                         (16, 0.5416666666666666),
+04/14/2026 20:36:57:INFO:	                         (16, 0.5416666666666666),
+[92mINFO [0m:      	                         (17, 0.9111111111111111),
+04/14/2026 20:36:57:INFO:	                         (17, 0.9111111111111111),
+[92mINFO [0m:      	                         (18, 0.9083333333333333),
+04/14/2026 20:36:57:INFO:	                         (18, 0.9083333333333333),
+[92mINFO [0m:      	                         (19, 0.5681818181818182),
+04/14/2026 20:36:57:INFO:	                         (19, 0.5681818181818182),
+[92mINFO [0m:      	                         (20, 0.553030303030303),
+04/14/2026 20:36:57:INFO:	                         (20, 0.553030303030303),
+[92mINFO [0m:      	                         (21, 0.5984848484848485),
+04/14/2026 20:36:57:INFO:	                         (21, 0.5984848484848485),
+[92mINFO [0m:      	                         (22, 0.6212121212121212),
+04/14/2026 20:36:57:INFO:	                         (22, 0.6212121212121212),
+[92mINFO [0m:      	                         (23, 0.6363636363636364),
+04/14/2026 20:36:57:INFO:	                         (23, 0.6363636363636364),
+[92mINFO [0m:      	                         (24, 0.9138888888888889),
+04/14/2026 20:36:57:INFO:	                         (24, 0.9138888888888889),
+[92mINFO [0m:      	                         (25, 0.9138888888888889)],
+04/14/2026 20:36:57:INFO:	                         (25, 0.9138888888888889)],
+[92mINFO [0m:      	 'privacy_delta': [(1, 1e-05),
+04/14/2026 20:36:57:INFO:	 'privacy_delta': [(1, 1e-05),
+[92mINFO [0m:      	                   (2, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (2, 1e-05),
+[92mINFO [0m:      	                   (3, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (3, 1e-05),
+[92mINFO [0m:      	                   (4, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (4, 1e-05),
+[92mINFO [0m:      	                   (5, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (5, 1e-05),
+[92mINFO [0m:      	                   (6, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (6, 1e-05),
+[92mINFO [0m:      	                   (7, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (7, 1e-05),
+[92mINFO [0m:      	                   (8, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (8, 1e-05),
+[92mINFO [0m:      	                   (9, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (9, 1e-05),
+[92mINFO [0m:      	                   (10, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (10, 1e-05),
+[92mINFO [0m:      	                   (11, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (11, 1e-05),
+[92mINFO [0m:      	                   (12, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (12, 1e-05),
+[92mINFO [0m:      	                   (13, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (13, 1e-05),
+[92mINFO [0m:      	                   (14, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (14, 1e-05),
+[92mINFO [0m:      	                   (15, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (15, 1e-05),
+[92mINFO [0m:      	                   (16, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (16, 1e-05),
+[92mINFO [0m:      	                   (17, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (17, 1e-05),
+[92mINFO [0m:      	                   (18, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (18, 1e-05),
+[92mINFO [0m:      	                   (19, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (19, 1e-05),
+[92mINFO [0m:      	                   (20, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (20, 1e-05),
+[92mINFO [0m:      	                   (21, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (21, 1e-05),
+[92mINFO [0m:      	                   (22, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (22, 1e-05),
+[92mINFO [0m:      	                   (23, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (23, 1e-05),
+[92mINFO [0m:      	                   (24, 1e-05),
+04/14/2026 20:36:57:INFO:	                   (24, 1e-05),
+[92mINFO [0m:      	                   (25, 1e-05)],
+04/14/2026 20:36:57:INFO:	                   (25, 1e-05)],
+[92mINFO [0m:      	 'privacy_epsilon': [(1, 0.6989254481003171),
+04/14/2026 20:36:57:INFO:	 'privacy_epsilon': [(1, 0.6989254481003171),
+[92mINFO [0m:      	                     (2, 0.9012483972500238),
+04/14/2026 20:36:57:INFO:	                     (2, 0.9012483972500238),
+[92mINFO [0m:      	                     (3, 1.0634484186925148),
+04/14/2026 20:36:57:INFO:	                     (3, 1.0634484186925148),
+[92mINFO [0m:      	                     (4, 1.2042896151911613),
+04/14/2026 20:36:57:INFO:	                     (4, 1.2042896151911613),
+[92mINFO [0m:      	                     (5, 1.331069407522347),
+04/14/2026 20:36:57:INFO:	                     (5, 1.331069407522347),
+[92mINFO [0m:      	                     (6, 1.447623224390985),
+04/14/2026 20:36:57:INFO:	                     (6, 1.447623224390985),
+[92mINFO [0m:      	                     (7, 1.5562851907349886),
+04/14/2026 20:36:57:INFO:	                     (7, 1.5562851907349886),
+[92mINFO [0m:      	                     (8, 1.6586082287608723),
+04/14/2026 20:36:57:INFO:	                     (8, 1.6586082287608723),
+[92mINFO [0m:      	                     (9, 1.7556900249722758),
+04/14/2026 20:36:57:INFO:	                     (9, 1.7556900249722758),
+[92mINFO [0m:      	                     (10, 1.848341647153548),
+04/14/2026 20:36:57:INFO:	                     (10, 1.848341647153548),
+[92mINFO [0m:      	                     (11, 1.9371830010252513),
+04/14/2026 20:36:57:INFO:	                     (11, 1.9371830010252513),
+[92mINFO [0m:      	                     (12, 2.022700821711594),
+04/14/2026 20:36:57:INFO:	                     (12, 2.022700821711594),
+[92mINFO [0m:      	                     (13, 2.1052857448887274),
+04/14/2026 20:36:57:INFO:	                     (13, 2.1052857448887274),
+[92mINFO [0m:      	                     (14, 2.1852570014788513),
+04/14/2026 20:36:57:INFO:	                     (14, 2.1852570014788513),
+[92mINFO [0m:      	                     (15, 2.2628795144077616),
+04/14/2026 20:36:57:INFO:	                     (15, 2.2628795144077616),
+[92mINFO [0m:      	                     (16, 2.3383760704522443),
+04/14/2026 20:36:57:INFO:	                     (16, 2.3383760704522443),
+[92mINFO [0m:      	                     (17, 2.4119361299249786),
+04/14/2026 20:36:57:INFO:	                     (17, 2.4119361299249786),
+[92mINFO [0m:      	                     (18, 2.483722468347731),
+04/14/2026 20:36:57:INFO:	                     (18, 2.483722468347731),
+[92mINFO [0m:      	                     (19, 2.553876155127198),
+04/14/2026 20:36:57:INFO:	                     (19, 2.553876155127198),
+[92mINFO [0m:      	                     (20, 2.6225204066308865),
+04/14/2026 20:36:57:INFO:	                     (20, 2.6225204066308865),
+[92mINFO [0m:      	                     (21, 2.6897636059754375),
+04/14/2026 20:36:57:INFO:	                     (21, 2.6897636059754375),
+[92mINFO [0m:      	                     (22, 2.755701699525268),
+04/14/2026 20:36:57:INFO:	                     (22, 2.755701699525268),
+[92mINFO [0m:      	                     (23, 2.820420106638785),
+04/14/2026 20:36:57:INFO:	                     (23, 2.820420106638785),
+[92mINFO [0m:      	                     (24, 2.883995274913673),
+04/14/2026 20:36:57:INFO:	                     (24, 2.883995274913673),
+[92mINFO [0m:      	                     (25, 2.9464959481847677)],
+04/14/2026 20:36:57:INFO:	                     (25, 2.9464959481847677)],
+[92mINFO [0m:      	 'privacy_risk': [(1, 'LOW'),
+04/14/2026 20:36:57:INFO:	 'privacy_risk': [(1, 'LOW'),
+[92mINFO [0m:      	                  (2, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (2, 'LOW'),
+[92mINFO [0m:      	                  (3, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (3, 'LOW'),
+[92mINFO [0m:      	                  (4, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (4, 'LOW'),
+[92mINFO [0m:      	                  (5, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (5, 'LOW'),
+[92mINFO [0m:      	                  (6, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (6, 'LOW'),
+[92mINFO [0m:      	                  (7, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (7, 'LOW'),
+[92mINFO [0m:      	                  (8, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (8, 'LOW'),
+[92mINFO [0m:      	                  (9, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (9, 'LOW'),
+[92mINFO [0m:      	                  (10, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (10, 'LOW'),
+[92mINFO [0m:      	                  (11, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (11, 'LOW'),
+[92mINFO [0m:      	                  (12, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (12, 'LOW'),
+[92mINFO [0m:      	                  (13, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (13, 'LOW'),
+[92mINFO [0m:      	                  (14, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (14, 'LOW'),
+[92mINFO [0m:      	                  (15, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (15, 'LOW'),
+[92mINFO [0m:      	                  (16, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (16, 'LOW'),
+[92mINFO [0m:      	                  (17, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (17, 'LOW'),
+[92mINFO [0m:      	                  (18, 'LOW'),
+04/14/2026 20:36:57:INFO:	                  (18, 'LOW'),
+[92mINFO [0m:      	                  (19, 'MEDIUM'),
+04/14/2026 20:36:57:INFO:	                  (19, 'MEDIUM'),
+[92mINFO [0m:      	                  (20, 'MEDIUM'),
+04/14/2026 20:36:57:INFO:	                  (20, 'MEDIUM'),
+[92mINFO [0m:      	                  (21, 'MEDIUM'),
+04/14/2026 20:36:57:INFO:	                  (21, 'MEDIUM'),
+[92mINFO [0m:      	                  (22, 'MEDIUM'),
+04/14/2026 20:36:57:INFO:	                  (22, 'MEDIUM'),
+[92mINFO [0m:      	                  (23, 'MEDIUM'),
+04/14/2026 20:36:57:INFO:	                  (23, 'MEDIUM'),
+[92mINFO [0m:      	                  (24, 'MEDIUM'),
+04/14/2026 20:36:57:INFO:	                  (24, 'MEDIUM'),
+[92mINFO [0m:      	                  (25, 'MEDIUM')],
+04/14/2026 20:36:57:INFO:	                  (25, 'MEDIUM')],
+[92mINFO [0m:      	 'test_accuracy': [(1, 0.625),
+04/14/2026 20:36:57:INFO:	 'test_accuracy': [(1, 0.625),
+[92mINFO [0m:      	                   (2, 0.625),
+04/14/2026 20:36:57:INFO:	                   (2, 0.625),
+[92mINFO [0m:      	                   (3, 0.625),
+04/14/2026 20:36:57:INFO:	                   (3, 0.625),
+[92mINFO [0m:      	                   (4, 0.625),
+04/14/2026 20:36:57:INFO:	                   (4, 0.625),
+[92mINFO [0m:      	                   (5, 0.625),
+04/14/2026 20:36:57:INFO:	                   (5, 0.625),
+[92mINFO [0m:      	                   (6, 0.6282051282051282),
+04/14/2026 20:36:57:INFO:	                   (6, 0.6282051282051282),
+[92mINFO [0m:      	                   (7, 0.6394230769230769),
+04/14/2026 20:36:57:INFO:	                   (7, 0.6394230769230769),
+[92mINFO [0m:      	                   (8, 0.6410256410256411),
+04/14/2026 20:36:57:INFO:	                   (8, 0.6410256410256411),
+[92mINFO [0m:      	                   (9, 0.6538461538461539),
+04/14/2026 20:36:57:INFO:	                   (9, 0.6538461538461539),
+[92mINFO [0m:      	                   (10, 0.6955128205128205),
+04/14/2026 20:36:57:INFO:	                   (10, 0.6955128205128205),
+[92mINFO [0m:      	                   (11, 0.6971153846153846),
+04/14/2026 20:36:57:INFO:	                   (11, 0.6971153846153846),
+[92mINFO [0m:      	                   (12, 0.7003205128205128),
+04/14/2026 20:36:57:INFO:	                   (12, 0.7003205128205128),
+[92mINFO [0m:      	                   (13, 0.7227564102564102),
+04/14/2026 20:36:57:INFO:	                   (13, 0.7227564102564102),
+[92mINFO [0m:      	                   (14, 0.7612179487179487),
+04/14/2026 20:36:57:INFO:	                   (14, 0.7612179487179487),
+[92mINFO [0m:      	                   (15, 0.75),
+04/14/2026 20:36:57:INFO:	                   (15, 0.75),
+[92mINFO [0m:      	                   (16, 0.7548076923076923),
+04/14/2026 20:36:57:INFO:	                   (16, 0.7548076923076923),
+[92mINFO [0m:      	                   (17, 0.7676282051282052),
+04/14/2026 20:36:57:INFO:	                   (17, 0.7676282051282052),
+[92mINFO [0m:      	                   (18, 0.7660256410256411),
+04/14/2026 20:36:57:INFO:	                   (18, 0.7660256410256411),
+[92mINFO [0m:      	                   (19, 0.7644230769230769),
+04/14/2026 20:36:57:INFO:	                   (19, 0.7644230769230769),
+[92mINFO [0m:      	                   (20, 0.7612179487179487),
+04/14/2026 20:36:57:INFO:	                   (20, 0.7612179487179487),
+[92mINFO [0m:      	                   (21, 0.7772435897435898),
+04/14/2026 20:36:57:INFO:	                   (21, 0.7772435897435898),
+[92mINFO [0m:      	                   (22, 0.7884615384615384),
+04/14/2026 20:36:57:INFO:	                   (22, 0.7884615384615384),
+[92mINFO [0m:      	                   (23, 0.8028846153846154),
+04/14/2026 20:36:57:INFO:	                   (23, 0.8028846153846154),
+[92mINFO [0m:      	                   (24, 0.7868589743589743),
+04/14/2026 20:36:57:INFO:	                   (24, 0.7868589743589743),
+[92mINFO [0m:      	                   (25, 0.7724358974358975)],
+04/14/2026 20:36:57:INFO:	                   (25, 0.7724358974358975)],
+[92mINFO [0m:      	 'test_f1': [(1, 0.5223002444519005),
+04/14/2026 20:36:57:INFO:	 'test_f1': [(1, 0.5223002444519005),
+[92mINFO [0m:      	             (2, 0.5223002444519005),
+04/14/2026 20:36:57:INFO:	             (2, 0.5223002444519005),
+[92mINFO [0m:      	             (3, 0.5223002444519005),
+04/14/2026 20:36:57:INFO:	             (3, 0.5223002444519005),
+[92mINFO [0m:      	             (4, 0.5223002444519005),
+04/14/2026 20:36:57:INFO:	             (4, 0.5223002444519005),
+[92mINFO [0m:      	             (5, 0.5223002444519005),
+04/14/2026 20:36:57:INFO:	             (5, 0.5223002444519005),
+[92mINFO [0m:      	             (6, 0.5294848884384632),
+04/14/2026 20:36:57:INFO:	             (6, 0.5294848884384632),
+[92mINFO [0m:      	             (7, 0.5526338396546036),
+04/14/2026 20:36:57:INFO:	             (7, 0.5526338396546036),
+[92mINFO [0m:      	             (8, 0.556222140211865),
+04/14/2026 20:36:57:INFO:	             (8, 0.556222140211865),
+[92mINFO [0m:      	             (9, 0.5810371963280816),
+04/14/2026 20:36:57:INFO:	             (9, 0.5810371963280816),
+[92mINFO [0m:      	             (10, 0.6568065257007465),
+04/14/2026 20:36:57:INFO:	             (10, 0.6568065257007465),
+[92mINFO [0m:      	             (11, 0.6608035354817533),
+04/14/2026 20:36:57:INFO:	             (11, 0.6608035354817533),
+[92mINFO [0m:      	             (12, 0.6642818576729468),
+04/14/2026 20:36:57:INFO:	             (12, 0.6642818576729468),
+[92mINFO [0m:      	             (13, 0.6989497774570992),
+04/14/2026 20:36:57:INFO:	             (13, 0.6989497774570992),
+[92mINFO [0m:      	             (14, 0.7498902671603126),
+04/14/2026 20:36:57:INFO:	             (14, 0.7498902671603126),
+[92mINFO [0m:      	             (15, 0.7360369560708612),
+04/14/2026 20:36:57:INFO:	             (15, 0.7360369560708612),
+[92mINFO [0m:      	             (16, 0.7420442276299721),
+04/14/2026 20:36:57:INFO:	             (16, 0.7420442276299721),
+[92mINFO [0m:      	             (17, 0.7591299950630912),
+04/14/2026 20:36:57:INFO:	             (17, 0.7591299950630912),
+[92mINFO [0m:      	             (18, 0.7567463289609658),
+04/14/2026 20:36:57:INFO:	             (18, 0.7567463289609658),
+[92mINFO [0m:      	             (19, 0.7548605482424139),
+04/14/2026 20:36:57:INFO:	             (19, 0.7548605482424139),
+[92mINFO [0m:      	             (20, 0.7499978510941386),
+04/14/2026 20:36:57:INFO:	             (20, 0.7499978510941386),
+[92mINFO [0m:      	             (21, 0.7711193200677612),
+04/14/2026 20:36:57:INFO:	             (21, 0.7711193200677612),
+[92mINFO [0m:      	             (22, 0.783716134446627),
+04/14/2026 20:36:57:INFO:	             (22, 0.783716134446627),
+[92mINFO [0m:      	             (23, 0.8020373795605092),
+04/14/2026 20:36:57:INFO:	             (23, 0.8020373795605092),
+[92mINFO [0m:      	             (24, 0.7815768169029038),
+04/14/2026 20:36:57:INFO:	             (24, 0.7815768169029038),
+[92mINFO [0m:      	             (25, 0.7642723078222173)],
+04/14/2026 20:36:57:INFO:	             (25, 0.7642723078222173)],
+[92mINFO [0m:      	 'val_accuracy': [(1, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	 'val_accuracy': [(1, 0.7070649274189098),
+[92mINFO [0m:      	                  (2, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	                  (2, 0.7070649274189098),
+[92mINFO [0m:      	                  (3, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	                  (3, 0.7070649274189098),
+[92mINFO [0m:      	                  (4, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	                  (4, 0.7070649274189098),
+[92mINFO [0m:      	                  (5, 0.7070649274189098),
+04/14/2026 20:36:57:INFO:	                  (5, 0.7070649274189098),
+[92mINFO [0m:      	                  (6, 0.709351829705812),
+04/14/2026 20:36:57:INFO:	                  (6, 0.709351829705812),
+[92mINFO [0m:      	                  (7, 0.7379114308317849),
+04/14/2026 20:36:57:INFO:	                  (7, 0.7379114308317849),
+[92mINFO [0m:      	                  (8, 0.7379114308317849),
+04/14/2026 20:36:57:INFO:	                  (8, 0.7379114308317849),
+[92mINFO [0m:      	                  (9, 0.7647691939727338),
+04/14/2026 20:36:57:INFO:	                  (9, 0.7647691939727338),
+[92mINFO [0m:      	                  (10, 0.8395451952974077),
+04/14/2026 20:36:57:INFO:	                  (10, 0.8395451952974077),
+[92mINFO [0m:      	                  (11, 0.8441189998712122),
+04/14/2026 20:36:57:INFO:	                  (11, 0.8441189998712122),
+[92mINFO [0m:      	                  (12, 0.84183209758431),
+04/14/2026 20:36:57:INFO:	                  (12, 0.84183209758431),
+[92mINFO [0m:      	                  (13, 0.861829153864552),
+04/14/2026 20:36:57:INFO:	                  (13, 0.861829153864552),
+[92mINFO [0m:      	                  (14, 0.8795393078578919),
+04/14/2026 20:36:57:INFO:	                  (14, 0.8795393078578919),
+[92mINFO [0m:      	                  (15, 0.8789542435560134),
+04/14/2026 20:36:57:INFO:	                  (15, 0.8789542435560134),
+[92mINFO [0m:      	                  (16, 0.8812411458429157),
+04/14/2026 20:36:57:INFO:	                  (16, 0.8812411458429157),
+[92mINFO [0m:      	                  (17, 0.8926756572774271),
+04/14/2026 20:36:57:INFO:	                  (17, 0.8926756572774271),
+[92mINFO [0m:      	                  (18, 0.8972494618512318),
+04/14/2026 20:36:57:INFO:	                  (18, 0.8972494618512318),
+[92mINFO [0m:      	                  (19, 0.8983662355343771),
+04/14/2026 20:36:57:INFO:	                  (19, 0.8983662355343771),
+[92mINFO [0m:      	                  (20, 0.8875167884017441),
+04/14/2026 20:36:57:INFO:	                  (20, 0.8875167884017441),
+[92mINFO [0m:      	                  (21, 0.9171931632108624),
+04/14/2026 20:36:57:INFO:	                  (21, 0.9171931632108624),
+[92mINFO [0m:      	                  (22, 0.9200651297996431),
+04/14/2026 20:36:57:INFO:	                  (22, 0.9200651297996431),
+[92mINFO [0m:      	                  (23, 0.9275109009622283),
+04/14/2026 20:36:57:INFO:	                  (23, 0.9275109009622283),
+[92mINFO [0m:      	                  (24, 0.9246389343734476),
+04/14/2026 20:36:57:INFO:	                  (24, 0.9246389343734476),
+[92mINFO [0m:      	                  (25, 0.9149062609239601)],
+04/14/2026 20:36:57:INFO:	                  (25, 0.9149062609239601)],
+[92mINFO [0m:      	 'val_f1': [(1, 0.6124556610188336),
+04/14/2026 20:36:57:INFO:	 'val_f1': [(1, 0.6124556610188336),
+[92mINFO [0m:      	            (2, 0.6124556610188336),
+04/14/2026 20:36:57:INFO:	            (2, 0.6124556610188336),
+[92mINFO [0m:      	            (3, 0.6124556610188336),
+04/14/2026 20:36:57:INFO:	            (3, 0.6124556610188336),
+[92mINFO [0m:      	            (4, 0.6124556610188336),
+04/14/2026 20:36:57:INFO:	            (4, 0.6124556610188336),
+[92mINFO [0m:      	            (5, 0.6124556610188336),
+04/14/2026 20:36:57:INFO:	            (5, 0.6124556610188336),
+[92mINFO [0m:      	            (6, 0.6173840717075724),
+04/14/2026 20:36:57:INFO:	            (6, 0.6173840717075724),
+[92mINFO [0m:      	            (7, 0.6747272466109683),
+04/14/2026 20:36:57:INFO:	            (7, 0.6747272466109683),
+[92mINFO [0m:      	            (8, 0.6747272466109683),
+04/14/2026 20:36:57:INFO:	            (8, 0.6747272466109683),
+[92mINFO [0m:      	            (9, 0.7229268045778898),
+04/14/2026 20:36:57:INFO:	            (9, 0.7229268045778898),
+[92mINFO [0m:      	            (10, 0.8298356816456157),
+04/14/2026 20:36:57:INFO:	            (10, 0.8298356816456157),
+[92mINFO [0m:      	            (11, 0.8353166929457561),
+04/14/2026 20:36:57:INFO:	            (11, 0.8353166929457561),
+[92mINFO [0m:      	            (12, 0.8325868671819288),
+04/14/2026 20:36:57:INFO:	            (12, 0.8325868671819288),
+[92mINFO [0m:      	            (13, 0.8567003787801705),
+04/14/2026 20:36:57:INFO:	            (13, 0.8567003787801705),
+[92mINFO [0m:      	            (14, 0.8770096120298766),
+04/14/2026 20:36:57:INFO:	            (14, 0.8770096120298766),
+[92mINFO [0m:      	            (15, 0.8760850507969256),
+04/14/2026 20:36:57:INFO:	            (15, 0.8760850507969256),
+[92mINFO [0m:      	            (16, 0.8785731566978311),
+04/14/2026 20:36:57:INFO:	            (16, 0.8785731566978311),
+[92mINFO [0m:      	            (17, 0.8908201453440466),
+04/14/2026 20:36:57:INFO:	            (17, 0.8908201453440466),
+[92mINFO [0m:      	            (18, 0.8960643102110236),
+04/14/2026 20:36:57:INFO:	            (18, 0.8960643102110236),
+[92mINFO [0m:      	            (19, 0.897190264523835),
+04/14/2026 20:36:57:INFO:	            (19, 0.897190264523835),
+[92mINFO [0m:      	            (20, 0.8855095501863497),
+04/14/2026 20:36:57:INFO:	            (20, 0.8855095501863497),
+[92mINFO [0m:      	            (21, 0.9170903079762656),
+04/14/2026 20:36:57:INFO:	            (21, 0.9170903079762656),
+[92mINFO [0m:      	            (22, 0.9201775335764634),
+04/14/2026 20:36:57:INFO:	            (22, 0.9201775335764634),
+[92mINFO [0m:      	            (23, 0.9281278088839181),
+04/14/2026 20:36:57:INFO:	            (23, 0.9281278088839181),
+[92mINFO [0m:      	            (24, 0.9250551027056585),
+04/14/2026 20:36:57:INFO:	            (24, 0.9250551027056585),
+[92mINFO [0m:      	            (25, 0.9151225570426242)]}
+04/14/2026 20:36:57:INFO:	            (25, 0.9151225570426242)]}
+[92mINFO [0m:      
+04/14/2026 20:36:57:INFO:
+[92mINFO [0m:      
+04/14/2026 20:36:57:INFO:
+[92mINFO [0m:      Received: reconnect message c27be3f5-d1a4-4594-89da-0fec000b6327
+04/14/2026 20:36:57:INFO:Received: reconnect message c27be3f5-d1a4-4594-89da-0fec000b6327
+[92mINFO [0m:      
+04/14/2026 20:36:57:INFO:
+[92mINFO [0m:      Received: reconnect message 0bc4ad46-7ea9-44fb-9838-7221215e9550
+04/14/2026 20:36:57:INFO:Received: reconnect message 0bc4ad46-7ea9-44fb-9838-7221215e9550
+
+   ► Val Accuracy:  0.8618
+   ► Test Accuracy: 0.7228
+   ► Val F1:        0.8567
+   ► Test F1:       0.6989
+   ► Hospital A:    0.4773
+   ► Hospital B:    0.9028
+   ► Fairness Gap:  0.4255
+   ► ε (epsilon):   2.1053
+======================================================================
+
+💾 [FedAvg] Metrics for Round 13 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 4.6m | ETA: 4.2m
+✅ [FedAvg] Model v14 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8795
+   ► Test Accuracy: 0.7612
+   ► Val F1:        0.8770
+   ► Test F1:       0.7499
+   ► Hospital A:    0.9111
+   ► Hospital B:    0.5568
+   ► Fairness Gap:  0.3543
+   ► ε (epsilon):   2.1853
+======================================================================
+
+💾 [FedAvg] Metrics for Round 14 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 5.0m | ETA: 3.9m
+✅ [FedAvg] Model v15 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8790
+   ► Test Accuracy: 0.7500
+   ► Val F1:        0.8761
+   ► Test F1:       0.7360
+   ► Hospital A:    0.9111
+   ► Hospital B:    0.5303
+   ► Fairness Gap:  0.3808
+   ► ε (epsilon):   2.2629
+======================================================================
+
+💾 [FedAvg] Metrics for Round 15 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 5.4m | ETA: 3.6m
+✅ [FedAvg] Model v16 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8812
+   ► Test Accuracy: 0.7548
+   ► Val F1:        0.8786
+   ► Test F1:       0.7420
+   ► Hospital A:    0.9111
+   ► Hospital B:    0.5417
+   ► Fairness Gap:  0.3694
+   ► ε (epsilon):   2.3384
+======================================================================
+
+💾 [FedAvg] Metrics for Round 16 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 5.7m | ETA: 3.2m
+✅ [FedAvg] Model v17 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8927
+   ► Test Accuracy: 0.7676
+   ► Val F1:        0.8908
+   ► Test F1:       0.7591
+   ► Hospital A:    0.5720
+   ► Hospital B:    0.9111
+   ► Fairness Gap:  0.3391
+   ► ε (epsilon):   2.4119
+======================================================================
+
+💾 [FedAvg] Metrics for Round 17 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 6.0m | ETA: 2.8m
+✅ [FedAvg] Model v18 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8972
+   ► Test Accuracy: 0.7660
+   ► Val F1:        0.8961
+   ► Test F1:       0.7567
+   ► Hospital A:    0.5720
+   ► Hospital B:    0.9083
+   ► Fairness Gap:  0.3364
+   ► ε (epsilon):   2.4837
+======================================================================
+
+💾 [FedAvg] Metrics for Round 18 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 6.3m | ETA: 2.5m
+✅ [FedAvg] Model v19 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8984
+   ► Test Accuracy: 0.7644
+   ► Val F1:        0.8972
+   ► Test F1:       0.7549
+   ► Hospital A:    0.9083
+   ► Hospital B:    0.5682
+   ► Fairness Gap:  0.3402
+   ► ε (epsilon):   2.5539
+======================================================================
+
+💾 [FedAvg] Metrics for Round 19 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 6.8m | ETA: 2.2m
+✅ [FedAvg] Model v20 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8875
+   ► Test Accuracy: 0.7612
+   ► Val F1:        0.8855
+   ► Test F1:       0.7500
+   ► Hospital A:    0.9139
+   ► Hospital B:    0.5530
+   ► Fairness Gap:  0.3609
+   ► ε (epsilon):   2.6225
+======================================================================
+
+💾 [FedAvg] Metrics for Round 20 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 7.2m | ETA: 1.8m
+✅ [FedAvg] Model v21 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9172
+   ► Test Accuracy: 0.7772
+   ► Val F1:        0.9171
+   ► Test F1:       0.7711
+   ► Hospital A:    0.9083
+   ► Hospital B:    0.5985
+   ► Fairness Gap:  0.3098
+   ► ε (epsilon):   2.6898
+======================================================================
+
+💾 [FedAvg] Metrics for Round 21 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 7.6m | ETA: 1.4m
+✅ [FedAvg] Model v22 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9201
+   ► Test Accuracy: 0.7885
+   ► Val F1:        0.9202
+   ► Test F1:       0.7837
+   ► Hospital A:    0.9111
+   ► Hospital B:    0.6212
+   ► Fairness Gap:  0.2899
+   ► ε (epsilon):   2.7557
+======================================================================
+
+💾 [FedAvg] Metrics for Round 22 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 7.9m | ETA: 1.1m
+✅ [FedAvg] Model v23 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9275
+   ► Test Accuracy: 0.8029
+   ► Val F1:        0.9281
+   ► Test F1:       0.8020
+   ► Hospital A:    0.9250
+   ► Hospital B:    0.6364
+   ► Fairness Gap:  0.2886
+   ► ε (epsilon):   2.8204
+======================================================================
+
+💾 [FedAvg] Metrics for Round 23 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 8.3m | ETA: 0.7m
+✅ [FedAvg] Model v24 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9246
+   ► Test Accuracy: 0.7869
+   ► Val F1:        0.9251
+   ► Test F1:       0.7816
+   ► Hospital A:    0.6136
+   ► Hospital B:    0.9139
+   ► Fairness Gap:  0.3003
+   ► ε (epsilon):   2.8840
+======================================================================
+
+💾 [FedAvg] Metrics for Round 24 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 8.6m | ETA: 0.4m
+✅ [FedAvg] Model v25 saved
+
+======================================================================
+[FedAvg SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9149
+   ► Test Accuracy: 0.7724
+   ► Val F1:        0.9151
+   ► Test F1:       0.7643
+   ► Hospital A:    0.5795
+   ► Hospital B:    0.9139
+   ► Fairness Gap:  0.3343
+   ► ε (epsilon):   2.9465
+======================================================================
+
+💾 [FedAvg] Metrics for Round 25 saved to fl_metrics_fedavg.json
+   ⏱️  Elapsed: 8.9m | ETA: 0.0m
+
+======================================================================
+🎉 [RUN 2] FedAvg TRAINING COMPLETE!
+📊 Metrics: fl_metrics_fedavg.json
+🤖 Model:   global_model_fedavg.pth
+⏱️  Time:    8.9 minutes
+======================================================================
+
+04/14/2026 20:36:57:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+04/14/2026 20:36:57:INFO:Disconnect and shut down
+
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.1332
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.0410
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.1447
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.5600
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.1876
+   [FedAvg Client A] Privacy spent: ε=2.81
+
+[FedAvg CLIENT A EVAL] ε=2.81 | Val: 0.7676 | Test: 0.5417 | F1: 0.5346
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.5663
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.1383
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.3118
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.2692
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.5797
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.2664
+   [FedAvg Client A] Privacy spent: ε=2.90
+
+[FedAvg CLIENT A EVAL] ε=2.90 | Val: 0.7946 | Test: 0.5720 | F1: 0.5726
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.7546
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.2848
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.3518
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.1808
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.0720
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.1270
+   [FedAvg Client A] Privacy spent: ε=2.98
+
+[FedAvg CLIENT A EVAL] ε=2.98 | Val: 0.8054 | Test: 0.5720 | F1: 0.5726
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.5964
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.2521
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.4649
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.1682
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.1556
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.0055
+   [FedAvg Client A] Privacy spent: ε=3.07
+
+[FedAvg CLIENT A EVAL] ε=3.07 | Val: 0.8000 | Test: 0.5682 | F1: 0.5682
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.6523
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.2707
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.1748
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.4470
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.1854
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.2822
+   [FedAvg Client A] Privacy spent: ε=3.15
+
+[FedAvg CLIENT A EVAL] ε=3.15 | Val: 0.7784 | Test: 0.5530 | F1: 0.5501
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.9686
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.3783
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.2318
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.0699
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.2416
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.3973
+   [FedAvg Client A] Privacy spent: ε=3.23
+
+[FedAvg CLIENT A EVAL] ε=3.23 | Val: 0.8324 | Test: 0.5985 | F1: 0.6043
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.2256
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.0762
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.1095
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.1150
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.2392
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.3409
+   [FedAvg Client A] Privacy spent: ε=3.31
+
+[FedAvg CLIENT A EVAL] ε=3.31 | Val: 0.8432 | Test: 0.6212 | F1: 0.6285
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.7046
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.4872
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.0697
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.3357
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.0788
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.1538
+   [FedAvg Client A] Privacy spent: ε=3.39
+
+[FedAvg CLIENT A EVAL] ε=3.39 | Val: 0.8649 | Test: 0.6364 | F1: 0.6458
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.3663
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.1489
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.1253
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.3548
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.0810
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.0295
+   [FedAvg Client A] Privacy spent: ε=3.46
+
+[FedAvg CLIENT A EVAL] ε=3.46 | Val: 0.8541 | Test: 0.6136 | F1: 0.6202
+
+🔄 [FedAvg Client A] Training (1 epoch)...
+   [FedAvg Client A] Epoch 1/1, Batch 0/53, Loss: 0.7234
+   [FedAvg Client A] Epoch 1/1, Batch 10/53, Loss: 0.0280
+   [FedAvg Client A] Epoch 1/1, Batch 20/53, Loss: 0.0710
+   [FedAvg Client A] Epoch 1/1, Batch 30/53, Loss: 0.2750
+   [FedAvg Client A] Epoch 1/1, Batch 40/53, Loss: 0.1958
+   [FedAvg Client A] Epoch 1/1, Batch 50/53, Loss: 0.5425
+   [FedAvg Client A] Privacy spent: ε=3.54
+
+[FedAvg CLIENT A EVAL] ε=3.54 | Val: 0.8270 | Test: 0.5795 | F1: 0.5815
+04/14/2026 20:36:57:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+04/14/2026 20:36:57:INFO:Disconnect and shut down
+
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.0092
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0783
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0671
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.1119
+   [FedAvg Client B] Privacy spent: ε=2.35
+
+[FedAvg CLIENT B EVAL] ε=2.35 | Val: 0.9764 | Test: 0.9111 | F1: 0.8975
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.0071
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.0144
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1296
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.0203
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.0007
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.2359
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.1199
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0111
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.1181
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.0912
+   [FedAvg Client B] Privacy spent: ε=2.40
+
+[FedAvg CLIENT B EVAL] ε=2.40 | Val: 0.9735 | Test: 0.9250 | F1: 0.9166
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.0736
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.1268
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.2852
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.1924
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.5216
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.1331
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.0391
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.0450
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.0327
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.2098
+   [FedAvg Client B] Privacy spent: ε=2.46
+
+[FedAvg CLIENT B EVAL] ε=2.46 | Val: 0.9764 | Test: 0.9139 | F1: 0.8999
+
+🔄 [FedAvg Client B] Training (1 epoch)...
+   [FedAvg Client B] Epoch 1/1, Batch 0/95, Loss: 0.2055
+   [FedAvg Client B] Epoch 1/1, Batch 10/95, Loss: 0.2457
+   [FedAvg Client B] Epoch 1/1, Batch 20/95, Loss: 0.1418
+   [FedAvg Client B] Epoch 1/1, Batch 30/95, Loss: 0.1222
+   [FedAvg Client B] Epoch 1/1, Batch 40/95, Loss: 0.2395
+   [FedAvg Client B] Epoch 1/1, Batch 50/95, Loss: 0.1352
+   [FedAvg Client B] Epoch 1/1, Batch 60/95, Loss: 0.3074
+   [FedAvg Client B] Epoch 1/1, Batch 70/95, Loss: 0.2904
+   [FedAvg Client B] Epoch 1/1, Batch 80/95, Loss: 0.1521
+   [FedAvg Client B] Epoch 1/1, Batch 90/95, Loss: 0.1459
+   [FedAvg Client B] Privacy spent: ε=2.51
+
+[FedAvg CLIENT B EVAL] ε=2.51 | Val: 0.9794 | Test: 0.9139 | F1: 0.8983
+Server command: /home/abhay/.local/bin/uv run --project /home/abhay/Documents/fog_project python /home/abhay/Documents/fog_project/experiments/server_fedavg.py
+
+
+=== COMPLETED ===
+Duration: 9.7 minutes
+Server exit code: 0

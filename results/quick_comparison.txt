@@ -1,0 +1,24 @@
+========================================================================
+EXPERIMENT COMPARISON — FINAL RESULTS
+========================================================================
+
+                                 Original        No-DP       FedAvg  Centralized
+                                 (FedProx     (FedProx      (FedAvg      (No FL,
+                                    + DP)       no DP)        + DP)       No DP)
+------------------------------------------------------------------------
+Val Accuracy:                      80.81%       97.04%       91.49%       97.52%
+Test Accuracy:                     68.27%       86.70%       77.24%       83.97%
+Test F1:                           0.6311       0.8672       0.7643       0.8286
+Hospital A Acc:                    88.33%       77.27%       57.95%          N/A
+Hospital B Acc:                    40.91%       93.61%       91.39%          N/A
+Fairness Gap:                      0.4742       0.1634       0.3343          N/A
+Privacy ε (final):                 0.3605          N/A       0.3274          N/A
+Training Time:                    8.4 min      3.5 min      8.9 min      2.9 min
+------------------------------------------------------------------------
+
+KEY FINDINGS:
+1. DP Cost: Accuracy drop from No-DP to Original = +18.43% (DP hurts accuracy)
+2. FedProx Benefit: Accuracy gain over FedAvg = -8.97% (FedAvg better)
+3. Federation Cost: Centralized vs Federated = +15.71% (centralized better)
+4. Fairness: FedProx gap (0.4742) vs FedAvg gap (0.3343) — FedAvg fairer
+========================================================================

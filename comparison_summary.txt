@@ -1,0 +1,48 @@
+======================================================================
+  COMPARISON SUMMARY — Federated Learning Experiments
+  Generated: 2026-04-14 20:40:24
+======================================================================
+
+EXPERIMENT CONFIGURATION
+----------------------------------------
+Model:          Net (3-block CNN, GroupNorm, Dropout 0.5)
+Dataset:        PneumoniaMNIST (28x28, binary)
+Data Split:     Non-IID (SKEW_RATIO=0.8)
+Rounds:         25
+Local Epochs:   1 per round
+Batch Size:     32
+Learning Rate:  0.001 (Adam)
+Clients:        2 (Hospital A + Hospital B)
+
+======================================================================
+  RESULTS COMPARISON
+======================================================================
+
+Metric                         |     Original |        No-DP |       FedAvg
+---------------------------------------------------------------------------
+
+⚠️  No-DP (FedProx only): Data NOT FOUND at /home/abhay/Documents/fog_project/fl_metrics_no_dp.json
+
+⚠️  FedAvg (+ DP): Data NOT FOUND at /home/abhay/Documents/fog_project/fl_metrics_fedavg.json
+Rounds Completed               |            3 |          N/A |          N/A
+Global Val Accuracy            |       0.8081 |          N/A |          N/A
+Global Test Accuracy           |       0.6827 |          N/A |          N/A
+Global Val F1                  |       0.7878 |          N/A |          N/A
+Global Test F1                 |       0.6311 |          N/A |          N/A
+Hospital A Test Acc            |       0.8833 |          N/A |          N/A
+Hospital B Test Acc            |       0.4091 |          N/A |          N/A
+Fairness Gap                   |       0.4742 |          N/A |          N/A
+Fairness Score                 |       0.5258 |          N/A |          N/A
+Privacy ε (epsilon)            |       0.3605 |          N/A |          N/A
+Training Time (min)            |          8.4 |          N/A |          N/A
+
+
+⚠️  Centralized baseline not found (Run 3 not completed)
+======================================================================
+  ANALYSIS
+======================================================================
+
+
+======================================================================
+  END OF COMPARISON SUMMARY
+======================================================================

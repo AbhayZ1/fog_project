@@ -1,0 +1,2783 @@
+=== RUN 1: No-DP Baseline (FedProx without DP) ===
+Started: 2026-04-14 20:22:56
+
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:23:01:WARNING:DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=25, no round_timeout
+04/14/2026 20:23:01:INFO:Starting Flower server, config: num_rounds=25, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (25 rounds), SSL is disabled
+04/14/2026 20:23:01:INFO:Flower ECE: gRPC server running (25 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+04/14/2026 20:23:01:INFO:[INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+04/14/2026 20:23:01:INFO:Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+04/14/2026 20:23:01:INFO:Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+04/14/2026 20:23:01:INFO:Evaluation returned no results (`None`)
+[92mINFO [0m:      
+04/14/2026 20:23:01:INFO:
+[92mINFO [0m:      [ROUND 1]
+04/14/2026 20:23:01:INFO:[ROUND 1]
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:23:13:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:23:13:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+04/14/2026 20:23:13:DEBUG:ChannelConnectivity.IDLE
+04/14/2026 20:23:13:DEBUG:ChannelConnectivity.READY
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:23:17:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 20:23:17:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+04/14/2026 20:23:17:DEBUG:ChannelConnectivity.IDLE
+04/14/2026 20:23:17:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:17:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:17:INFO:
+[92mINFO [0m:      Received: train message c965fc6e-e0b9-41f3-a32f-deaeb0563912
+04/14/2026 20:23:17:INFO:Received: train message c965fc6e-e0b9-41f3-a32f-deaeb0563912
+[92mINFO [0m:      
+04/14/2026 20:23:17:INFO:
+[92mINFO [0m:      Received: train message 98c0be85-fbf8-41ff-a30a-e9e985769c6f
+04/14/2026 20:23:17:INFO:Received: train message 98c0be85-fbf8-41ff-a30a-e9e985769c6f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:22:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:25:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:23:25:INFO:aggregate_fit: received 2 results and 0 failures
+[93mWARNING [0m:   No fit_metrics_aggregation_fn provided
+04/14/2026 20:23:25:WARNING:No fit_metrics_aggregation_fn provided
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:25:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:25:INFO:
+[92mINFO [0m:      Received: evaluate message 71944dcb-a234-4ea5-a160-450400c5af7e
+04/14/2026 20:23:25:INFO:Received: evaluate message 71944dcb-a234-4ea5-a160-450400c5af7e
+[92mINFO [0m:      
+04/14/2026 20:23:25:INFO:
+[92mINFO [0m:      Received: evaluate message c3a2b5ff-8d36-47e4-b660-2df777e324bc
+04/14/2026 20:23:25:INFO:Received: evaluate message c3a2b5ff-8d36-47e4-b660-2df777e324bc
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:25:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:25:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:23:25:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:23:25:INFO:
+[92mINFO [0m:      [ROUND 2]
+04/14/2026 20:23:25:INFO:[ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:25:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:26:INFO:
+[92mINFO [0m:      Received: train message 91c01549-f264-44d1-aa02-22a35fd64dba
+04/14/2026 20:23:26:INFO:Received: train message 91c01549-f264-44d1-aa02-22a35fd64dba
+[92mINFO [0m:      
+04/14/2026 20:23:26:INFO:
+[92mINFO [0m:      Received: train message b9c6e624-a1e7-42ef-9c05-a545d28b3a07
+04/14/2026 20:23:26:INFO:Received: train message b9c6e624-a1e7-42ef-9c05-a545d28b3a07
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:30:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:33:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:23:33:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:33:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:33:INFO:
+[92mINFO [0m:      Received: evaluate message 6c771e34-c4c6-4996-9fe6-ff4ae8069e4d
+04/14/2026 20:23:33:INFO:Received: evaluate message 6c771e34-c4c6-4996-9fe6-ff4ae8069e4d
+[92mINFO [0m:      
+04/14/2026 20:23:33:INFO:
+[92mINFO [0m:      Received: evaluate message 30531c87-1db4-4c5b-aad9-95de470da26c
+04/14/2026 20:23:33:INFO:Received: evaluate message 30531c87-1db4-4c5b-aad9-95de470da26c
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:34:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:34:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:23:34:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:23:34:INFO:
+[92mINFO [0m:      [ROUND 3]
+04/14/2026 20:23:34:INFO:[ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:34:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:34:INFO:
+[92mINFO [0m:      Received: train message 079224aa-1d19-4752-8bb4-f862cd99c5ba
+04/14/2026 20:23:34:INFO:Received: train message 079224aa-1d19-4752-8bb4-f862cd99c5ba
+[92mINFO [0m:      
+04/14/2026 20:23:34:INFO:
+[92mINFO [0m:      Received: train message faf546d0-8314-4724-afd4-ffd0b810a00c
+04/14/2026 20:23:34:INFO:Received: train message faf546d0-8314-4724-afd4-ffd0b810a00c
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:39:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:42:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:23:42:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:42:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:42:INFO:
+[92mINFO [0m:      Received: evaluate message 37dc3318-4d6a-4f9d-a9bf-6567ef8e998e
+04/14/2026 20:23:42:INFO:Received: evaluate message 37dc3318-4d6a-4f9d-a9bf-6567ef8e998e
+[92mINFO [0m:      
+04/14/2026 20:23:42:INFO:
+[92mINFO [0m:      Received: evaluate message 07459a08-eece-4e6d-8748-9e600ccecb6d
+04/14/2026 20:23:42:INFO:Received: evaluate message 07459a08-eece-4e6d-8748-9e600ccecb6d
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:42:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:43:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:23:43:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:23:43:INFO:
+[92mINFO [0m:      [ROUND 4]
+04/14/2026 20:23:43:INFO:[ROUND 4]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:43:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:43:INFO:
+[92mINFO [0m:      Received: train message 417c8ec4-bb3e-4ed8-a455-33943078761c
+04/14/2026 20:23:43:INFO:Received: train message 417c8ec4-bb3e-4ed8-a455-33943078761c
+[92mINFO [0m:      
+04/14/2026 20:23:43:INFO:
+[92mINFO [0m:      Received: train message a96d3c0e-b8b2-4de2-85ad-ffe3cb039216
+04/14/2026 20:23:43:INFO:Received: train message a96d3c0e-b8b2-4de2-85ad-ffe3cb039216
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:50:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:23:50:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:51:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:51:INFO:
+[92mINFO [0m:      Received: evaluate message ed851b6c-59eb-4a30-8821-caa390dcdc3d
+04/14/2026 20:23:51:INFO:Received: evaluate message ed851b6c-59eb-4a30-8821-caa390dcdc3d
+[92mINFO [0m:      
+04/14/2026 20:23:51:INFO:
+[92mINFO [0m:      Received: evaluate message 7504c5a3-c46c-4d7e-8206-fc83451aa0b0
+04/14/2026 20:23:51:INFO:Received: evaluate message 7504c5a3-c46c-4d7e-8206-fc83451aa0b0
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:51:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:52:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:23:52:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:23:52:INFO:
+[92mINFO [0m:      [ROUND 5]
+04/14/2026 20:23:52:INFO:[ROUND 5]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:52:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:52:INFO:
+[92mINFO [0m:      Received: train message c792e685-a306-4bb0-ae76-61dc6dd9ee1b
+04/14/2026 20:23:52:INFO:Received: train message c792e685-a306-4bb0-ae76-61dc6dd9ee1b
+[92mINFO [0m:      
+04/14/2026 20:23:52:INFO:
+[92mINFO [0m:      Received: train message 32e94bb6-24a6-407d-9bef-2b065a13a059
+04/14/2026 20:23:52:INFO:Received: train message 32e94bb6-24a6-407d-9bef-2b065a13a059
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:23:59:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:23:59:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:23:59:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:23:59:INFO:
+[92mINFO [0m:      Received: evaluate message bf832873-386f-443c-b0b5-2da0e1e4e703
+04/14/2026 20:23:59:INFO:Received: evaluate message bf832873-386f-443c-b0b5-2da0e1e4e703
+[92mINFO [0m:      
+04/14/2026 20:23:59:INFO:
+[92mINFO [0m:      Received: evaluate message 635c0be8-998e-4d1e-b1e5-f8859b15a1eb
+04/14/2026 20:23:59:INFO:Received: evaluate message 635c0be8-998e-4d1e-b1e5-f8859b15a1eb
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:00:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:00:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:00:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:00:INFO:
+[92mINFO [0m:      [ROUND 6]
+04/14/2026 20:24:00:INFO:[ROUND 6]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:00:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:00:INFO:
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 07859d06-564e-42ca-b167-efb676786dcd
+04/14/2026 20:24:00:INFO:Received: train message 07859d06-564e-42ca-b167-efb676786dcd
+04/14/2026 20:24:00:INFO:
+[92mINFO [0m:      Received: train message c6a64b2e-8d40-4657-a82e-39638df72178
+04/14/2026 20:24:00:INFO:Received: train message c6a64b2e-8d40-4657-a82e-39638df72178
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:05:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:08:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:08:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:08:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:08:INFO:
+[92mINFO [0m:      Received: evaluate message 3b889140-1c99-4bd3-8766-e8a9fa22a549
+04/14/2026 20:24:08:INFO:Received: evaluate message 3b889140-1c99-4bd3-8766-e8a9fa22a549
+[92mINFO [0m:      
+04/14/2026 20:24:08:INFO:
+[92mINFO [0m:      Received: evaluate message d155a2a2-50f9-4295-8731-ec4fa9e7ceb1
+04/14/2026 20:24:08:INFO:Received: evaluate message d155a2a2-50f9-4295-8731-ec4fa9e7ceb1
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:09:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:09:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:09:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:09:INFO:
+[92mINFO [0m:      [ROUND 7]
+04/14/2026 20:24:09:INFO:[ROUND 7]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:09:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:09:INFO:
+[92mINFO [0m:      Received: train message 5e66db03-deb7-42d4-bc78-8d6d02942fba
+04/14/2026 20:24:09:INFO:Received: train message 5e66db03-deb7-42d4-bc78-8d6d02942fba
+[92mINFO [0m:      
+04/14/2026 20:24:09:INFO:
+[92mINFO [0m:      Received: train message ab57b51e-5906-41ae-92cf-b29f98953fe2
+04/14/2026 20:24:09:INFO:Received: train message ab57b51e-5906-41ae-92cf-b29f98953fe2
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:14:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:17:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:17:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:17:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:17:INFO:
+[92mINFO [0m:      Received: evaluate message d3d0fcfe-1f65-4e88-aa55-0e8a4aeca4c4
+04/14/2026 20:24:17:INFO:Received: evaluate message d3d0fcfe-1f65-4e88-aa55-0e8a4aeca4c4
+[92mINFO [0m:      
+04/14/2026 20:24:17:INFO:
+[92mINFO [0m:      Received: evaluate message bd133d46-212b-411f-9525-a33f9cd759ba
+04/14/2026 20:24:17:INFO:Received: evaluate message bd133d46-212b-411f-9525-a33f9cd759ba
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:18:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:18:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:18:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:18:INFO:
+[92mINFO [0m:      [ROUND 8]
+04/14/2026 20:24:18:INFO:[ROUND 8]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:18:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:18:INFO:
+[92mINFO [0m:      Received: train message 56ca3dc0-0024-4635-82a5-29de4d5c8beb
+04/14/2026 20:24:18:INFO:Received: train message 56ca3dc0-0024-4635-82a5-29de4d5c8beb
+[92mINFO [0m:      
+04/14/2026 20:24:18:INFO:
+[92mINFO [0m:      Received: train message 5d9f41aa-8452-49cd-8800-d93583145e47
+04/14/2026 20:24:18:INFO:Received: train message 5d9f41aa-8452-49cd-8800-d93583145e47
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:22:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:25:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:25:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:25:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:25:INFO:
+[92mINFO [0m:      Received: evaluate message 661d2c73-c292-480c-9bf2-f20a2f3a4575
+04/14/2026 20:24:25:INFO:Received: evaluate message 661d2c73-c292-480c-9bf2-f20a2f3a4575
+[92mINFO [0m:      
+04/14/2026 20:24:25:INFO:
+[92mINFO [0m:      Received: evaluate message abbbf0e1-e8f7-4536-b5a9-19a3b625ca23
+04/14/2026 20:24:25:INFO:Received: evaluate message abbbf0e1-e8f7-4536-b5a9-19a3b625ca23
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:26:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:26:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:26:INFO:
+[92mINFO [0m:      [ROUND 9]
+04/14/2026 20:24:26:INFO:[ROUND 9]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:26:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:26:INFO:
+[92mINFO [0m:      Received: train message f42d40d5-d4eb-45b4-bc0b-ea136841bec6
+04/14/2026 20:24:26:INFO:Received: train message f42d40d5-d4eb-45b4-bc0b-ea136841bec6
+[92mINFO [0m:      
+04/14/2026 20:24:26:INFO:
+[92mINFO [0m:      Received: train message 8dc9eecb-a5fd-4bd0-b6af-9e92dc1bdb7d
+04/14/2026 20:24:26:INFO:Received: train message 8dc9eecb-a5fd-4bd0-b6af-9e92dc1bdb7d
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:31:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:34:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:34:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:34:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:35:INFO:
+[92mINFO [0m:      Received: evaluate message dee6b73d-c5c0-46a5-b317-02ee709bcdb9
+04/14/2026 20:24:35:INFO:Received: evaluate message dee6b73d-c5c0-46a5-b317-02ee709bcdb9
+[92mINFO [0m:      
+04/14/2026 20:24:35:INFO:
+[92mINFO [0m:      Received: evaluate message 59d19a09-7570-4eca-8614-6375e39e5eb4
+04/14/2026 20:24:35:INFO:Received: evaluate message 59d19a09-7570-4eca-8614-6375e39e5eb4
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:35:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:36:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:36:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:36:INFO:
+[92mINFO [0m:      [ROUND 10]
+04/14/2026 20:24:36:INFO:[ROUND 10]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:36:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:36:INFO:
+[92mINFO [0m:      Received: train message 34d86de4-989c-40b3-a7ef-2bdbb5c070ab
+04/14/2026 20:24:36:INFO:Received: train message 34d86de4-989c-40b3-a7ef-2bdbb5c070ab
+[92mINFO [0m:      
+04/14/2026 20:24:36:INFO:
+[92mINFO [0m:      Received: train message a76a6755-99a4-4ec5-8504-93aa05abbd01
+04/14/2026 20:24:36:INFO:Received: train message a76a6755-99a4-4ec5-8504-93aa05abbd01
+
+======================================================================
+🏥 [NO-DP] CLIENT B (Hospital B) - No Differential Privacy
+======================================================================
+
+✅ Model: GroupNorm (consistent with original architecture)
+✅ No Differential Privacy — standard SGD training
+
+🔌 Connecting to FL server at 127.0.0.1:8080...
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.8300
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.3008
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.3810
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.2358
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.3557
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.1182
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0703
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.1673
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.2272
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.2447
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9617, Test Acc: 0.8889, F1: 0.8511
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.1166
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0934
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.3076
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.1632
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.1086
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0731
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.1027
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.1957
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0786
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.1014
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9617, Test Acc: 0.9167, F1: 0.9159
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.1015
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0335
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.1639
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.2593
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0822
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0410
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0632
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.1006
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.1192
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0281
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9882, Test Acc: 0.9167, F1: 0.9039
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0170
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0187
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0173
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0357
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0055
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0282
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.1975
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0466
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.1723
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0488
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9646, Test Acc: 0.9333, F1: 0.9307
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0147
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.2496
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0414
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0572
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0098
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0063
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0819
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0205
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0180
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.1803
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9676, Test Acc: 0.9306, F1: 0.9257
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.1504
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0111
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0309
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0154
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0305
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0381
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0027
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0793
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0382
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9764, Test Acc: 0.9250, F1: 0.9129
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0221
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0539
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0189
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0090
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0649
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0048
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.3224
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0472
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0081
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0024
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9823, Test Acc: 0.9222, F1: 0.9074
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0661
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0899
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0137
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.1169
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0461
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0087
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0027
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0455
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.1249
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0434
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9794, Test Acc: 0.9306, F1: 0.9193
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0130
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0055
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0190
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0253
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.1563
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.1479
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0048
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0126
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0409
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0078
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9735, Test Acc: 0.9306, F1: 0.9205
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0045
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0032
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0010[92mINFO [0m:      Sent reply
+04/14/2026 20:24:40:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:43:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:43:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:43:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:43:INFO:
+[92mINFO [0m:      Received: evaluate message ef50df2a-a817-4325-8d19-054b3a78208d
+04/14/2026 20:24:43:INFO:Received: evaluate message ef50df2a-a817-4325-8d19-054b3a78208d
+[92mINFO [0m:      
+04/14/2026 20:24:43:INFO:
+[92mINFO [0m:      Received: evaluate message 33ab78bb-c6e7-482e-80b9-7309f4bc91d2
+04/14/2026 20:24:43:INFO:Received: evaluate message 33ab78bb-c6e7-482e-80b9-7309f4bc91d2
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:44:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:44:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:44:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:44:INFO:
+[92mINFO [0m:      [ROUND 11]
+04/14/2026 20:24:44:INFO:[ROUND 11]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:44:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:44:INFO:
+[92mINFO [0m:      Received: train message 1d764b4b-11bd-4049-b61a-7a247aa008be
+04/14/2026 20:24:44:INFO:Received: train message 1d764b4b-11bd-4049-b61a-7a247aa008be
+[92mINFO [0m:      
+04/14/2026 20:24:44:INFO:
+[92mINFO [0m:      Received: train message 2533336e-2c77-40b3-aeb7-b64f7b2f343c
+04/14/2026 20:24:44:INFO:Received: train message 2533336e-2c77-40b3-aeb7-b64f7b2f343c
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:51:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:51:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:51:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:51:INFO:
+[92mINFO [0m:      Received: evaluate message fa86b2e0-c487-4b28-906d-e4a86ec9b912
+04/14/2026 20:24:51:INFO:Received: evaluate message fa86b2e0-c487-4b28-906d-e4a86ec9b912
+[92mINFO [0m:      
+04/14/2026 20:24:51:INFO:
+[92mINFO [0m:      Received: evaluate message 2368c1fe-716f-45d0-abc8-ab805e329985
+04/14/2026 20:24:51:INFO:Received: evaluate message 2368c1fe-716f-45d0-abc8-ab805e329985
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:52:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:52:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:24:52:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:24:52:INFO:
+[92mINFO [0m:      [ROUND 12]
+04/14/2026 20:24:52:INFO:[ROUND 12]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:52:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:52:INFO:
+[92mINFO [0m:      Received: train message dc757e89-e161-40ad-8f84-b0ea7f02a55a
+04/14/2026 20:24:52:INFO:Received: train message dc757e89-e161-40ad-8f84-b0ea7f02a55a
+[92mINFO [0m:      
+04/14/2026 20:24:52:INFO:
+[92mINFO [0m:      Received: train message 803508ad-54a8-4fe1-8651-b98345e18243
+04/14/2026 20:24:52:INFO:Received: train message 803508ad-54a8-4fe1-8651-b98345e18243
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:24:59:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:24:59:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:24:59:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:24:59:INFO:
+[92mINFO [0m:      Received: evaluate message 130f1aa8-6bb9-4b77-927f-24cf6548e981
+04/14/2026 20:24:59:INFO:Received: evaluate message 130f1aa8-6bb9-4b77-927f-24cf6548e981
+[92mINFO [0m:      
+04/14/2026 20:24:59:INFO:
+[92mINFO [0m:      Received: evaluate message 115ec860-35dc-4a99-b6a4-a0f5835cc5eb
+04/14/2026 20:24:59:INFO:Received: evaluate message 115ec860-35dc-4a99-b6a4-a0f5835cc5eb
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:00:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:00:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:00:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:00:INFO:
+[92mINFO [0m:      [ROUND 13]
+04/14/2026 20:25:00:INFO:[ROUND 13]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:00:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:00:INFO:
+[92mINFO [0m:      Received: train message cc885665-d66e-44c9-b44b-d47bd7d34187
+04/14/2026 20:25:00:INFO:Received: train message cc885665-d66e-44c9-b44b-d47bd7d34187
+[92mINFO [0m:      
+04/14/2026 20:25:00:INFO:
+[92mINFO [0m:      Received: train message 0449e4c4-a7e9-400a-bf34-47f25048a6d9
+04/14/2026 20:25:00:INFO:Received: train message 0449e4c4-a7e9-400a-bf34-47f25048a6d9
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:05:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:08:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:08:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:08:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:08:INFO:
+[92mINFO [0m:      Received: evaluate message e3f24886-d190-43a2-93ef-82b18d79e933
+04/14/2026 20:25:08:INFO:Received: evaluate message e3f24886-d190-43a2-93ef-82b18d79e933
+[92mINFO [0m:      
+04/14/2026 20:25:08:INFO:
+[92mINFO [0m:      Received: evaluate message 54368256-c73d-4be9-8fe6-44b6ba6e85c6
+04/14/2026 20:25:08:INFO:Received: evaluate message 54368256-c73d-4be9-8fe6-44b6ba6e85c6
+
+======================================================================
+🏥 [NO-DP] CLIENT A (Hospital A) - No Differential Privacy
+======================================================================
+
+✅ Model: GroupNorm (consistent with original architecture)
+✅ No Differential Privacy — standard SGD training
+
+🔌 Connecting to FL server at 127.0.0.1:8080...
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.6594
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.4176
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.3048
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.1582
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.2730
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0473
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.6378, Test Acc: 0.4432, F1: 0.3989
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.4942
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.2593
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.2404
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2305
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.3086
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0976
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9514, Test Acc: 0.7235, F1: 0.7359
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1365
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.1393
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.2740
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2304
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0403
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0873
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9081, Test Acc: 0.6326, F1: 0.6425
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1416
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.1720
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.2853
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0527
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.1667
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.1325
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9676, Test Acc: 0.7273, F1: 0.7394
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0883
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0279
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.1186
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0808
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.1809
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.2694
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9784, Test Acc: 0.7462, F1: 0.7577
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1968
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0844
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0852
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0437
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0432
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.2731
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9622, Test Acc: 0.6780, F1: 0.6900
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0741
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0937
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.2025
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.1408
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.1894
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.1064
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9405, Test Acc: 0.6553, F1: 0.6659
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1643
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0390
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.1197
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2108
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0758
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0078
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9514, Test Acc: 0.6667, F1: 0.6772
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0491
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.2695
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0895
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0400
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0150
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.3601
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9676, Test Acc: 0.6780, F1: 0.6900
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0465
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0312
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0619
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0928
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0251
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.1474
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9784, Test Acc: 0.8182, F1: 0.8257
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0319
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0084
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.1282
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2315
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0945
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0784
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9568, Test Acc: 0.6553, F1: 0.6653
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1118
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.1712
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0132
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2040
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0124
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0531
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9730, Test Acc: 0.7121, F1: 0.7237
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0166
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0902
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0821
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0512
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.2060
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0878
+
+======================================================================[92mINFO [0m:      Sent reply
+04/14/2026 20:25:09:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:09:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:09:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:09:INFO:
+[92mINFO [0m:      [ROUND 14]
+04/14/2026 20:25:09:INFO:[ROUND 14]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:09:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:09:INFO:
+[92mINFO [0m:      Received: train message 2ad10bd7-5584-4728-ad41-5458d7c9e946
+04/14/2026 20:25:09:INFO:Received: train message 2ad10bd7-5584-4728-ad41-5458d7c9e946
+[92mINFO [0m:      
+04/14/2026 20:25:09:INFO:
+[92mINFO [0m:      Received: train message 98600bb7-87cb-4975-bf54-c633811629f2
+04/14/2026 20:25:09:INFO:Received: train message 98600bb7-87cb-4975-bf54-c633811629f2
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:15:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:16:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:16:INFO:aggregate_fit: received 2 results and 0 failures
+
+======================================================================
+🚀 [RUN 1] NO-DP BASELINE — FedProx WITHOUT Differential Privacy
+======================================================================
+Strategy:     FedProx (μ=0.01)
+DP:           DISABLED
+Rounds:       25
+Local Epochs: 1 per client
+Device:       cpu
+Clients:      2
+======================================================================
+
+✅ Server model fixed (BatchNorm → GroupNorm) for consistency
+✅ Starting No-DP server on 0.0.0.0:8080...
+Waiting for clients...
+
+✅ [NO-DP] Model v1 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.8247
+   ► Test Accuracy: 0.7003
+   ► Val F1:        0.8101
+   ► Test F1:       0.6598
+   ► Hospital A:    0.4432
+   ► Hospital B:    0.8889
+   ► Fairness Gap:  0.4457
+======================================================================
+
+💾 [NO-DP] Metrics for Round 1 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.0m | ETA: 0.0m
+✅ [NO-DP] Model v2 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9573
+   ► Test Accuracy: 0.8349
+   ► Val F1:        0.9593
+   ► Test F1:       0.8397
+   ► Hospital A:    0.9167
+   ► Hospital B:    0.7235
+   ► Fairness Gap:  0.1932
+======================================================================
+
+💾 [NO-DP] Metrics for Round 2 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.1m | ETA: 1.6m
+✅ [NO-DP] Model v3 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9543
+   ► Test Accuracy: 0.7965
+   ► Val F1:        0.9548
+   ► Test F1:       0.7933
+   ► Hospital A:    0.9167
+   ► Hospital B:    0.6326
+   ► Fairness Gap:  0.2841
+======================================================================
+
+💾 [NO-DP] Metrics for Round 3 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.3m | ETA: 2.1m
+✅ [NO-DP] Model v4 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9659
+   ► Test Accuracy: 0.8462
+   ► Val F1:        0.9676
+   ► Test F1:       0.8498
+   ► Hospital A:    0.9333
+   ► Hospital B:    0.7273
+   ► Fairness Gap:  0.2061
+======================================================================
+
+💾 [NO-DP] Metrics for Round 4 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.4m | ETA: 2.3m
+✅ [NO-DP] Model v5 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9721
+   ► Test Accuracy: 0.8526
+   ► Val F1:        0.9736
+   ► Test F1:       0.8546
+   ► Hospital A:    0.9306
+   ► Hospital B:    0.7462
+   ► Fairness Gap:  0.1843
+======================================================================
+
+💾 [NO-DP] Metrics for Round 5 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.6m | ETA: 2.3m
+✅ [NO-DP] Model v6 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9704
+   ► Test Accuracy: 0.8205
+   ► Val F1:        0.9712
+   ► Test F1:       0.8186
+   ► Hospital A:    0.6780
+   ► Hospital B:    0.9250
+   ► Fairness Gap:  0.2470
+======================================================================
+
+💾 [NO-DP] Metrics for Round 6 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.7m | ETA: 2.3m
+✅ [NO-DP] Model v7 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9646
+   ► Test Accuracy: 0.8093
+   ► Val F1:        0.9653
+   ► Test F1:       0.8052
+   ► Hospital A:    0.9222
+   ► Hospital B:    0.6553
+   ► Fairness Gap:  0.2669
+======================================================================
+
+💾 [NO-DP] Metrics for Round 7 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 0.9m | ETA: 2.2m
+✅ [NO-DP] Model v8 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9675
+   ► Test Accuracy: 0.8189
+   ► Val F1:        0.9682
+   ► Test F1:       0.8169
+   ► Hospital A:    0.9306
+   ► Hospital B:    0.6667
+   ► Fairness Gap:  0.2639
+======================================================================
+
+💾 [NO-DP] Metrics for Round 8 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.0m | ETA: 2.2m
+✅ [NO-DP] Model v9 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9710
+   ► Test Accuracy: 0.8237
+   ► Val F1:        0.9720
+   ► Test F1:       0.8230
+   ► Hospital A:    0.6780
+   ► Hospital B:    0.9306
+   ► Fairness Gap:  0.2525
+======================================================================
+
+💾 [NO-DP] Metrics for Round 9 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.2m | ETA: 2.1m
+✅ [NO-DP] Model v10 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9517
+   ► Test Accuracy: 0.8862
+   ► Val F1:        0.9568
+   ► Test F1:       0.8892
+   ► Hospital A:    0.9361
+   ► Hospital B:    0.8182
+   ► Fairness Gap:  0.1179
+======================================================================
+
+💾 [NO-DP] Metrics for Round 10 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.3m | ETA: 2.0m
+✅ [NO-DP] Model v11 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9698
+   ► Test Accuracy: 0.8109
+   ► Val F1:        0.9703
+   ► Test F1:       0.8073
+   ► Hospital A:    0.6553
+   ► Hospital B:    0.9250
+   ► Fairness Gap:  0.2697
+======================================================================
+
+💾 [NO-DP] Metrics for Round 11 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.4m | ETA: 1.8m
+✅ [NO-DP] Model v12 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9801
+   ► Test Accuracy: 0.8429
+   ► Val F1:        0.9804
+   ► Test F1:       0.8430
+   ► Hospital A:    0.7121
+   ► Hospital B:    0.9389
+   ► Fairness Gap:  0.2268
+======================================================================
+
+💾 [NO-DP] Metrics for Round 12 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.6m | ETA: 1.7m
+✅ [NO-DP] Model v13 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9795
+   ► Test Accuracy: 0.8686
+   ► Val F1:        0.9803
+   ► Test F1:       0.8706
+   ► Hospital A:    0.9472
+   ► Hospital B:    0.7614
+   ► Fairness Gap:  0.1859
+======================================================================
+
+💾 [NO-DP] Metrics for Round 13 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.7m | ETA: 1.6m
+✅ [NO-DP] Model v14 saved[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:17:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:17:INFO:
+[92mINFO [0m:      Received: evaluate message 5e08a21f-3ee6-4275-9497-4af3326fbe44
+04/14/2026 20:25:17:INFO:Received: evaluate message 5e08a21f-3ee6-4275-9497-4af3326fbe44
+[92mINFO [0m:      
+04/14/2026 20:25:17:INFO:
+[92mINFO [0m:      Received: evaluate message 4631db38-4cbb-4a72-8599-8805f3e2f06d
+04/14/2026 20:25:17:INFO:Received: evaluate message 4631db38-4cbb-4a72-8599-8805f3e2f06d
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:17:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:18:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:18:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:18:INFO:
+[92mINFO [0m:      [ROUND 15]
+04/14/2026 20:25:18:INFO:[ROUND 15]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:18:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:18:INFO:
+[92mINFO [0m:      Received: train message e3bcae44-559f-499c-b669-d983b61d1647
+04/14/2026 20:25:18:INFO:Received: train message e3bcae44-559f-499c-b669-d983b61d1647
+[92mINFO [0m:      
+04/14/2026 20:25:18:INFO:
+[92mINFO [0m:      Received: train message efea0604-99cc-444f-a577-6c677eb78b3f
+04/14/2026 20:25:18:INFO:Received: train message efea0604-99cc-444f-a577-6c677eb78b3f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:23:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:25:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:25:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:25:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:25:INFO:
+[92mINFO [0m:      Received: evaluate message 8560a7eb-0496-4957-8e3b-ddce0c2bf6b3
+04/14/2026 20:25:25:INFO:Received: evaluate message 8560a7eb-0496-4957-8e3b-ddce0c2bf6b3
+[92mINFO [0m:      
+04/14/2026 20:25:25:INFO:
+[92mINFO [0m:      Received: evaluate message fe0218d0-9a03-4068-8f83-7596d1971520
+04/14/2026 20:25:25:INFO:Received: evaluate message fe0218d0-9a03-4068-8f83-7596d1971520
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:26:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:26:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:26:INFO:
+[92mINFO [0m:      [ROUND 16]
+04/14/2026 20:25:26:INFO:[ROUND 16]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:26:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:26:INFO:
+[92mINFO [0m:      Received: train message 36aaa188-0132-4ddd-917c-7d784bbe96f5
+04/14/2026 20:25:26:INFO:Received: train message 36aaa188-0132-4ddd-917c-7d784bbe96f5
+[92mINFO [0m:      
+04/14/2026 20:25:26:INFO:
+[92mINFO [0m:      Received: train message 57bc6ec8-da97-4856-908e-4b802135c9cf
+04/14/2026 20:25:26:INFO:Received: train message 57bc6ec8-da97-4856-908e-4b802135c9cf
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:31:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:33:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:33:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:33:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:33:INFO:
+[92mINFO [0m:      Received: evaluate message 6f3a109a-5aae-498d-9e7d-46ce68866e53
+04/14/2026 20:25:33:INFO:Received: evaluate message 6f3a109a-5aae-498d-9e7d-46ce68866e53
+[92mINFO [0m:      
+04/14/2026 20:25:33:INFO:
+[92mINFO [0m:      Received: evaluate message 6279862a-fd87-4e36-9e87-77232d0cd69f
+04/14/2026 20:25:33:INFO:Received: evaluate message 6279862a-fd87-4e36-9e87-77232d0cd69f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:34:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:34:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:34:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:34:INFO:
+[92mINFO [0m:      [ROUND 17]
+04/14/2026 20:25:34:INFO:[ROUND 17]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:34:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:34:INFO:
+[92mINFO [0m:      Received: train message 0be5c1c7-bc79-4e1c-88a2-230835838e59
+04/14/2026 20:25:34:INFO:Received: train message 0be5c1c7-bc79-4e1c-88a2-230835838e59
+[92mINFO [0m:      
+04/14/2026 20:25:34:INFO:
+[92mINFO [0m:      Received: train message ffdb596e-5512-4a15-b5dd-4abc1406fc13
+04/14/2026 20:25:34:INFO:Received: train message ffdb596e-5512-4a15-b5dd-4abc1406fc13
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:39:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:42:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:42:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:42:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:42:INFO:
+[92mINFO [0m:      Received: evaluate message ea87ed3f-c01b-41a1-a5ae-3e26ffe24b0f
+04/14/2026 20:25:42:INFO:Received: evaluate message ea87ed3f-c01b-41a1-a5ae-3e26ffe24b0f
+[92mINFO [0m:      
+04/14/2026 20:25:42:INFO:
+[92mINFO [0m:      Received: evaluate message b9f11e4d-c405-4f1b-8c5b-f506fec7a970
+04/14/2026 20:25:42:INFO:Received: evaluate message b9f11e4d-c405-4f1b-8c5b-f506fec7a970
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:42:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:43:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:43:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:43:INFO:
+[92mINFO [0m:      [ROUND 18]
+04/14/2026 20:25:43:INFO:[ROUND 18]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:43:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:43:INFO:
+[92mINFO [0m:      Received: train message 5336365d-4c4d-4ccd-89cd-50b525dc0d5b
+04/14/2026 20:25:43:INFO:Received: train message 5336365d-4c4d-4ccd-89cd-50b525dc0d5b
+[92mINFO [0m:      
+04/14/2026 20:25:43:INFO:
+[92mINFO [0m:      Received: train message a1e9d38f-baa4-4904-9c03-5da01f28fa4f
+04/14/2026 20:25:43:INFO:Received: train message a1e9d38f-baa4-4904-9c03-5da01f28fa4f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:48:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:50:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:50:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:50:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:50:INFO:
+[92mINFO [0m:      
+04/14/2026 20:25:50:INFO:
+[92mINFO [0m:      Received: evaluate message 391c652d-6396-4644-8431-1a2fa13fceab
+04/14/2026 20:25:50:INFO:Received: evaluate message 391c652d-6396-4644-8431-1a2fa13fceab
+[92mINFO [0m:      Received: evaluate message 9f3872a3-6380-4c7b-9f05-0db7c043323b
+04/14/2026 20:25:50:INFO:Received: evaluate message 9f3872a3-6380-4c7b-9f05-0db7c043323b
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:51:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:51:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:25:51:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:25:51:INFO:
+[92mINFO [0m:      [ROUND 19]
+04/14/2026 20:25:51:INFO:[ROUND 19]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:51:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:51:INFO:
+[92mINFO [0m:      Received: train message 418b3692-f767-4b02-ab0e-5c21002c3e39
+04/14/2026 20:25:51:INFO:Received: train message 418b3692-f767-4b02-ab0e-5c21002c3e39
+[92mINFO [0m:      
+04/14/2026 20:25:51:INFO:
+[92mINFO [0m:      Received: train message 74430fc5-a4f2-4fa8-baad-91dbc89874e7
+04/14/2026 20:25:51:INFO:Received: train message 74430fc5-a4f2-4fa8-baad-91dbc89874e7
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:57:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:25:59:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:25:59:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:25:59:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:25:59:INFO:
+[92mINFO [0m:      Received: evaluate message 70265f0e-ecb0-4431-9887-5aad36563f91
+04/14/2026 20:25:59:INFO:Received: evaluate message 70265f0e-ecb0-4431-9887-5aad36563f91
+[92mINFO [0m:      
+04/14/2026 20:25:59:INFO:
+[92mINFO [0m:      Received: evaluate message aacd8771-7c2b-49ad-b499-717bfe57449f
+04/14/2026 20:25:59:INFO:Received: evaluate message aacd8771-7c2b-49ad-b499-717bfe57449f
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:00:INFO:Sent reply
+
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0006
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0097
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0267
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0230
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9322, Test Acc: 0.9361, F1: 0.9358
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.1750
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0019
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0746
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0709
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0327
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0320
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0578
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0200
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0212
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0010
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9794, Test Acc: 0.9250, F1: 0.9114
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0428
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0162
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0052
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0153
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0902
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0008
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0817
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0042
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0014
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0057
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9853, Test Acc: 0.9389, F1: 0.9306
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0229
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0076
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0008
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0008
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0108
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0011
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0329
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0094
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0002
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0098
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9764, Test Acc: 0.9472, F1: 0.9428
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0110
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0027
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0095
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0028
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0142
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0291
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0025
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0024
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0626
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9823, Test Acc: 0.9361, F1: 0.9269
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0033
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0131
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.1086
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0042
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0773
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0049
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0173
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0035
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0089
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9735, Test Acc: 0.9472, F1: 0.9428
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0227
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0123
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0008
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0003
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0125
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0000
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0078
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0285
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0035
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9764, Test Acc: 0.9389, F1: 0.9316
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0408
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0077
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0040
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0582
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0373
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0572
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0012
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0198
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0062
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9764, Test Acc: 0.9389, F1: 0.9306
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0061
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0039
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0008
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0007
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0049
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0002
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0007
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0018
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0005
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0008
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9823, Test Acc: 0.9361, F1: 0.9280
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0047
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0017
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0494
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0010
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0051
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0026
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0000
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0005
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0014
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9823, Test Acc: 0.9361, F1: 0.9269
+======================================================================
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:00:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:00:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:00:INFO:
+[92mINFO [0m:      [ROUND 20]
+04/14/2026 20:26:00:INFO:[ROUND 20]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:00:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:00:INFO:
+[92mINFO [0m:      Received: train message 82c42d80-6da1-4ef9-9bf2-b9a21dfe73ab
+04/14/2026 20:26:00:INFO:Received: train message 82c42d80-6da1-4ef9-9bf2-b9a21dfe73ab
+[92mINFO [0m:      
+04/14/2026 20:26:00:INFO:
+[92mINFO [0m:      Received: train message feee75df-aca2-41a9-9f8d-96a13213fd38
+04/14/2026 20:26:00:INFO:Received: train message feee75df-aca2-41a9-9f8d-96a13213fd38
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:05:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:08:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:26:08:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:08:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:08:INFO:
+[92mINFO [0m:      Received: evaluate message 14d70ea5-c520-4435-98d0-db9f80c95d34
+04/14/2026 20:26:08:INFO:Received: evaluate message 14d70ea5-c520-4435-98d0-db9f80c95d34
+[92mINFO [0m:      
+04/14/2026 20:26:08:INFO:
+[92mINFO [0m:      Received: evaluate message 585b9abd-c1e9-42b2-98f5-846826e6fe92
+04/14/2026 20:26:08:INFO:Received: evaluate message 585b9abd-c1e9-42b2-98f5-846826e6fe92
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:08:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:09:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:09:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:09:INFO:
+[92mINFO [0m:      [ROUND 21]
+04/14/2026 20:26:09:INFO:[ROUND 21]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:09:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:09:INFO:
+[92mINFO [0m:      Received: train message 5f29af98-9733-425f-8f44-98c14b5ec79c
+04/14/2026 20:26:09:INFO:Received: train message 5f29af98-9733-425f-8f44-98c14b5ec79c
+[92mINFO [0m:      
+04/14/2026 20:26:09:INFO:
+[92mINFO [0m:      Received: train message ccbc7b7b-3f40-47c8-843d-72acb47d4506
+04/14/2026 20:26:09:INFO:Received: train message ccbc7b7b-3f40-47c8-843d-72acb47d4506
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:13:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:16:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:26:16:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:16:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:16:INFO:
+[92mINFO [0m:      Received: evaluate message abe54c93-4bc2-4463-83bb-d5b152bd6882
+04/14/2026 20:26:16:INFO:Received: evaluate message abe54c93-4bc2-4463-83bb-d5b152bd6882
+[92mINFO [0m:      
+04/14/2026 20:26:16:INFO:
+[92mINFO [0m:      Received: evaluate message f5784a77-3157-4254-832b-d9efb75187a6
+04/14/2026 20:26:16:INFO:Received: evaluate message f5784a77-3157-4254-832b-d9efb75187a6
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:17:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:17:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:17:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:17:INFO:
+[92mINFO [0m:      [ROUND 22]
+04/14/2026 20:26:17:INFO:[ROUND 22]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:17:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:17:INFO:
+[92mINFO [0m:      
+[92mINFO [0m:      Received: train message 8eddd659-71e6-422f-a9e6-ed79a9cb94d1
+04/14/2026 20:26:17:INFO:Received: train message 8eddd659-71e6-422f-a9e6-ed79a9cb94d1
+04/14/2026 20:26:17:INFO:
+[92mINFO [0m:      Received: train message d2b1b35d-25f7-4e56-8f18-b2538833dfcd
+04/14/2026 20:26:17:INFO:Received: train message d2b1b35d-25f7-4e56-8f18-b2538833dfcd
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:23:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:25:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:26:25:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:25:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:25:INFO:
+[92mINFO [0m:      Received: evaluate message 61f05fe5-a51c-486c-9c16-1ff09852405b
+04/14/2026 20:26:25:INFO:Received: evaluate message 61f05fe5-a51c-486c-9c16-1ff09852405b
+[92mINFO [0m:      
+04/14/2026 20:26:25:INFO:
+[92mINFO [0m:      Received: evaluate message cb23cc12-f983-475f-85c5-2a550946c1d9
+04/14/2026 20:26:25:INFO:Received: evaluate message cb23cc12-f983-475f-85c5-2a550946c1d9
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:26:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:27:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:27:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:27:INFO:
+[92mINFO [0m:      [ROUND 23]
+04/14/2026 20:26:27:INFO:[ROUND 23]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:27:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:27:INFO:
+[92mINFO [0m:      Received: train message 4dd9e49c-2fa9-41af-973c-3a07a988ce8a
+04/14/2026 20:26:27:INFO:Received: train message 4dd9e49c-2fa9-41af-973c-3a07a988ce8a
+[92mINFO [0m:      
+04/14/2026 20:26:27:INFO:
+[92mINFO [0m:      Received: train message b625f490-32e2-4c12-b058-2c6c2a624b0b
+04/14/2026 20:26:27:INFO:Received: train message b625f490-32e2-4c12-b058-2c6c2a624b0b
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:32:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:35:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:26:35:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:35:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:35:INFO:
+[92mINFO [0m:      Received: evaluate message ab6deb1c-d7ca-44dd-ad03-57c304c44fce
+04/14/2026 20:26:35:INFO:Received: evaluate message ab6deb1c-d7ca-44dd-ad03-57c304c44fce
+[92mINFO [0m:      
+04/14/2026 20:26:35:INFO:
+[92mINFO [0m:      Received: evaluate message 35199d64-e9aa-480f-aa64-b503e29c6b5e
+04/14/2026 20:26:35:INFO:Received: evaluate message 35199d64-e9aa-480f-aa64-b503e29c6b5e
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:36:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:36:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:36:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:36:INFO:
+[92mINFO [0m:      [ROUND 24]
+04/14/2026 20:26:36:INFO:[ROUND 24]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:36:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:36:INFO:
+[92mINFO [0m:      Received: train message 1337b7bb-a235-4122-9a55-0e397e512c8d
+04/14/2026 20:26:36:INFO:Received: train message 1337b7bb-a235-4122-9a55-0e397e512c8d
+[92mINFO [0m:      
+04/14/2026 20:26:36:INFO:
+[92mINFO [0m:      Received: train message 0f2e6f7c-8675-44b8-8290-f70999456522
+04/14/2026 20:26:36:INFO:Received: train message 0f2e6f7c-8675-44b8-8290-f70999456522
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:42:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:45:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:26:45:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:45:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:45:INFO:
+[92mINFO [0m:      Received: evaluate message 55b9a3cc-eb04-45fc-8499-67fba7eea805
+04/14/2026 20:26:45:INFO:Received: evaluate message 55b9a3cc-eb04-45fc-8499-67fba7eea805
+[92mINFO [0m:      
+04/14/2026 20:26:45:INFO:
+[92mINFO [0m:      Received: evaluate message d3d24cc8-cd88-47f3-9b41-72e9b0c21753
+04/14/2026 20:26:45:INFO:Received: evaluate message d3d24cc8-cd88-47f3-9b41-72e9b0c21753
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:46:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:46:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:46:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:46:INFO:
+[92mINFO [0m:      [ROUND 25]
+04/14/2026 20:26:46:INFO:[ROUND 25]
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:46:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:46:INFO:
+[92mINFO [0m:      Received: train message d4a57557-2d4c-4499-9361-da127bf88ce0
+04/14/2026 20:26:46:INFO:Received: train message d4a57557-2d4c-4499-9361-da127bf88ce0
+[92mINFO [0m:      
+04/14/2026 20:26:46:INFO:
+[92mINFO [0m:      Received: train message 4e3ad805-156e-4dff-bd03-95ecc0941976
+04/14/2026 20:26:46:INFO:Received: train message 4e3ad805-156e-4dff-bd03-95ecc0941976
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:52:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:55:INFO:Sent reply
+[92mINFO [0m:      aggregate_fit: received 2 results and 0 failures
+04/14/2026 20:26:55:INFO:aggregate_fit: received 2 results and 0 failures
+[92mINFO [0m:      configure_evaluate: strategy sampled 2 clients (out of 2)
+04/14/2026 20:26:55:INFO:configure_evaluate: strategy sampled 2 clients (out of 2)
+[92mINFO [0m:      
+04/14/2026 20:26:55:INFO:
+[92mINFO [0m:      Received: evaluate message d005aa14-b8fb-4afb-a154-c09762abc833
+04/14/2026 20:26:55:INFO:Received: evaluate message d005aa14-b8fb-4afb-a154-c09762abc833
+[92mINFO [0m:      
+04/14/2026 20:26:55:INFO:
+[92mINFO [0m:      Received: evaluate message 727b513b-c516-4b4c-8c03-6877041183c0
+04/14/2026 20:26:55:INFO:Received: evaluate message 727b513b-c516-4b4c-8c03-6877041183c0
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:55:INFO:Sent reply
+[92mINFO [0m:      Sent reply
+04/14/2026 20:26:56:INFO:Sent reply
+[92mINFO [0m:      aggregate_evaluate: received 2 results and 0 failures
+04/14/2026 20:26:56:INFO:aggregate_evaluate: received 2 results and 0 failures
+[92mINFO [0m:      
+04/14/2026 20:26:56:INFO:
+[92mINFO [0m:      [SUMMARY]
+04/14/2026 20:26:56:INFO:[SUMMARY]
+[92mINFO [0m:      Run finished 25 round(s) in 234.63s
+04/14/2026 20:26:56:INFO:Run finished 25 round(s) in 234.63s
+[92mINFO [0m:      	History (loss, distributed):
+04/14/2026 20:26:56:INFO:	History (loss, distributed):
+[92mINFO [0m:      		round 1: 0.5057104808779863
+04/14/2026 20:26:56:INFO:		round 1: 0.5057104808779863
+[92mINFO [0m:      		round 2: 0.39277547483260816
+04/14/2026 20:26:56:INFO:		round 2: 0.39277547483260816
+[92mINFO [0m:      		round 3: 0.6697900621936872
+04/14/2026 20:26:56:INFO:		round 3: 0.6697900621936872
+[92mINFO [0m:      		round 4: 0.4701812657026144
+04/14/2026 20:26:56:INFO:		round 4: 0.4701812657026144
+[92mINFO [0m:      		round 5: 0.4620106713129924
+04/14/2026 20:26:56:INFO:		round 5: 0.4620106713129924
+[92mINFO [0m:      		round 6: 0.5807378653150338
+04/14/2026 20:26:56:INFO:		round 6: 0.5807378653150338
+[92mINFO [0m:      		round 7: 0.6462744250893593
+04/14/2026 20:26:56:INFO:		round 7: 0.6462744250893593
+[92mINFO [0m:      		round 8: 0.8595568606486688
+04/14/2026 20:26:56:INFO:		round 8: 0.8595568606486688
+[92mINFO [0m:      		round 9: 0.6615260507051761
+04/14/2026 20:26:56:INFO:		round 9: 0.6615260507051761
+[92mINFO [0m:      		round 10: 0.456142042691891
+04/14/2026 20:26:56:INFO:		round 10: 0.456142042691891
+[92mINFO [0m:      		round 11: 0.7997521918553573
+04/14/2026 20:26:56:INFO:		round 11: 0.7997521918553573
+[92mINFO [0m:      		round 12: 0.636736182639232
+04/14/2026 20:26:56:INFO:		round 12: 0.636736182639232
+[92mINFO [0m:      		round 13: 0.6133696385301076
+04/14/2026 20:26:56:INFO:		round 13: 0.6133696385301076
+[92mINFO [0m:      		round 14: 0.8383996910773791
+04/14/2026 20:26:56:INFO:		round 14: 0.8383996910773791
+[92mINFO [0m:      		round 15: 0.586110875583612
+04/14/2026 20:26:56:INFO:		round 15: 0.586110875583612
+[92mINFO [0m:      		round 16: 0.6434588833497121
+04/14/2026 20:26:56:INFO:		round 16: 0.6434588833497121
+[92mINFO [0m:      		round 17: 0.8472652114354647
+04/14/2026 20:26:56:INFO:		round 17: 0.8472652114354647
+[92mINFO [0m:      		round 18: 0.808151744879209
+04/14/2026 20:26:56:INFO:		round 18: 0.808151744879209
+[92mINFO [0m:      		round 19: 0.9876278088643
+04/14/2026 20:26:56:INFO:		round 19: 0.9876278088643
+[92mINFO [0m:      		round 20: 0.7816325242702777
+04/14/2026 20:26:56:INFO:		round 20: 0.7816325242702777
+[92mINFO [0m:      		round 21: 1.4559253339584057
+04/14/2026 20:26:56:INFO:		round 21: 1.4559253339584057
+[92mINFO [0m:      		round 22: 0.9865655589562196
+04/14/2026 20:26:56:INFO:		round 22: 0.9865655589562196
+[92mINFO [0m:      		round 23: 0.9912179341683021
+04/14/2026 20:26:56:INFO:		round 23: 0.9912179341683021
+[92mINFO [0m:      		round 24: 0.9408876391557547
+04/14/2026 20:26:56:INFO:		round 24: 0.9408876391557547
+[92mINFO [0m:      		round 25: 0.6920015926544483
+04/14/2026 20:26:56:INFO:		round 25: 0.6920015926544483
+[92mINFO [0m:      	History (metrics, distributed, evaluate):
+04/14/2026 20:26:56:INFO:	History (metrics, distributed, evaluate):
+[92mINFO [0m:      	{'accuracy': [(1, 0.8246536529722371),
+04/14/2026 20:26:56:INFO:	{'accuracy': [(1, 0.8246536529722371),
+[92mINFO [0m:      	              (2, 0.9572939856125697),
+04/14/2026 20:26:56:INFO:	              (2, 0.9572939856125697),
+[92mINFO [0m:      	              (3, 0.9543153091825659),
+04/14/2026 20:26:56:INFO:	              (3, 0.9543153091825659),
+[92mINFO [0m:      	              (4, 0.9658565304583004),
+04/14/2026 20:26:56:INFO:	              (4, 0.9658565304583004),
+[92mINFO [0m:      	              (5, 0.9721321730171288),
+04/14/2026 20:26:56:INFO:	              (5, 0.9721321730171288),
+[92mINFO [0m:      	              (6, 0.9703769801114933),
+04/14/2026 20:26:56:INFO:	              (6, 0.9703769801114933),
+[92mINFO [0m:      	              (7, 0.9646330469339318),
+04/14/2026 20:26:56:INFO:	              (7, 0.9646330469339318),
+[92mINFO [0m:      	              (8, 0.9675050135227127),
+04/14/2026 20:26:56:INFO:	              (8, 0.9675050135227127),
+[92mINFO [0m:      	              (9, 0.9709620444133719),
+04/14/2026 20:26:56:INFO:	              (9, 0.9709620444133719),
+[92mINFO [0m:      	              (10, 0.9517101171968428),
+04/14/2026 20:26:56:INFO:	              (10, 0.9517101171968428),
+[92mINFO [0m:      	              (11, 0.969791915809615),
+04/14/2026 20:26:56:INFO:	              (11, 0.969791915809615),
+[92mINFO [0m:      	              (12, 0.9800562986403696),
+04/14/2026 20:26:56:INFO:	              (12, 0.9800562986403696),
+[92mINFO [0m:      	              (13, 0.9795245892591026),
+04/14/2026 20:26:56:INFO:	              (13, 0.9795245892591026),
+[92mINFO [0m:      	              (14, 0.9714937537946386),
+04/14/2026 20:26:56:INFO:	              (14, 0.9714937537946386),
+[92mINFO [0m:      	              (15, 0.980109653560981),
+04/14/2026 20:26:56:INFO:	              (15, 0.980109653560981),
+[92mINFO [0m:      	              (16, 0.9795245892591026),
+04/14/2026 20:26:56:INFO:	              (16, 0.9795245892591026),
+[92mINFO [0m:      	              (17, 0.9772376869722001),
+04/14/2026 20:26:56:INFO:	              (17, 0.9772376869722001),
+[92mINFO [0m:      	              (18, 0.9806413629422479),
+04/14/2026 20:26:56:INFO:	              (18, 0.9806413629422479),
+[92mINFO [0m:      	              (19, 0.9760675583684432),
+04/14/2026 20:26:56:INFO:	              (19, 0.9760675583684432),
+[92mINFO [0m:      	              (20, 0.9727172373190073),
+04/14/2026 20:26:56:INFO:	              (20, 0.9727172373190073),
+[92mINFO [0m:      	              (21, 0.9663348849189557),
+04/14/2026 20:26:56:INFO:	              (21, 0.9663348849189557),
+[92mINFO [0m:      	              (22, 0.974950784685298),
+04/14/2026 20:26:56:INFO:	              (22, 0.974950784685298),
+[92mINFO [0m:      	              (23, 0.9766526226703218),
+04/14/2026 20:26:56:INFO:	              (23, 0.9766526226703218),
+[92mINFO [0m:      	              (24, 0.9744190753040312),
+04/14/2026 20:26:56:INFO:	              (24, 0.9744190753040312),
+[92mINFO [0m:      	              (25, 0.970430335032105)],
+04/14/2026 20:26:56:INFO:	              (25, 0.970430335032105)],
+[92mINFO [0m:      	 'fairness_gap': [(1, 0.44570707070707066),
+04/14/2026 20:26:56:INFO:	 'fairness_gap': [(1, 0.44570707070707066),
+[92mINFO [0m:      	                  (2, 0.19318181818181812),
+04/14/2026 20:26:56:INFO:	                  (2, 0.19318181818181812),
+[92mINFO [0m:      	                  (3, 0.28409090909090906),
+04/14/2026 20:26:56:INFO:	                  (3, 0.28409090909090906),
+[92mINFO [0m:      	                  (4, 0.20606060606060606),
+04/14/2026 20:26:56:INFO:	                  (4, 0.20606060606060606),
+[92mINFO [0m:      	                  (5, 0.18434343434343436),
+04/14/2026 20:26:56:INFO:	                  (5, 0.18434343434343436),
+[92mINFO [0m:      	                  (6, 0.24696969696969706),
+04/14/2026 20:26:56:INFO:	                  (6, 0.24696969696969706),
+[92mINFO [0m:      	                  (7, 0.266919191919192),
+04/14/2026 20:26:56:INFO:	                  (7, 0.266919191919192),
+[92mINFO [0m:      	                  (8, 0.26388888888888895),
+04/14/2026 20:26:56:INFO:	                  (8, 0.26388888888888895),
+[92mINFO [0m:      	                  (9, 0.2525252525252526),
+04/14/2026 20:26:56:INFO:	                  (9, 0.2525252525252526),
+[92mINFO [0m:      	                  (10, 0.11792929292929288),
+04/14/2026 20:26:56:INFO:	                  (10, 0.11792929292929288),
+[92mINFO [0m:      	                  (11, 0.26969696969696977),
+04/14/2026 20:26:56:INFO:	                  (11, 0.26969696969696977),
+[92mINFO [0m:      	                  (12, 0.22676767676767673),
+04/14/2026 20:26:56:INFO:	                  (12, 0.22676767676767673),
+[92mINFO [0m:      	                  (13, 0.18585858585858583),
+04/14/2026 20:26:56:INFO:	                  (13, 0.18585858585858583),
+[92mINFO [0m:      	                  (14, 0.22020202020202018),
+04/14/2026 20:26:56:INFO:	                  (14, 0.22020202020202018),
+[92mINFO [0m:      	                  (15, 0.18207070707070705),
+04/14/2026 20:26:56:INFO:	                  (15, 0.18207070707070705),
+[92mINFO [0m:      	                  (16, 0.2116161616161616),
+04/14/2026 20:26:56:INFO:	                  (16, 0.2116161616161616),
+[92mINFO [0m:      	                  (17, 0.21540404040404038),
+04/14/2026 20:26:56:INFO:	                  (17, 0.21540404040404038),
+[92mINFO [0m:      	                  (18, 0.19368686868686869),
+04/14/2026 20:26:56:INFO:	                  (18, 0.19368686868686869),
+[92mINFO [0m:      	                  (19, 0.22777777777777775),
+04/14/2026 20:26:56:INFO:	                  (19, 0.22777777777777775),
+[92mINFO [0m:      	                  (20, 0.17449494949494948),
+04/14/2026 20:26:56:INFO:	                  (20, 0.17449494949494948),
+[92mINFO [0m:      	                  (21, 0.27449494949494957),
+04/14/2026 20:26:56:INFO:	                  (21, 0.27449494949494957),
+[92mINFO [0m:      	                  (22, 0.2164141414141414),
+04/14/2026 20:26:56:INFO:	                  (22, 0.2164141414141414),
+[92mINFO [0m:      	                  (23, 0.21363636363636362),
+04/14/2026 20:26:56:INFO:	                  (23, 0.21363636363636362),
+[92mINFO [0m:      	                  (24, 0.203030303030303),
+04/14/2026 20:26:56:INFO:	                  (24, 0.203030303030303),
+[92mINFO [0m:      	                  (25, 0.1633838383838384)],
+04/14/2026 20:26:56:INFO:	                  (25, 0.1633838383838384)],
+[92mINFO [0m:      	 'fairness_score': [(1, 0.5542929292929293),
+04/14/2026 20:26:56:INFO:	 'fairness_score': [(1, 0.5542929292929293),
+[92mINFO [0m:      	                    (2, 0.8068181818181819),
+04/14/2026 20:26:56:INFO:	                    (2, 0.8068181818181819),
+[92mINFO [0m:      	                    (3, 0.7159090909090909),
+04/14/2026 20:26:56:INFO:	                    (3, 0.7159090909090909),
+[92mINFO [0m:      	                    (4, 0.793939393939394),
+04/14/2026 20:26:56:INFO:	                    (4, 0.793939393939394),
+[92mINFO [0m:      	                    (5, 0.8156565656565656),
+04/14/2026 20:26:56:INFO:	                    (5, 0.8156565656565656),
+[92mINFO [0m:      	                    (6, 0.7530303030303029),
+04/14/2026 20:26:56:INFO:	                    (6, 0.7530303030303029),
+[92mINFO [0m:      	                    (7, 0.733080808080808),
+04/14/2026 20:26:56:INFO:	                    (7, 0.733080808080808),
+[92mINFO [0m:      	                    (8, 0.736111111111111),
+04/14/2026 20:26:56:INFO:	                    (8, 0.736111111111111),
+[92mINFO [0m:      	                    (9, 0.7474747474747474),
+04/14/2026 20:26:56:INFO:	                    (9, 0.7474747474747474),
+[92mINFO [0m:      	                    (10, 0.8820707070707071),
+04/14/2026 20:26:56:INFO:	                    (10, 0.8820707070707071),
+[92mINFO [0m:      	                    (11, 0.7303030303030302),
+04/14/2026 20:26:56:INFO:	                    (11, 0.7303030303030302),
+[92mINFO [0m:      	                    (12, 0.7732323232323233),
+04/14/2026 20:26:56:INFO:	                    (12, 0.7732323232323233),
+[92mINFO [0m:      	                    (13, 0.8141414141414142),
+04/14/2026 20:26:56:INFO:	                    (13, 0.8141414141414142),
+[92mINFO [0m:      	                    (14, 0.7797979797979798),
+04/14/2026 20:26:56:INFO:	                    (14, 0.7797979797979798),
+[92mINFO [0m:      	                    (15, 0.817929292929293),
+04/14/2026 20:26:56:INFO:	                    (15, 0.817929292929293),
+[92mINFO [0m:      	                    (16, 0.7883838383838384),
+04/14/2026 20:26:56:INFO:	                    (16, 0.7883838383838384),
+[92mINFO [0m:      	                    (17, 0.7845959595959596),
+04/14/2026 20:26:56:INFO:	                    (17, 0.7845959595959596),
+[92mINFO [0m:      	                    (18, 0.8063131313131313),
+04/14/2026 20:26:56:INFO:	                    (18, 0.8063131313131313),
+[92mINFO [0m:      	                    (19, 0.7722222222222223),
+04/14/2026 20:26:56:INFO:	                    (19, 0.7722222222222223),
+[92mINFO [0m:      	                    (20, 0.8255050505050505),
+04/14/2026 20:26:56:INFO:	                    (20, 0.8255050505050505),
+[92mINFO [0m:      	                    (21, 0.7255050505050504),
+04/14/2026 20:26:56:INFO:	                    (21, 0.7255050505050504),
+[92mINFO [0m:      	                    (22, 0.7835858585858586),
+04/14/2026 20:26:56:INFO:	                    (22, 0.7835858585858586),
+[92mINFO [0m:      	                    (23, 0.7863636363636364),
+04/14/2026 20:26:56:INFO:	                    (23, 0.7863636363636364),
+[92mINFO [0m:      	                    (24, 0.796969696969697),
+04/14/2026 20:26:56:INFO:	                    (24, 0.796969696969697),
+[92mINFO [0m:      	                    (25, 0.8366161616161616)],
+04/14/2026 20:26:56:INFO:	                    (25, 0.8366161616161616)],
+[92mINFO [0m:      	 'hospital_a_accuracy': [(1, 0.4431818181818182),
+04/14/2026 20:26:56:INFO:	 'hospital_a_accuracy': [(1, 0.4431818181818182),
+[92mINFO [0m:      	                         (2, 0.9166666666666666),
+04/14/2026 20:26:56:INFO:	                         (2, 0.9166666666666666),
+[92mINFO [0m:      	                         (3, 0.9166666666666666),
+04/14/2026 20:26:56:INFO:	                         (3, 0.9166666666666666),
+[92mINFO [0m:      	                         (4, 0.9333333333333333),
+04/14/2026 20:26:56:INFO:	                         (4, 0.9333333333333333),
+[92mINFO [0m:      	                         (5, 0.9305555555555556),
+04/14/2026 20:26:56:INFO:	                         (5, 0.9305555555555556),
+[92mINFO [0m:      	                         (6, 0.678030303030303),
+04/14/2026 20:26:56:INFO:	                         (6, 0.678030303030303),
+[92mINFO [0m:      	                         (7, 0.9222222222222223),
+04/14/2026 20:26:56:INFO:	                         (7, 0.9222222222222223),
+[92mINFO [0m:      	                         (8, 0.9305555555555556),
+04/14/2026 20:26:56:INFO:	                         (8, 0.9305555555555556),
+[92mINFO [0m:      	                         (9, 0.678030303030303),
+04/14/2026 20:26:56:INFO:	                         (9, 0.678030303030303),
+[92mINFO [0m:      	                         (10, 0.9361111111111111),
+04/14/2026 20:26:56:INFO:	                         (10, 0.9361111111111111),
+[92mINFO [0m:      	                         (11, 0.6553030303030303),
+04/14/2026 20:26:56:INFO:	                         (11, 0.6553030303030303),
+[92mINFO [0m:      	                         (12, 0.7121212121212122),
+04/14/2026 20:26:56:INFO:	                         (12, 0.7121212121212122),
+[92mINFO [0m:      	                         (13, 0.9472222222222222),
+04/14/2026 20:26:56:INFO:	                         (13, 0.9472222222222222),
+[92mINFO [0m:      	                         (14, 0.9361111111111111),
+04/14/2026 20:26:56:INFO:	                         (14, 0.9361111111111111),
+[92mINFO [0m:      	                         (15, 0.7651515151515151),
+04/14/2026 20:26:56:INFO:	                         (15, 0.7651515151515151),
+[92mINFO [0m:      	                         (16, 0.7272727272727273),
+04/14/2026 20:26:56:INFO:	                         (16, 0.7272727272727273),
+[92mINFO [0m:      	                         (17, 0.7234848484848485),
+04/14/2026 20:26:56:INFO:	                         (17, 0.7234848484848485),
+[92mINFO [0m:      	                         (18, 0.9361111111111111),
+04/14/2026 20:26:56:INFO:	                         (18, 0.9361111111111111),
+[92mINFO [0m:      	                         (19, 0.9361111111111111),
+04/14/2026 20:26:56:INFO:	                         (19, 0.9361111111111111),
+[92mINFO [0m:      	                         (20, 0.7727272727272727),
+04/14/2026 20:26:56:INFO:	                         (20, 0.7727272727272727),
+[92mINFO [0m:      	                         (21, 0.6477272727272727),
+04/14/2026 20:26:56:INFO:	                         (21, 0.6477272727272727),
+[92mINFO [0m:      	                         (22, 0.9361111111111111),
+04/14/2026 20:26:56:INFO:	                         (22, 0.9361111111111111),
+[92mINFO [0m:      	                         (23, 0.7196969696969697),
+04/14/2026 20:26:56:INFO:	                         (23, 0.7196969696969697),
+[92mINFO [0m:      	                         (24, 0.7386363636363636),
+04/14/2026 20:26:56:INFO:	                         (24, 0.7386363636363636),
+[92mINFO [0m:      	                         (25, 0.7727272727272727)],
+04/14/2026 20:26:56:INFO:	                         (25, 0.7727272727272727)],
+[92mINFO [0m:      	 'hospital_b_accuracy': [(1, 0.8888888888888888),
+04/14/2026 20:26:56:INFO:	 'hospital_b_accuracy': [(1, 0.8888888888888888),
+[92mINFO [0m:      	                         (2, 0.7234848484848485),
+04/14/2026 20:26:56:INFO:	                         (2, 0.7234848484848485),
+[92mINFO [0m:      	                         (3, 0.6325757575757576),
+04/14/2026 20:26:56:INFO:	                         (3, 0.6325757575757576),
+[92mINFO [0m:      	                         (4, 0.7272727272727273),
+04/14/2026 20:26:56:INFO:	                         (4, 0.7272727272727273),
+[92mINFO [0m:      	                         (5, 0.7462121212121212),
+04/14/2026 20:26:56:INFO:	                         (5, 0.7462121212121212),
+[92mINFO [0m:      	                         (6, 0.925),
+04/14/2026 20:26:56:INFO:	                         (6, 0.925),
+[92mINFO [0m:      	                         (7, 0.6553030303030303),
+04/14/2026 20:26:56:INFO:	                         (7, 0.6553030303030303),
+[92mINFO [0m:      	                         (8, 0.6666666666666666),
+04/14/2026 20:26:56:INFO:	                         (8, 0.6666666666666666),
+[92mINFO [0m:      	                         (9, 0.9305555555555556),
+04/14/2026 20:26:56:INFO:	                         (9, 0.9305555555555556),
+[92mINFO [0m:      	                         (10, 0.8181818181818182),
+04/14/2026 20:26:56:INFO:	                         (10, 0.8181818181818182),
+[92mINFO [0m:      	                         (11, 0.925),
+04/14/2026 20:26:56:INFO:	                         (11, 0.925),
+[92mINFO [0m:      	                         (12, 0.9388888888888889),
+04/14/2026 20:26:56:INFO:	                         (12, 0.9388888888888889),
+[92mINFO [0m:      	                         (13, 0.7613636363636364),
+04/14/2026 20:26:56:INFO:	                         (13, 0.7613636363636364),
+[92mINFO [0m:      	                         (14, 0.7159090909090909),
+04/14/2026 20:26:56:INFO:	                         (14, 0.7159090909090909),
+[92mINFO [0m:      	                         (15, 0.9472222222222222),
+04/14/2026 20:26:56:INFO:	                         (15, 0.9472222222222222),
+[92mINFO [0m:      	                         (16, 0.9388888888888889),
+04/14/2026 20:26:56:INFO:	                         (16, 0.9388888888888889),
+[92mINFO [0m:      	                         (17, 0.9388888888888889),
+04/14/2026 20:26:56:INFO:	                         (17, 0.9388888888888889),
+[92mINFO [0m:      	                         (18, 0.7424242424242424),
+04/14/2026 20:26:56:INFO:	                         (18, 0.7424242424242424),
+[92mINFO [0m:      	                         (19, 0.7083333333333334),
+04/14/2026 20:26:56:INFO:	                         (19, 0.7083333333333334),
+[92mINFO [0m:      	                         (20, 0.9472222222222222),
+04/14/2026 20:26:56:INFO:	                         (20, 0.9472222222222222),
+[92mINFO [0m:      	                         (21, 0.9222222222222223),
+04/14/2026 20:26:56:INFO:	                         (21, 0.9222222222222223),
+[92mINFO [0m:      	                         (22, 0.7196969696969697),
+04/14/2026 20:26:56:INFO:	                         (22, 0.7196969696969697),
+[92mINFO [0m:      	                         (23, 0.9333333333333333),
+04/14/2026 20:26:56:INFO:	                         (23, 0.9333333333333333),
+[92mINFO [0m:      	                         (24, 0.9416666666666667),
+04/14/2026 20:26:56:INFO:	                         (24, 0.9416666666666667),
+[92mINFO [0m:      	                         (25, 0.9361111111111111)],
+04/14/2026 20:26:56:INFO:	                         (25, 0.9361111111111111)],
+[92mINFO [0m:      	 'test_accuracy': [(1, 0.7003205128205128),
+04/14/2026 20:26:56:INFO:	 'test_accuracy': [(1, 0.7003205128205128),
+[92mINFO [0m:      	                   (2, 0.8349358974358975),
+04/14/2026 20:26:56:INFO:	                   (2, 0.8349358974358975),
+[92mINFO [0m:      	                   (3, 0.7964743589743589),
+04/14/2026 20:26:56:INFO:	                   (3, 0.7964743589743589),
+[92mINFO [0m:      	                   (4, 0.8461538461538461),
+04/14/2026 20:26:56:INFO:	                   (4, 0.8461538461538461),
+[92mINFO [0m:      	                   (5, 0.8525641025641025),
+04/14/2026 20:26:56:INFO:	                   (5, 0.8525641025641025),
+[92mINFO [0m:      	                   (6, 0.8205128205128205),
+04/14/2026 20:26:56:INFO:	                   (6, 0.8205128205128205),
+[92mINFO [0m:      	                   (7, 0.8092948717948718),
+04/14/2026 20:26:56:INFO:	                   (7, 0.8092948717948718),
+[92mINFO [0m:      	                   (8, 0.8189102564102564),
+04/14/2026 20:26:56:INFO:	                   (8, 0.8189102564102564),
+[92mINFO [0m:      	                   (9, 0.8237179487179487),
+04/14/2026 20:26:56:INFO:	                   (9, 0.8237179487179487),
+[92mINFO [0m:      	                   (10, 0.8862179487179487),
+04/14/2026 20:26:56:INFO:	                   (10, 0.8862179487179487),
+[92mINFO [0m:      	                   (11, 0.8108974358974359),
+04/14/2026 20:26:56:INFO:	                   (11, 0.8108974358974359),
+[92mINFO [0m:      	                   (12, 0.842948717948718),
+04/14/2026 20:26:56:INFO:	                   (12, 0.842948717948718),
+[92mINFO [0m:      	                   (13, 0.8685897435897436),
+04/14/2026 20:26:56:INFO:	                   (13, 0.8685897435897436),
+[92mINFO [0m:      	                   (14, 0.842948717948718),
+04/14/2026 20:26:56:INFO:	                   (14, 0.842948717948718),
+[92mINFO [0m:      	                   (15, 0.8701923076923077),
+04/14/2026 20:26:56:INFO:	                   (15, 0.8701923076923077),
+[92mINFO [0m:      	                   (16, 0.8493589743589743),
+04/14/2026 20:26:56:INFO:	                   (16, 0.8493589743589743),
+[92mINFO [0m:      	                   (17, 0.8477564102564102),
+04/14/2026 20:26:56:INFO:	                   (17, 0.8477564102564102),
+[92mINFO [0m:      	                   (18, 0.8541666666666666),
+04/14/2026 20:26:56:INFO:	                   (18, 0.8541666666666666),
+[92mINFO [0m:      	                   (19, 0.8397435897435898),
+04/14/2026 20:26:56:INFO:	                   (19, 0.8397435897435898),
+[92mINFO [0m:      	                   (20, 0.8733974358974359),
+04/14/2026 20:26:56:INFO:	                   (20, 0.8733974358974359),
+[92mINFO [0m:      	                   (21, 0.8060897435897436),
+04/14/2026 20:26:56:INFO:	                   (21, 0.8060897435897436),
+[92mINFO [0m:      	                   (22, 0.844551282051282),
+04/14/2026 20:26:56:INFO:	                   (22, 0.844551282051282),
+[92mINFO [0m:      	                   (23, 0.842948717948718),
+04/14/2026 20:26:56:INFO:	                   (23, 0.842948717948718),
+[92mINFO [0m:      	                   (24, 0.8557692307692307),
+04/14/2026 20:26:56:INFO:	                   (24, 0.8557692307692307),
+[92mINFO [0m:      	                   (25, 0.8669871794871795)],
+04/14/2026 20:26:56:INFO:	                   (25, 0.8669871794871795)],
+[92mINFO [0m:      	 'test_f1': [(1, 0.6597513123782631),
+04/14/2026 20:26:56:INFO:	 'test_f1': [(1, 0.6597513123782631),
+[92mINFO [0m:      	             (2, 0.8397363853302963),
+04/14/2026 20:26:56:INFO:	             (2, 0.8397363853302963),
+[92mINFO [0m:      	             (3, 0.7933153036241956),
+04/14/2026 20:26:56:INFO:	             (3, 0.7933153036241956),
+[92mINFO [0m:      	             (4, 0.8497590024692272),
+04/14/2026 20:26:56:INFO:	             (4, 0.8497590024692272),
+[92mINFO [0m:      	             (5, 0.8546061450112973),
+04/14/2026 20:26:56:INFO:	             (5, 0.8546061450112973),
+[92mINFO [0m:      	             (6, 0.8185501233654576),
+04/14/2026 20:26:56:INFO:	             (6, 0.8185501233654576),
+[92mINFO [0m:      	             (7, 0.805223797863518),
+04/14/2026 20:26:56:INFO:	             (7, 0.805223797863518),
+[92mINFO [0m:      	             (8, 0.8168840214634917),
+04/14/2026 20:26:56:INFO:	             (8, 0.8168840214634917),
+[92mINFO [0m:      	             (9, 0.8229837204930703),
+04/14/2026 20:26:56:INFO:	             (9, 0.8229837204930703),
+[92mINFO [0m:      	             (10, 0.8892401294825925),
+04/14/2026 20:26:56:INFO:	             (10, 0.8892401294825925),
+[92mINFO [0m:      	             (11, 0.8072925043663738),
+04/14/2026 20:26:56:INFO:	             (11, 0.8072925043663738),
+[92mINFO [0m:      	             (12, 0.8430431694235114),
+04/14/2026 20:26:56:INFO:	             (12, 0.8430431694235114),
+[92mINFO [0m:      	             (13, 0.8706153080802843),
+04/14/2026 20:26:56:INFO:	             (13, 0.8706153080802843),
+[92mINFO [0m:      	             (14, 0.8426309782378868),
+04/14/2026 20:26:56:INFO:	             (14, 0.8426309782378868),
+[92mINFO [0m:      	             (15, 0.872172016581856),
+04/14/2026 20:26:56:INFO:	             (15, 0.872172016581856),
+[92mINFO [0m:      	             (16, 0.8500854144042999),
+04/14/2026 20:26:56:INFO:	             (16, 0.8500854144042999),
+[92mINFO [0m:      	             (17, 0.8479361514313114),
+04/14/2026 20:26:56:INFO:	             (17, 0.8479361514313114),
+[92mINFO [0m:      	             (18, 0.8542104784694217),
+04/14/2026 20:26:56:INFO:	             (18, 0.8542104784694217),
+[92mINFO [0m:      	             (19, 0.8394385171603205),
+04/14/2026 20:26:56:INFO:	             (19, 0.8394385171603205),
+[92mINFO [0m:      	             (20, 0.875632277108912),
+04/14/2026 20:26:56:INFO:	             (20, 0.875632277108912),
+[92mINFO [0m:      	             (21, 0.8009269421322122),
+04/14/2026 20:26:56:INFO:	             (21, 0.8009269421322122),
+[92mINFO [0m:      	             (22, 0.8448335787477452),
+04/14/2026 20:26:56:INFO:	             (22, 0.8448335787477452),
+[92mINFO [0m:      	             (23, 0.8427113010446342),
+04/14/2026 20:26:56:INFO:	             (23, 0.8427113010446342),
+[92mINFO [0m:      	             (24, 0.8568536624633526),
+04/14/2026 20:26:56:INFO:	             (24, 0.8568536624633526),
+[92mINFO [0m:      	             (25, 0.8672297882933504)],
+04/14/2026 20:26:56:INFO:	             (25, 0.8672297882933504)],
+[92mINFO [0m:      	 'val_accuracy': [(1, 0.8246536529722371),
+04/14/2026 20:26:56:INFO:	 'val_accuracy': [(1, 0.8246536529722371),
+[92mINFO [0m:      	                  (2, 0.9572939856125697),
+04/14/2026 20:26:56:INFO:	                  (2, 0.9572939856125697),
+[92mINFO [0m:      	                  (3, 0.9543153091825659),
+04/14/2026 20:26:56:INFO:	                  (3, 0.9543153091825659),
+[92mINFO [0m:      	                  (4, 0.9658565304583004),
+04/14/2026 20:26:56:INFO:	                  (4, 0.9658565304583004),
+[92mINFO [0m:      	                  (5, 0.9721321730171288),
+04/14/2026 20:26:56:INFO:	                  (5, 0.9721321730171288),
+[92mINFO [0m:      	                  (6, 0.9703769801114933),
+04/14/2026 20:26:56:INFO:	                  (6, 0.9703769801114933),
+[92mINFO [0m:      	                  (7, 0.9646330469339318),
+04/14/2026 20:26:56:INFO:	                  (7, 0.9646330469339318),
+[92mINFO [0m:      	                  (8, 0.9675050135227127),
+04/14/2026 20:26:56:INFO:	                  (8, 0.9675050135227127),
+[92mINFO [0m:      	                  (9, 0.9709620444133719),
+04/14/2026 20:26:56:INFO:	                  (9, 0.9709620444133719),
+[92mINFO [0m:      	                  (10, 0.9517101171968428),
+04/14/2026 20:26:56:INFO:	                  (10, 0.9517101171968428),
+[92mINFO [0m:      	                  (11, 0.969791915809615),
+04/14/2026 20:26:56:INFO:	                  (11, 0.969791915809615),
+[92mINFO [0m:      	                  (12, 0.9800562986403696),
+04/14/2026 20:26:56:INFO:	                  (12, 0.9800562986403696),
+[92mINFO [0m:      	                  (13, 0.9795245892591026),
+04/14/2026 20:26:56:INFO:	                  (13, 0.9795245892591026),
+[92mINFO [0m:      	                  (14, 0.9714937537946386),
+04/14/2026 20:26:56:INFO:	                  (14, 0.9714937537946386),
+[92mINFO [0m:      	                  (15, 0.980109653560981),
+04/14/2026 20:26:56:INFO:	                  (15, 0.980109653560981),
+[92mINFO [0m:      	                  (16, 0.9795245892591026),
+04/14/2026 20:26:56:INFO:	                  (16, 0.9795245892591026),
+[92mINFO [0m:      	                  (17, 0.9772376869722001),
+04/14/2026 20:26:56:INFO:	                  (17, 0.9772376869722001),
+[92mINFO [0m:      	                  (18, 0.9806413629422479),
+04/14/2026 20:26:56:INFO:	                  (18, 0.9806413629422479),
+[92mINFO [0m:      	                  (19, 0.9760675583684432),
+04/14/2026 20:26:56:INFO:	                  (19, 0.9760675583684432),
+[92mINFO [0m:      	                  (20, 0.9727172373190073),
+04/14/2026 20:26:56:INFO:	                  (20, 0.9727172373190073),
+[92mINFO [0m:      	                  (21, 0.9663348849189557),
+04/14/2026 20:26:56:INFO:	                  (21, 0.9663348849189557),
+[92mINFO [0m:      	                  (22, 0.974950784685298),
+04/14/2026 20:26:56:INFO:	                  (22, 0.974950784685298),
+[92mINFO [0m:      	                  (23, 0.9766526226703218),
+04/14/2026 20:26:56:INFO:	                  (23, 0.9766526226703218),
+[92mINFO [0m:      	                  (24, 0.9744190753040312),
+04/14/2026 20:26:56:INFO:	                  (24, 0.9744190753040312),
+[92mINFO [0m:      	                  (25, 0.970430335032105)],
+04/14/2026 20:26:56:INFO:	                  (25, 0.970430335032105)],
+[92mINFO [0m:      	 'val_f1': [(1, 0.8101486448791809),
+04/14/2026 20:26:56:INFO:	 'val_f1': [(1, 0.8101486448791809),
+[92mINFO [0m:      	            (2, 0.9592847272068648),
+04/14/2026 20:26:56:INFO:	            (2, 0.9592847272068648),
+[92mINFO [0m:      	            (3, 0.9547999957059312),
+04/14/2026 20:26:56:INFO:	            (3, 0.9547999957059312),
+[92mINFO [0m:      	            (4, 0.9675741210651413),
+04/14/2026 20:26:56:INFO:	            (4, 0.9675741210651413),
+[92mINFO [0m:      	            (5, 0.9735641213296184),
+04/14/2026 20:26:56:INFO:	            (5, 0.9735641213296184),
+[92mINFO [0m:      	            (6, 0.9712468659584275),
+04/14/2026 20:26:56:INFO:	            (6, 0.9712468659584275),
+[92mINFO [0m:      	            (7, 0.9652576460061596),
+04/14/2026 20:26:56:INFO:	            (7, 0.9652576460061596),
+[92mINFO [0m:      	            (8, 0.968241742228918),
+04/14/2026 20:26:56:INFO:	            (8, 0.968241742228918),
+[92mINFO [0m:      	            (9, 0.9720052671717361),
+04/14/2026 20:26:56:INFO:	            (9, 0.9720052671717361),
+[92mINFO [0m:      	            (10, 0.9567888424410409),
+04/14/2026 20:26:56:INFO:	            (10, 0.9567888424410409),
+[92mINFO [0m:      	            (11, 0.9703484875750477),
+04/14/2026 20:26:56:INFO:	            (11, 0.9703484875750477),
+[92mINFO [0m:      	            (12, 0.9804267987780119),
+04/14/2026 20:26:56:INFO:	            (12, 0.9804267987780119),
+[92mINFO [0m:      	            (13, 0.9803317834009926),
+04/14/2026 20:26:56:INFO:	            (13, 0.9803317834009926),
+[92mINFO [0m:      	            (14, 0.9719128220696285),
+04/14/2026 20:26:56:INFO:	            (14, 0.9719128220696285),
+[92mINFO [0m:      	            (15, 0.9810995663496082),
+04/14/2026 20:26:56:INFO:	            (15, 0.9810995663496082),
+[92mINFO [0m:      	            (16, 0.9803317834009926),
+04/14/2026 20:26:56:INFO:	            (16, 0.9803317834009926),
+[92mINFO [0m:      	            (17, 0.977881825692025),
+04/14/2026 20:26:56:INFO:	            (17, 0.977881825692025),
+[92mINFO [0m:      	            (18, 0.981131840562454),
+04/14/2026 20:26:56:INFO:	            (18, 0.981131840562454),
+[92mINFO [0m:      	            (19, 0.9765897979785555),
+04/14/2026 20:26:56:INFO:	            (19, 0.9765897979785555),
+[92mINFO [0m:      	            (20, 0.9743797477948117),
+04/14/2026 20:26:56:INFO:	            (20, 0.9743797477948117),
+[92mINFO [0m:      	            (21, 0.966824692907633),
+04/14/2026 20:26:56:INFO:	            (21, 0.966824692907633),
+[92mINFO [0m:      	            (22, 0.9757850534318522),
+04/14/2026 20:26:56:INFO:	            (22, 0.9757850534318522),
+[92mINFO [0m:      	            (23, 0.9773128786499428),
+04/14/2026 20:26:56:INFO:	            (23, 0.9773128786499428),
+[92mINFO [0m:      	            (24, 0.9758523642511548),
+04/14/2026 20:26:56:INFO:	            (24, 0.9758523642511548),
+[92mINFO [0m:      	            (25, 0.9721161636490399)]}
+04/14/2026 20:26:56:INFO:	            (25, 0.9721161636490399)]}
+[92mINFO [0m:      
+04/14/2026 20:26:56:INFO:
+[92mINFO [0m:      
+04/14/2026 20:26:56:INFO:
+[92mINFO [0m:      Received: reconnect message f13fadfa-9586-4180-98c8-b855b0a03e0f
+04/14/2026 20:26:56:INFO:Received: reconnect message f13fadfa-9586-4180-98c8-b855b0a03e0f
+[92mINFO [0m:      
+04/14/2026 20:26:56:INFO:
+[92mINFO [0m:      Received: reconnect message 5af8d0c7-5009-4d08-be10-77f12e760693
+04/14/2026 20:26:56:INFO:Received: reconnect message 5af8d0c7-5009-4d08-be10-77f12e760693
+04/14/2026 20:26:56:DEBUG:gRPC channel closed
+04/14/2026 20:26:56:DEBUG:gRPC channel closed
+[92mINFO [0m:      Disconnect and shut down
+04/14/2026 20:26:56:INFO:Disconnect and shut down
+[92mINFO [0m:      Disconnect and shut down
+04/14/2026 20:26:56:INFO:Disconnect and shut down
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0026
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0005
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0033
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0005
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0128
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0003
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0038
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0304
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0005
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9646, Test Acc: 0.9472, F1: 0.9435
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0075
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0004
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0407
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0130
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0006
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0015
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9853, Test Acc: 0.9222, F1: 0.9074
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0027
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0003
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0488
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.1182
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0019
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0162
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0037
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0007
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0152
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0001
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9764, Test Acc: 0.9361, F1: 0.9280
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0059
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0000
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0012
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0009
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0001
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9794, Test Acc: 0.9333, F1: 0.9243
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.0077
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0003
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0002
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0010
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0002
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0003
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.0002
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0001
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0000
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.0001
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9676, Test Acc: 0.9417, F1: 0.9351
+======================================================================
+
+
+🔄 [NO-DP Client B] Starting local training (1 epoch)...
+   [NO-DP Client B] Epoch 1/1, Batch 0/95, Loss: 0.1363
+   [NO-DP Client B] Epoch 1/1, Batch 10/95, Loss: 0.0064
+   [NO-DP Client B] Epoch 1/1, Batch 20/95, Loss: 0.0006
+   [NO-DP Client B] Epoch 1/1, Batch 30/95, Loss: 0.0090
+   [NO-DP Client B] Epoch 1/1, Batch 40/95, Loss: 0.0043
+   [NO-DP Client B] Epoch 1/1, Batch 50/95, Loss: 0.0098
+   [NO-DP Client B] Epoch 1/1, Batch 60/95, Loss: 0.2132
+   [NO-DP Client B] Epoch 1/1, Batch 70/95, Loss: 0.0000
+   [NO-DP Client B] Epoch 1/1, Batch 80/95, Loss: 0.0012
+   [NO-DP Client B] Epoch 1/1, Batch 90/95, Loss: 0.2766
+
+======================================================================
+[NO-DP CLIENT B EVAL]
+   Val Acc: 0.9646, Test Acc: 0.9361, F1: 0.9290
+======================================================================
+
+
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9715
+   ► Test Accuracy: 0.8429
+   ► Val F1:        0.9719
+   ► Test F1:       0.8426
+   ► Hospital A:    0.9361
+   ► Hospital B:    0.7159
+   ► Fairness Gap:  0.2202
+======================================================================
+
+💾 [NO-DP] Metrics for Round 14 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 1.9m | ETA: 1.5m
+✅ [NO-DP] Model v15 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9801
+   ► Test Accuracy: 0.8702
+   ► Val F1:        0.9811
+   ► Test F1:       0.8722
+   ► Hospital A:    0.7652
+   ► Hospital B:    0.9472
+   ► Fairness Gap:  0.1821
+======================================================================
+
+💾 [NO-DP] Metrics for Round 15 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.0m | ETA: 1.3m
+✅ [NO-DP] Model v16 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9795
+   ► Test Accuracy: 0.8494
+   ► Val F1:        0.9803
+   ► Test F1:       0.8501
+   ► Hospital A:    0.7273
+   ► Hospital B:    0.9389
+   ► Fairness Gap:  0.2116
+======================================================================
+
+💾 [NO-DP] Metrics for Round 16 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.1m | ETA: 1.2m
+✅ [NO-DP] Model v17 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9772
+   ► Test Accuracy: 0.8478
+   ► Val F1:        0.9779
+   ► Test F1:       0.8479
+   ► Hospital A:    0.7235
+   ► Hospital B:    0.9389
+   ► Fairness Gap:  0.2154
+======================================================================
+
+💾 [NO-DP] Metrics for Round 17 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.3m | ETA: 1.1m
+✅ [NO-DP] Model v18 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9806
+   ► Test Accuracy: 0.8542
+   ► Val F1:        0.9811
+   ► Test F1:       0.8542
+   ► Hospital A:    0.9361
+   ► Hospital B:    0.7424
+   ► Fairness Gap:  0.1937
+======================================================================
+
+💾 [NO-DP] Metrics for Round 18 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.4m | ETA: 0.9m
+✅ [NO-DP] Model v19 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9761
+   ► Test Accuracy: 0.8397
+   ► Val F1:        0.9766
+   ► Test F1:       0.8394
+   ► Hospital A:    0.9361
+   ► Hospital B:    0.7083
+   ► Fairness Gap:  0.2278
+======================================================================
+
+💾 [NO-DP] Metrics for Round 19 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.6m | ETA: 0.8m
+✅ [NO-DP] Model v20 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9727
+   ► Test Accuracy: 0.8734
+   ► Val F1:        0.9744
+   ► Test F1:       0.8756
+   ► Hospital A:    0.7727
+   ► Hospital B:    0.9472
+   ► Fairness Gap:  0.1745
+======================================================================
+
+💾 [NO-DP] Metrics for Round 20 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.7m | ETA: 0.7m
+✅ [NO-DP] Model v21 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9663
+   ► Test Accuracy: 0.8061
+   ► Val F1:        0.9668
+   ► Test F1:       0.8009
+   ► Hospital A:    0.6477
+   ► Hospital B:    0.9222
+   ► Fairness Gap:  0.2745
+======================================================================
+
+💾 [NO-DP] Metrics for Round 21 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 2.9m | ETA: 0.5m
+✅ [NO-DP] Model v22 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9750
+   ► Test Accuracy: 0.8446
+   ► Val F1:        0.9758
+   ► Test F1:       0.8448
+   ► Hospital A:    0.9361
+   ► Hospital B:    0.7197
+   ► Fairness Gap:  0.2164
+======================================================================
+
+💾 [NO-DP] Metrics for Round 22 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 3.0m | ETA: 0.4m
+✅ [NO-DP] Model v23 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9767
+   ► Test Accuracy: 0.8429
+   ► Val F1:        0.9773
+   ► Test F1:       0.8427
+   ► Hospital A:    0.7197
+   ► Hospital B:    0.9333
+   ► Fairness Gap:  0.2136
+======================================================================
+
+💾 [NO-DP] Metrics for Round 23 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 3.2m | ETA: 0.3m
+✅ [NO-DP] Model v24 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9744
+   ► Test Accuracy: 0.8558
+   ► Val F1:        0.9759
+   ► Test F1:       0.8569
+   ► Hospital A:    0.7386
+   ► Hospital B:    0.9417
+   ► Fairness Gap:  0.2030
+======================================================================
+
+💾 [NO-DP] Metrics for Round 24 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 3.3m | ETA: 0.1m
+✅ [NO-DP] Model v25 saved
+
+======================================================================
+[NO-DP SERVER] Round Evaluation Report:
+======================================================================
+   ► Val Accuracy:  0.9704
+   ► Test Accuracy: 0.8670
+   ► Val F1:        0.9721
+   ► Test F1:       0.8672
+   ► Hospital A:    0.7727
+   ► Hospital B:    0.9361
+   ► Fairness Gap:  0.1634
+======================================================================
+
+💾 [NO-DP] Metrics for Round 25 saved to fl_metrics_no_dp.json
+   ⏱️  Elapsed: 3.5m | ETA: 0.0m
+
+======================================================================
+🎉 [RUN 1] NO-DP TRAINING COMPLETE!
+📊 Metrics: fl_metrics_no_dp.json
+🤖 Model:   global_model_no_dp.pth
+⏱️  Time:    3.5 minutes
+======================================================================
+
+
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9838, Test Acc: 0.7614, F1: 0.7721
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0797
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0266
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0860
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.4549
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0401
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0030
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9568, Test Acc: 0.7159, F1: 0.7277
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1030
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0021
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0785
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0675
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0178
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0181
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9892, Test Acc: 0.7652, F1: 0.7758
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.1382
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.1082
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0518
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2900
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0613
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0349
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9838, Test Acc: 0.7273, F1: 0.7390
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0070
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0120
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0169
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0030
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0053
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0817
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9784, Test Acc: 0.7235, F1: 0.7352
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.2817
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.1813
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0690
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.2052
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0047
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0396
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9784, Test Acc: 0.7424, F1: 0.7536
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0404
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0321
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0870
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0102
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0626
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0118
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9676, Test Acc: 0.7083, F1: 0.7202
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0471
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0015
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0193
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0509
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0038
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.1074
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9838, Test Acc: 0.7727, F1: 0.7831
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0128
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0011
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0211
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0785
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0369
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0811
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9405, Test Acc: 0.6477, F1: 0.6558
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.2327
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0073
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0252
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0586
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0628
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.1173
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9730, Test Acc: 0.7197, F1: 0.7315
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0587
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0239
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0774
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0206
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.1057
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0409
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9730, Test Acc: 0.7197, F1: 0.7315
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0161
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0019
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0016
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0230
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.1809
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0546
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9838, Test Acc: 0.7386, F1: 0.7501
+======================================================================
+
+
+🔄 [NO-DP Client A] Starting local training (1 epoch)...
+   [NO-DP Client A] Epoch 1/1, Batch 0/53, Loss: 0.0815
+   [NO-DP Client A] Epoch 1/1, Batch 10/53, Loss: 0.0299
+   [NO-DP Client A] Epoch 1/1, Batch 20/53, Loss: 0.0055
+   [NO-DP Client A] Epoch 1/1, Batch 30/53, Loss: 0.0024
+   [NO-DP Client A] Epoch 1/1, Batch 40/53, Loss: 0.0039
+   [NO-DP Client A] Epoch 1/1, Batch 50/53, Loss: 0.0018
+
+======================================================================
+[NO-DP CLIENT A EVAL]
+   Val Acc: 0.9784, Test Acc: 0.7727, F1: 0.7831
+======================================================================
+
+Server command: /home/abhay/.local/bin/uv run --project /home/abhay/Documents/fog_project python /home/abhay/Documents/fog_project/experiments/server_no_dp.py
+
+
+=== COMPLETED ===
+Duration: 3.9 minutes
+Server exit code: 0

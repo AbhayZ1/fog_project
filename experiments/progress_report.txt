@@ -1,0 +1,3 @@
+fl_metrics_no_dp.json: 22/25, acc=0.8285, time=31.4m
+fl_metrics_fedavg.json: NOT FOUND
+Active: 9 procs

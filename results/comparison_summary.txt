@@ -1,0 +1,79 @@
+======================================================================
+  COMPARISON SUMMARY — Federated Learning Experiments
+  Generated from actual experiment results
+======================================================================
+
+EXPERIMENT CONFIGURATION
+----------------------------------------
+Model:          Net (3-block CNN, GroupNorm, Dropout 0.5)
+Dataset:        PneumoniaMNIST (28x28, binary)
+Data Split:     Non-IID (SKEW_RATIO=0.8)
+Rounds:         25 (Original only completed 3)
+Local Epochs:   1 per round
+Batch Size:     32
+Learning Rate:  0.001 (Adam)
+Clients:        2 (Hospital A + Hospital B)
+
+======================================================================
+  DETAILED RESULTS
+======================================================================
+
+--- Original (FedProx+DP) (3 rounds) ---
+  Val Accuracy:        80.81%
+  Test Accuracy:       68.27%
+  Test F1:             0.6311
+  Hospital A Acc:      88.33%
+  Hospital B Acc:      40.91%
+  Fairness Gap:        0.4742
+  Privacy epsilon:     0.3605
+  Training Time:       8.4 min
+
+--- No-DP (FedProx only) (25 rounds) ---
+  Val Accuracy:        97.04%
+  Test Accuracy:       86.70%
+  Test F1:             0.8672
+  Hospital A Acc:      77.27%
+  Hospital B Acc:      93.61%
+  Fairness Gap:        0.1634
+  Privacy epsilon:     0.0000
+  Training Time:       3.5 min
+
+--- FedAvg (+DP) (25 rounds) ---
+  Val Accuracy:        91.49%
+  Test Accuracy:       77.24%
+  Test F1:             0.7643
+  Hospital A Acc:      57.95%
+  Hospital B Acc:      91.39%
+  Fairness Gap:        0.3343
+  Privacy epsilon:     0.3274
+  Training Time:       8.9 min
+
+--- Centralized Baseline (16 epochs, early stopped) ---
+  Best Val Accuracy:   97.52%
+  Final Test Accuracy: 83.97%
+  Final Test F1:       0.8286
+  Training Time:       2.9 min
+
+======================================================================
+  ANALYSIS
+======================================================================
+
+NOTE: Original run only completed 3/25 rounds, so direct comparisons
+should consider that the original model was undertrained.
+
+DP Privacy Cost: +18.43% accuracy
+  Removing DP significantly improved accuracy, indicating
+  gradient noise from DP-SGD has a substantial cost.
+
+FedProx vs FedAvg: -8.97%
+
+No-DP vs FedAvg (isolating strategy effect): +9.46%
+  No-DP (FedProx, no noise) significantly outperforms FedAvg+DP
+
+Centralized vs No-DP Federated: -2.72%
+  Federation overhead compared to centralized training.
+
+Fairness: No-DP gap (0.1634), FedAvg gap (0.3343)
+  No-DP achieves BETTER fairness between hospitals
+
+======================================================================

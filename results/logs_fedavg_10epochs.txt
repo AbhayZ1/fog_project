@@ -1,0 +1,129 @@
+=== RUN 2: FedAvg+DP (epochs=10) ===
+Started: 2026-04-14 23:34:34
+
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 23:34:41:WARNING:DEPRECATED FEATURE: flwr.server.start_server() is deprecated.
+	Instead, use the `flower-superlink` CLI command to start a SuperLink as shown below:
+
+		$ flower-superlink --insecure
+
+	To view usage and all available options, run:
+
+		$ flower-superlink --help
+
+	Using `start_server()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[92mINFO [0m:      Starting Flower server, config: num_rounds=25, no round_timeout
+04/14/2026 23:34:41:INFO:Starting Flower server, config: num_rounds=25, no round_timeout
+[92mINFO [0m:      Flower ECE: gRPC server running (25 rounds), SSL is disabled
+04/14/2026 23:34:41:INFO:Flower ECE: gRPC server running (25 rounds), SSL is disabled
+[92mINFO [0m:      [INIT]
+04/14/2026 23:34:41:INFO:[INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+04/14/2026 23:34:41:INFO:Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+04/14/2026 23:34:41:INFO:Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+04/14/2026 23:34:41:INFO:Evaluation returned no results (`None`)
+[92mINFO [0m:      
+04/14/2026 23:34:41:INFO:
+[92mINFO [0m:      [ROUND 1]
+04/14/2026 23:34:41:INFO:[ROUND 1]
+/home/abhay/Documents/fog_project/.venv/lib/python3.11/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 23:34:55:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 23:34:55:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+04/14/2026 23:34:55:DEBUG:ChannelConnectivity.IDLE
+04/14/2026 23:34:55:DEBUG:ChannelConnectivity.CONNECTING
+04/14/2026 23:34:55:DEBUG:ChannelConnectivity.READY
+/home/abhay/Documents/fog_project/.venv/lib/python3.11/site-packages/opacus/privacy_engine.py:96: UserWarning: Secure RNG turned off. This is perfectly fine for experimentation as it allows for much faster training performance, but remember to turn it on and retrain one last time before production with ``secure_mode`` turned on.
+  warnings.warn(
+[93mWARNING [0m:   DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 23:34:59:WARNING:DEPRECATED FEATURE: flwr.client.start_client() is deprecated.
+	Instead, use the `flower-supernode` CLI command to start a SuperNode as shown below:
+
+		$ flower-supernode --insecure --superlink='<IP>:<PORT>'
+
+	To view all available options, run:
+
+		$ flower-supernode --help
+
+	Using `start_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+04/14/2026 23:34:59:DEBUG:Opened insecure gRPC connection (no certificates were passed)
+04/14/2026 23:34:59:DEBUG:ChannelConnectivity.IDLE
+04/14/2026 23:34:59:DEBUG:ChannelConnectivity.CONNECTING
+[92mINFO [0m:      configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 23:34:59:INFO:configure_fit: strategy sampled 2 clients (out of 2)
+04/14/2026 23:34:59:DEBUG:ChannelConnectivity.READY
+[92mINFO [0m:      
+04/14/2026 23:34:59:INFO:
+[92mINFO [0m:      Received: train message 27ce1a6a-233a-4e93-b657-12be66904d94
+04/14/2026 23:34:59:INFO:Received: train message 27ce1a6a-233a-4e93-b657-12be66904d94
+[92mINFO [0m:      
+04/14/2026 23:34:59:INFO:
+[92mINFO [0m:      Received: train message 3b58d862-3834-40e8-a703-e0c56f529c54
+04/14/2026 23:34:59:INFO:Received: train message 3b58d862-3834-40e8-a703-e0c56f529c54
+/home/abhay/Documents/fog_project/experiments/client_B_fedavg.py:96: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
+/home/abhay/Documents/fog_project/experiments/client_A_fedavg.py:97: UserWarning: Full backward hook is firing when gradients are computed with respect to module outputs since no inputs require gradients. See https://docs.pytorch.org/docs/main/generated/torch.nn.Module.html#torch.nn.Module.register_full_backward_hook for more details.
+  loss.backward()
